@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HEI Event Observatory - Taiwan Higher Education Event Intelligence Dashboard covering 27 universities">
+<title>HEI Event Observatory</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234338CA'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-family='serif' font-weight='bold'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root,html[data-theme="light"]{
+  --base:#FAF8F5;--card:#FFFFFF;--elevated:#F3F0EB;--accent:#6366F1;--accent2:#F59E0B;
+  --warm:#B45309;--text:#1C1917;--text2:#57534E;--muted:#78716C;--border:#E7E5E4;
+  --shadow:rgba(28,25,23,0.06);--hover:rgba(67,56,202,0.06);
+  --chart-bg:rgba(255,255,255,0.8);--grid:rgba(0,0,0,0.06)
+}
+html[data-theme="dark"]{
+  --base:#1C1917;--card:#292524;--elevated:#3D3836;--accent:#818CF8;--accent2:#FBBF24;
+  --warm:#F59E0B;--text:#FAFAF9;--text2:#D6D3D1;--muted:#78716C;--border:#44403C;
+  --shadow:rgba(0,0,0,0.3);--hover:rgba(129,140,248,0.08);
+  --chart-bg:rgba(41,37,36,0.8);--grid:rgba(255,255,255,0.08)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--base);color:var(--text);font-family:'DM Sans','Noto Sans TC',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,h4{font-family:'Instrument Serif','Noto Sans TC',serif;font-weight:400;letter-spacing:-0.01em}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--muted);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--text2)}
+
+/* Card system */
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 1px 3px var(--shadow),0 4px 16px var(--shadow);transition:all .25s ease}
+.card:hover{box-shadow:0 2px 8px var(--shadow),0 8px 32px var(--shadow);transform:translateY(-1px)}
+.card-flat{background:var(--card);border:1px solid var(--border);border-radius:12px}
+
+/* Grain overlay */
+body::before{content:'';position:fixed;inset:0;opacity:0.03;pointer-events:none;z-index:9999;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* Stat number */
+.stat-num{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--accent);line-height:1}
+
+/* Tabs */
+.tab-pill{position:relative;padding:8px 20px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;border:none;background:transparent;color:var(--text2);font-family:'DM Sans','Noto Sans TC',sans-serif}
+.tab-pill:hover{background:var(--hover);color:var(--text)}
+.tab-pill.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(67,56,202,0.25)}
+html[data-theme="dark"] .tab-pill.active{box-shadow:0 2px 8px rgba(129,140,248,0.25)}
+
+/* Forms */
+input,select{background:var(--base);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:10px 14px;font-family:'DM Sans','Noto Sans TC',sans-serif;font-size:14px;outline:none;transition:all .2s}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(67,56,202,0.1)}
+html[data-theme="dark"] input:focus,html[data-theme="dark"] select:focus{box-shadow:0 0 0 3px rgba(129,140,248,0.15)}
+
+/* Buttons */
+.btn{padding:10px 20px;border-radius:10px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;border:none}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 12px rgba(67,56,202,0.3)}
+.btn-secondary{background:var(--elevated);color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Table */
+table{width:100%;border-collapse:separate;border-spacing:0}
+th{text-align:left;padding:12px 16px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text2);border-bottom:2px solid var(--border);cursor:pointer;user-select:none;white-space:nowrap;font-family:'DM Sans',sans-serif}
+th:hover{color:var(--accent)}
+td{padding:12px 16px;font-size:14px;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--hover)}
+
+/* Confidence indicators */
+.conf-high{border-left:3px solid #16A34A}.conf-medium{border-left:3px solid #CA8A04}.conf-unverified{border-left:3px solid var(--muted);opacity:0.75}
+
+/* Badge */
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:100px;font-size:12px;font-weight:500;gap:4px}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.anim-fade{animation:fadeUp .5s cubic-bezier(.22,1,.36,1) both}
+.anim-fade-1{animation-delay:.05s}.anim-fade-2{animation-delay:.1s}.anim-fade-3{animation-delay:.15s}.anim-fade-4{animation-delay:.2s}
+
+/* Decorative line */
+.deco-line{width:40px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:16px}
+
+/* Heatmap cell */
+.heat-cell{display:flex;align-items:center;justify-content:center;font-size:12px;font-family:'JetBrains Mono',monospace;border-radius:6px;min-width:36px;height:32px;font-weight:500}
+
+@media (max-width:640px){
+  .tab-pill{padding:6px 14px;font-size:13px}
+  h1{font-size:1.25rem!important}
+}
+@media print{body{background:#fff;color:#000}.card{border:1px solid #ddd;box-shadow:none}body::before{display:none}}
+</style>
+</head>
+<body>
+<div id="root" style="min-height:100vh;display:flex;align-items:center;justify-content:center">
+<div style="text-align:center">
+<div style="width:36px;height:36px;border:3px solid var(--accent);border-top-color:transparent;border-radius:50%;margin:0 auto 16px;animation:spin .8s linear infinite"></div>
+<div style="font-family:'Instrument Serif',serif;color:var(--accent);font-size:20px">Loading Observatory...</div>
+</div>
+</div>
+
+<script src="hei-event-data.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{
+  base:'var(--base)',card:'var(--card)',elevated:'var(--elevated)',
+  accent:'var(--accent)',accent2:'var(--accent2)',warm:'var(--warm)',
+  txt:'var(--text)',txt2:'var(--text2)',muted:'var(--muted)'
+},fontFamily:{
+  serif:['Instrument Serif','Noto Sans TC','serif'],
+  sans:['DM Sans','Noto Sans TC','sans-serif'],
+  mono:['JetBrains Mono','monospace']
+}}}}
+</script>
+<script type="text/babel">
+const {useState,useEffect,useRef,useMemo,useCallback,memo}=React;
+
+// ── Data ──
+const DATA=(typeof __EVENTS_DATA__==='string')?JSON.parse(__EVENTS_DATA__):__EVENTS_DATA__;
+const {meta,schools,events,category_map}=DATA;
+
+// ── Utilities ──
+const catColor=(cat)=>category_map[cat]?.color||'#78716C';
+const catName=(cat)=>category_map[cat]?.name||'其他';
+const schoolType=(id)=>schools.find(s=>s.id===id)?.type||'public';
+const schoolName=(id)=>schools.find(s=>s.id===id)?.name||id;
+const fmtDate=(d)=>{if(!d)return'-';const p=d.split('-');return `${p[0]}/${p[1]}/${p[2]}`;};
+const monthKey=(d)=>d?d.slice(0,7):'';
+
+// ── Theme ──
+function useTheme(){
+  const[t,setT]=useState(()=>localStorage.getItem('hei-theme')||'light');
+  const toggle=useCallback(()=>{
+    const n=t==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',n);
+    localStorage.setItem('hei-theme',n);
+    setT(n);
+  },[t]);
+  useEffect(()=>{document.documentElement.setAttribute('data-theme',t);},[]);
+  return[t,toggle];
+}
+
+// ── Chart Hook ──
+function useChart(ref,configFn,deps=[]){
+  const inst=useRef(null);
+  useEffect(()=>{
+    if(!ref.current)return;
+    if(inst.current)inst.current.destroy();
+    const theme=document.documentElement.getAttribute('data-theme');
+    inst.current=new Chart(ref.current,configFn(theme));
+    return()=>{if(inst.current){inst.current.destroy();inst.current=null;}};
+  },deps);
+}
+
+// ── Shared chart defaults ──
+const chartColors=['#6366F1','#F59E0B','#10B981','#F472B6','#06B6D4','#8B5CF6','#EF4444','#14B8A6','#EC4899','#3B82F6','#A855F7','#F97316','#22D3EE'];
+const chartFont={family:"'DM Sans','Noto Sans TC',sans-serif"};
+const chartOpts=(theme)=>({
+  gridColor:theme==='dark'?'rgba(255,255,255,0.08)':'rgba(0,0,0,0.06)',
+  tickColor:theme==='dark'?'#D6D3D1':'#57534E',
+  legendColor:theme==='dark'?'#D6D3D1':'#57534E',
+});
+
+// ── Stat Card ──
+const StatCard=memo(({label,value,sub,delay=0})=>(
+  <div className={`card p-6 anim-fade anim-fade-${delay}`}>
+    <div className="text-sm font-medium mb-1" style={{color:'var(--text2)'}}>{label}</div>
+    <div className="stat-num text-4xl mb-2">{value}</div>
+    {sub&&<div className="text-xs" style={{color:'var(--muted)'}}>{sub}</div>}
+  </div>
+));
+
+// ── Section Header ──
+const SectionHead=({title,sub})=>(
+  <div className="mb-4">
+    <div className="deco-line"></div>
+    <h2 className="text-2xl" style={{fontFamily:"'Instrument Serif',serif"}}>{title}</h2>
+    {sub&&<p className="text-sm mt-1" style={{color:'var(--text2)'}}>{sub}</p>}
+  </div>
+);
+
+// ════════════ TAB 1: OVERVIEW ════════════
+function OverviewTab(){
+  const pieRef=useRef(null);
+  const barRef=useRef(null);
+  const lineRef=useRef(null);
+  const[theme]=useTheme();
+
+  const catDist=useMemo(()=>{
+    const m={};events.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]);
+  },[]);
+
+  const schoolRank=useMemo(()=>{
+    const m={};events.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  },[]);
+
+  const monthly=useMemo(()=>{
+    const m={};events.forEach(e=>{const k=monthKey(e.date);if(k)m[k]=(m[k]||0)+1;});
+    return Object.entries(m).sort((a,b)=>a[0].localeCompare(b[0]));
+  },[]);
+
+  const now=new Date();
+  const thisMonth=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+  const thisMonthCount=events.filter(e=>monthKey(e.date)===thisMonth).length;
+  const catCount=new Set(events.map(e=>e.category)).size;
+
+  useChart(pieRef,(th)=>{
+    const o=chartOpts(th);
+    return{type:'doughnut',data:{
+      labels:catDist.map(([c])=>catName(c)),
+      datasets:[{data:catDist.map(([,v])=>v),backgroundColor:catDist.map(([c])=>catColor(c)),borderWidth:0,hoverOffset:8}]
+    },options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'right',labels:{color:o.legendColor,font:{...chartFont,size:12},padding:10,usePointStyle:true,pointStyleWidth:8}}}}}
+  },[theme]);
+
+  useChart(barRef,(th)=>{
+    const o=chartOpts(th);
+    const pubColor=th==='dark'?'#818CF8':'#6366F1';
+    const priColor=th==='dark'?'#FBBF24':'#F59E0B';
+    return{type:'bar',data:{
+      labels:schoolRank.map(([id])=>schools.find(s=>s.id===id)?.acronym||id),
+      datasets:[{data:schoolRank.map(([,v])=>v),backgroundColor:schoolRank.map(([id])=>schoolType(id)==='public'?pubColor:priColor),borderRadius:6,barThickness:14,categoryPercentage:0.7,barPercentage:0.75}]
+    },options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:chartFont}},y:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:12}}}}}}
+  },[theme]);
+
+  useChart(lineRef,(th)=>{
+    const o=chartOpts(th);
+    const lineColor=th==='dark'?'#818CF8':'#6366F1';
+    return{type:'line',data:{
+      labels:monthly.map(([k])=>k),
+      datasets:[{data:monthly.map(([,v])=>v),borderColor:lineColor,backgroundColor:lineColor+'18',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:lineColor,pointBorderColor:th==='dark'?'#292524':'#fff',pointBorderWidth:2}]
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{...chartFont,size:11}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
+  },[theme]);
+
+  return(
+    <div className="anim-fade">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+        <StatCard label="Total Events" value={meta.total_events} sub={`${meta.date_range.start} ~ ${meta.date_range.end}`} delay={1}/>
+        <StatCard label="Schools" value={meta.schools_crawled} sub={`${schools.filter(s=>s.type==='public').length} public / ${schools.filter(s=>s.type==='private').length} private`} delay={2}/>
+        <StatCard label="Categories" value={catCount} sub="data-driven classification" delay={3}/>
+        <StatCard label="This Month" value={thisMonthCount} sub={thisMonth} delay={4}/>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="card p-6">
+          <SectionHead title="Category Distribution"/>
+          <div style={{height:300}}><canvas ref={pieRef}></canvas></div>
+        </div>
+        <div className="card p-6">
+          <SectionHead title="School Ranking" sub="Top 15 by event count"/>
+          <div style={{height:300}}><canvas ref={barRef}></canvas></div>
+        </div>
+      </div>
+      <div className="card p-6">
+        <SectionHead title="Monthly Timeline"/>
+        <div style={{height:220}}><canvas ref={lineRef}></canvas></div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════ TAB 2: EVENT BROWSER ════════════
+function EventBrowserTab(){
+  const[search,setSearch]=useState('');
+  const[catFilter,setCatFilter]=useState('all');
+  const[schoolFilter,setSchoolFilter]=useState('all');
+  const[typeFilter,setTypeFilter]=useState('all');
+  const[sortCol,setSortCol]=useState('date');
+  const[sortDir,setSortDir]=useState('desc');
+  const[page,setPage]=useState(1);
+  const perPage=20;
+
+  const filtered=useMemo(()=>{
+    let r=events;
+    if(search){const q=search.toLowerCase();r=r.filter(e=>e.title.toLowerCase().includes(q)||e.school_name.includes(q)||e.unit.includes(q));}
+    if(catFilter!=='all')r=r.filter(e=>e.category===catFilter);
+    if(schoolFilter!=='all')r=r.filter(e=>e.school_id===schoolFilter);
+    if(typeFilter!=='all')r=r.filter(e=>schoolType(e.school_id)===typeFilter);
+    r=[...r].sort((a,b)=>{
+      let va=a[sortCol]||'',vb=b[sortCol]||'';
+      if(sortCol==='date'){va=va||'9999';vb=vb||'9999';}
+      return sortDir==='asc'?(va<vb?-1:va>vb?1:0):(va>vb?-1:va<vb?1:0);
+    });
+    return r;
+  },[search,catFilter,schoolFilter,typeFilter,sortCol,sortDir]);
+
+  const totalPages=Math.max(1,Math.ceil(filtered.length/perPage));
+  const pageEvents=filtered.slice((page-1)*perPage,page*perPage);
+  useEffect(()=>{setPage(1);},[search,catFilter,schoolFilter,typeFilter]);
+
+  const doSort=(col)=>{if(sortCol===col)setSortDir(d=>d==='asc'?'desc':'asc');else{setSortCol(col);setSortDir('asc');}};
+  const sortIcon=(col)=>sortCol===col?(sortDir==='asc'?' \u25B2':' \u25BC'):'';
+
+  return(
+    <div className="anim-fade">
+      <div className="card-flat p-4 mb-5">
+        <div className="flex flex-wrap gap-3 items-center">
+          <input className="flex-1 min-w-[200px]" placeholder="Search events, schools, units..." value={search} onChange={e=>setSearch(e.target.value)}/>
+          <select value={catFilter} onChange={e=>setCatFilter(e.target.value)}>
+            <option value="all">All Categories</option>
+            {Object.entries(category_map).map(([k,v])=><option key={k} value={k}>{v.name}</option>)}
+          </select>
+          <select value={schoolFilter} onChange={e=>setSchoolFilter(e.target.value)}>
+            <option value="all">All Schools</option>
+            {schools.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}
+          </select>
+          <select value={typeFilter} onChange={e=>setTypeFilter(e.target.value)}>
+            <option value="all">Public + Private</option>
+            <option value="public">Public Only</option>
+            <option value="private">Private Only</option>
+          </select>
+          <span className="text-sm font-mono font-medium" style={{color:'var(--accent)'}}>{filtered.length} results</span>
+        </div>
+      </div>
+      <div className="card-flat overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th onClick={()=>doSort('date')}>Date{sortIcon('date')}</th>
+              <th onClick={()=>doSort('school_name')}>School{sortIcon('school_name')}</th>
+              <th onClick={()=>doSort('category')}>Category{sortIcon('category')}</th>
+              <th onClick={()=>doSort('title')}>Title{sortIcon('title')}</th>
+              <th>Unit</th>
+              <th>Link</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pageEvents.map(e=>(
+              <tr key={e.id} className={`conf-${e.confidence}`}>
+                <td className="font-mono text-sm whitespace-nowrap">{fmtDate(e.date)}</td>
+                <td className="whitespace-nowrap font-medium">{e.school_name}</td>
+                <td><span className="badge" style={{background:`${catColor(e.category)}15`,color:catColor(e.category)}}><span style={{width:6,height:6,borderRadius:'50%',background:catColor(e.category),display:'inline-block'}}></span>{catName(e.category)}</span></td>
+                <td className="min-w-[280px]">{e.title}</td>
+                <td className="text-sm" style={{color:'var(--text2)'}}>{e.unit}</td>
+                <td>{e.url?<a href={e.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium" style={{color:'var(--accent)',textDecoration:'underline',textUnderlineOffset:'3px'}}>Open</a>:<span className="text-xs" style={{color:'var(--muted)'}}>N/A</span>}</td>
+                <td><span className={`badge text-xs ${e.confidence==='high'?'':''}${e.confidence==='medium'?'':''}${e.confidence==='unverified'?'':''}`} style={{background:e.confidence==='high'?'#DCFCE7':e.confidence==='medium'?'#FEF3C7':'#F5F5F4',color:e.confidence==='high'?'#166534':e.confidence==='medium'?'#854D0E':'#78716C'}}>{e.confidence}</span></td>
+              </tr>
+            ))}
+            {pageEvents.length===0&&<tr><td colSpan={7} className="text-center py-10" style={{color:'var(--muted)'}}>No events found</td></tr>}
+          </tbody>
+        </table>
+        {totalPages>1&&(
+          <div className="flex items-center justify-between p-4" style={{borderTop:'1px solid var(--border)'}}>
+            <button className="btn btn-secondary" disabled={page<=1} onClick={()=>setPage(p=>p-1)} style={{opacity:page<=1?0.4:1}}>Previous</button>
+            <span className="text-sm font-mono" style={{color:'var(--text2)'}}>Page {page} / {totalPages}</span>
+            <button className="btn btn-secondary" disabled={page>=totalPages} onClick={()=>setPage(p=>p+1)} style={{opacity:page>=totalPages?0.4:1}}>Next</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ════════════ TAB 3: ANALYSIS ════════════
+function AnalysisTab(){
+  const trendRef=useRef(null);
+  const compareRef=useRef(null);
+  const[theme]=useTheme();
+
+  const topSchools=useMemo(()=>{
+    const m={};events.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([id])=>id);
+  },[]);
+  const cats=Object.keys(category_map);
+  const heatData=useMemo(()=>{
+    const m={};events.forEach(e=>{const k=`${e.school_id}-${e.category}`;m[k]=(m[k]||0)+1;});
+    return m;
+  },[]);
+  const heatMax=Math.max(1,...Object.values(heatData));
+
+  const monthlyByCat=useMemo(()=>{
+    const months=new Set();const m={};
+    events.forEach(e=>{const mk=monthKey(e.date);if(!mk)return;months.add(mk);const k=`${e.category}-${mk}`;m[k]=(m[k]||0)+1;});
+    return{months:[...months].sort(),data:m};
+  },[]);
+
+  const keywords=useMemo(()=>{
+    const stops=new Set(['的','與','及','在','之','了','和','為','是','中','大','全','年','月','日','大學','國立','活動','學','系','院','處','室','所','會','講座','研討','工作坊','論壇','成果','發表','中心','學系','辦理','計畫','教育','國際','台灣','技術']);
+    const m={};
+    events.forEach(e=>{
+      const words=e.title.replace(/[，。、：；「」（）\[\]\s\d\-\/]/g,' ').split(/\s+/).filter(w=>w.length>=2&&!stops.has(w));
+      words.forEach(w=>{m[w]=(m[w]||0)+1;});
+    });
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,24);
+  },[]);
+
+  const pvp=useMemo(()=>{
+    const pub={},pri={};
+    events.forEach(e=>{const target=schoolType(e.school_id)==='public'?pub:pri;target[e.category]=(target[e.category]||0)+1;});
+    return{pub,pri};
+  },[]);
+
+  const top5Cats=useMemo(()=>{
+    const m={};events.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([c])=>c);
+  },[]);
+
+  useChart(trendRef,(th)=>{
+    const o=chartOpts(th);
+    return{type:'line',data:{
+      labels:monthlyByCat.months,
+      datasets:top5Cats.map((c,i)=>({
+        label:catName(c),data:monthlyByCat.months.map(mk=>monthlyByCat.data[`${c}-${mk}`]||0),
+        borderColor:catColor(c),backgroundColor:catColor(c)+'15',tension:0.4,pointRadius:4,borderWidth:2.5
+      }))
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:{...chartFont,size:11},usePointStyle:true}}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{...chartFont,size:10}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
+  },[theme]);
+
+  // Sort categories by total for the bar chart
+  const sortedCats=useMemo(()=>{
+    const totals=cats.map(c=>({c,total:(pvp.pub[c]||0)+(pvp.pri[c]||0)}));
+    return totals.sort((a,b)=>b.total-a.total).map(x=>x.c);
+  },[]);
+
+  useChart(compareRef,(th)=>{
+    const o=chartOpts(th);
+    const pubC=th==='dark'?'#818CF8':'#6366F1';
+    const priC=th==='dark'?'#FBBF24':'#F59E0B';
+    return{type:'bar',data:{
+      labels:sortedCats.map(c=>catName(c)),
+      datasets:[
+        {label:'Public',data:sortedCats.map(c=>pvp.pub[c]||0),backgroundColor:pubC,borderRadius:4,barPercentage:0.75},
+        {label:'Private',data:sortedCats.map(c=>pvp.pri[c]||0),backgroundColor:priC,borderRadius:4,barPercentage:0.75}
+      ]
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:chartFont}}},scales:{x:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:10},maxRotation:45}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
+  },[theme]);
+
+  return(
+    <div className="anim-fade">
+      <div className="card p-6 mb-6 overflow-x-auto">
+        <SectionHead title="Category x School Heatmap" sub="Top 15 schools by event count"/>
+        <div style={{minWidth:700}}>
+          <div className="flex items-center" style={{marginBottom:4}}>
+            <div style={{width:90}}></div>
+            {cats.map(c=><div key={c} className="flex-1 text-center text-xs font-medium px-0.5" style={{color:'var(--text2)',minWidth:36}}>{catName(c).slice(0,3)}</div>)}
+          </div>
+          {topSchools.map(sid=>(
+            <div key={sid} className="flex items-center" style={{marginBottom:3}}>
+              <div className="text-xs font-medium truncate" style={{width:90,color:'var(--text2)'}}>{schools.find(s=>s.id===sid)?.acronym||sid}</div>
+              {cats.map(c=>{
+                const v=heatData[`${sid}-${c}`]||0;
+                const intensity=v/heatMax;
+                return <div key={c} className="flex-1 px-0.5"><div className="heat-cell" style={{background:v?`${catColor(c)}${Math.round(intensity*180+40).toString(16).padStart(2,'0')}`:'transparent',color:intensity>0.4?'#fff':'var(--text2)'}}>{v||''}</div></div>;
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="card p-6">
+          <SectionHead title="Monthly Trend" sub="Top 5 categories"/>
+          <div style={{height:280}}><canvas ref={trendRef}></canvas></div>
+        </div>
+        <div className="card p-6">
+          <SectionHead title="Public vs Private"/>
+          <div style={{height:280}}><canvas ref={compareRef}></canvas></div>
+        </div>
+      </div>
+      <div className="card p-6">
+        <SectionHead title="Top Keywords"/>
+        <div className="flex flex-wrap gap-2">
+          {keywords.map(([w,c],i)=>{
+            const size=Math.max(13,Math.min(22,12+c*1.5));
+            const opacity=Math.max(0.5,1-(i/keywords.length)*0.5);
+            return(
+              <span key={w} className="px-3 py-1.5 rounded-lg font-medium" style={{fontSize:size,background:'var(--elevated)',border:'1px solid var(--border)',opacity,transition:'all .2s',cursor:'default'}}>
+                {w} <span className="font-mono text-xs" style={{color:'var(--accent)'}}>{c}</span>
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════ TAB 4: SCHOOL PROFILE ════════════
+function SchoolProfileTab(){
+  const[selected,setSelected]=useState('');
+  const[compare,setCompare]=useState([]);
+  const polarRef=useRef(null);
+  const[theme]=useTheme();
+
+  const schoolEvents=useMemo(()=>selected?events.filter(e=>e.school_id===selected):[],[selected]);
+  const schoolCatDist=useMemo(()=>{
+    const m={};schoolEvents.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]);
+  },[schoolEvents]);
+
+  const compSchools=useMemo(()=>compare.length>0?compare:schools.slice(0,5).map(s=>s.id),[compare]);
+  const cats=Object.keys(category_map);
+
+  // Grouped bar chart instead of radar — much clearer for this data
+  const barCompRef=useRef(null);
+  useChart(barCompRef,(th)=>{
+    const o=chartOpts(th);
+    const topCats=(() => {
+      const totals={};
+      compSchools.forEach(sid=>{
+        events.filter(e=>e.school_id===sid).forEach(e=>{totals[e.category]=(totals[e.category]||0)+1;});
+      });
+      return Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,7).map(([c])=>c);
+    })();
+    return{type:'bar',data:{
+      labels:topCats.map(c=>catName(c)),
+      datasets:compSchools.map((sid,i)=>{
+        const evts=events.filter(e=>e.school_id===sid);
+        return{
+          label:schools.find(s=>s.id===sid)?.acronym||sid,
+          data:topCats.map(c=>evts.filter(e=>e.category===c).length),
+          backgroundColor:chartColors[i%chartColors.length],borderRadius:4
+        };
+      })
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:{...chartFont,size:11}}}},scales:{x:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:11}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
+  },[compSchools,theme]);
+
+  // Polar area for selected school
+  useChart(polarRef,(th)=>{
+    const o=chartOpts(th);
+    if(!schoolCatDist.length) return{type:'polarArea',data:{labels:[],datasets:[{data:[]}]},options:{}};
+    return{type:'polarArea',data:{
+      labels:schoolCatDist.map(([c])=>catName(c)),
+      datasets:[{data:schoolCatDist.map(([,v])=>v),backgroundColor:schoolCatDist.map(([c])=>catColor(c)+'B0'),borderWidth:0}]
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:o.legendColor,font:{...chartFont,size:11},usePointStyle:true}}},scales:{r:{grid:{color:o.gridColor},ticks:{display:false}}}}}
+  },[selected,schoolCatDist,theme]);
+
+  const toggleCompare=(sid)=>{
+    setCompare(prev=>{
+      if(prev.includes(sid))return prev.filter(x=>x!==sid);
+      if(prev.length>=6)return prev;
+      return[...prev,sid];
+    });
+  };
+
+  return(
+    <div className="anim-fade">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="card p-6">
+          <SectionHead title="Select School"/>
+          <select className="w-full mb-5" value={selected} onChange={e=>setSelected(e.target.value)}>
+            <option value="">-- Choose a school --</option>
+            <optgroup label="Public">
+              {schools.filter(s=>s.type==='public').map(s=><option key={s.id} value={s.id}>{s.name} ({s.acronym})</option>)}
+            </optgroup>
+            <optgroup label="Private">
+              {schools.filter(s=>s.type==='private').map(s=><option key={s.id} value={s.id}>{s.name} ({s.acronym})</option>)}
+            </optgroup>
+          </select>
+          {selected?(
+            <div>
+              <div className="mb-4">
+                <div className="text-xl font-serif">{schoolName(selected)}</div>
+                <div className="text-sm" style={{color:'var(--text2)'}}>{schools.find(s=>s.id===selected)?.name_en}</div>
+                <div className="mt-2">
+                  <span className="badge" style={{background:schoolType(selected)==='public'?'rgba(67,56,202,0.1)':'rgba(225,29,72,0.1)',color:schoolType(selected)==='public'?'var(--accent)':'var(--accent2)'}}>{schoolType(selected)==='public'?'Public':'Private'}</span>
+                </div>
+              </div>
+              <div className="stat-num text-3xl mb-4">{schoolEvents.length} <span className="text-base font-sans font-normal" style={{color:'var(--text2)'}}>events</span></div>
+              <div style={{height:200}}><canvas ref={polarRef}></canvas></div>
+              <h4 className="font-serif text-lg mt-5 mb-3">Recent Events</h4>
+              <div className="space-y-2">
+                {schoolEvents.slice(-5).reverse().map(e=>(
+                  <div key={e.id} className="text-sm p-3 rounded-lg" style={{background:'var(--elevated)'}}>
+                    <div className="font-medium leading-snug">{e.title}</div>
+                    <div className="flex gap-2 mt-1.5 items-center">
+                      <span className="font-mono text-xs" style={{color:'var(--text2)'}}>{fmtDate(e.date)}</span>
+                      <span className="badge text-xs" style={{background:`${catColor(e.category)}15`,color:catColor(e.category)}}>{catName(e.category)}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ):<div className="text-center py-12" style={{color:'var(--muted)'}}><div className="text-4xl mb-2" style={{fontFamily:'Instrument Serif'}}>Select a school</div><div className="text-sm">Choose from the dropdown above</div></div>}
+        </div>
+
+        <div className="lg:col-span-2">
+          <div className="card p-6">
+            <SectionHead title="Cross-School Comparison" sub="Select up to 6 schools to compare"/>
+            <div className="flex flex-wrap gap-1.5 mb-5">
+              {schools.map(s=>(
+                <button key={s.id} onClick={()=>toggleCompare(s.id)}
+                  className="text-xs px-3 py-1.5 rounded-full font-medium transition-all"
+                  style={{background:compSchools.includes(s.id)?'var(--accent)':'var(--elevated)',color:compSchools.includes(s.id)?'#fff':'var(--text2)',border:'1px solid '+(compSchools.includes(s.id)?'var(--accent)':'var(--border)'),cursor:'pointer'}}>
+                  {s.acronym}
+                </button>
+              ))}
+            </div>
+            <div style={{height:400}}><canvas ref={barCompRef}></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════ TAB 5: ADMIN ════════════
+function AdminTab(){
+  const exportXLSX=useCallback(()=>{
+    const rows=[['ID','School','School_EN','Category','Category_Name','Title','Date','Unit','URL','Confidence']];
+    events.forEach(e=>{rows.push([e.id,e.school_name,schools.find(s=>s.id===e.school_id)?.name_en||'',e.category,catName(e.category),e.title,e.date,e.unit,e.url||'',e.confidence]);});
+    const ws=XLSX.utils.aoa_to_sheet(rows);
+    const wb=XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb,ws,'Events');
+    XLSX.writeFile(wb,'hei-events-export.xlsx');
+  },[]);
+
+  const exportJSON=useCallback(()=>{
+    const blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download='hei-events-data.json';a.click();
+    URL.revokeObjectURL(url);
+  },[]);
+
+  const pubCount=events.filter(e=>schoolType(e.school_id)==='public').length;
+  const priCount=events.filter(e=>schoolType(e.school_id)==='private').length;
+  const q=meta.quality||{};
+
+  return(
+    <div className="anim-fade">
+      <div className="card p-6 mb-6">
+        <SectionHead title="Quality Metrics"/>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {label:'Verified',value:q.verified_count||0,color:'#16A34A'},
+            {label:'Unverified',value:q.unverified_count||0,color:'#78716C'},
+            {label:'Deduplicated',value:q.deduplicated_count||0,color:'#CA8A04'},
+            {label:'Fact-Check Pass',value:`${((q.fact_check_pass_rate||0)*100).toFixed(1)}%`,color:q.fact_check_pass_rate>=0.8?'#16A34A':'#DC2626'},
+          ].map(({label,value,color})=>(
+            <div key={label} className="p-4 rounded-xl" style={{background:'var(--elevated)'}}>
+              <div className="text-xs font-medium mb-2" style={{color:'var(--text2)'}}>{label}</div>
+              <div className="text-2xl font-mono font-semibold" style={{color}}>{value}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="card p-6 mb-6">
+        <SectionHead title="Crawl Status"/>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          {schools.map(s=>{
+            const evts=events.filter(e=>e.school_id===s.id).length;
+            const ok=evts>0;
+            return(
+              <div key={s.id} className="flex items-center gap-3 p-3 rounded-lg" style={{background:'var(--elevated)'}}>
+                <div style={{width:8,height:8,borderRadius:'50%',background:ok?'#16A34A':'#DC2626',flexShrink:0}}></div>
+                <span className="text-sm flex-1 truncate font-medium">{s.name}</span>
+                <span className="font-mono text-xs font-semibold" style={{color:'var(--accent)'}}>{evts}</span>
+                <span className="badge text-xs" style={{background:ok?'#DCFCE7':'#FEE2E2',color:ok?'#166534':'#991B1B'}}>{s.crawl_status}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="card p-6">
+          <SectionHead title="Data Summary"/>
+          <div className="space-y-3 text-sm">
+            {[
+              ['Version',meta.version],
+              ['Crawl Date',meta.crawl_date],
+              ['Date Range',`${meta.date_range.start} ~ ${meta.date_range.end}`],
+              ['Total Events',meta.total_events],
+              ['Public Events',pubCount],
+              ['Private Events',priCount],
+              ['Schools',meta.schools_crawled],
+            ].map(([k,v])=>(
+              <div key={k} className="flex justify-between items-center py-1" style={{borderBottom:'1px solid var(--border)'}}>
+                <span style={{color:'var(--text2)'}}>{k}</span>
+                <span className="font-mono font-medium">{v}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="card p-6">
+          <SectionHead title="Export"/>
+          <div className="space-y-3 mb-6">
+            <button className="btn btn-primary w-full" onClick={exportXLSX}>Export XLSX</button>
+            <button className="btn btn-secondary w-full" onClick={exportJSON}>Export JSON</button>
+          </div>
+          <div className="p-4 rounded-xl" style={{background:'var(--elevated)'}}>
+            <div className="font-serif text-lg mb-2">Data Freshness</div>
+            <div className="text-sm" style={{color:'var(--text2)'}}>Last crawl: <span className="font-mono">{meta.crawl_date}</span></div>
+            <div className="text-sm" style={{color:'var(--text2)'}}>Coverage: <span className="font-mono">{schools.filter(s=>s.event_count>0).length}/{schools.length}</span> schools</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════ MAIN APP ════════════
+function App(){
+  const[theme,toggleTheme]=useTheme();
+  const[tab,setTab]=useState(0);
+  const tabs=['Overview','Events','Analysis','Schools','Admin'];
+
+  return(
+    <div className="min-h-screen" style={{background:'var(--base)'}}>
+      {/* Header */}
+      <header className="sticky top-0 z-50 px-6 py-4" style={{background:'var(--card)',borderBottom:'1px solid var(--border)',boxShadow:'0 1px 3px var(--shadow)'}}>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{background:'var(--accent)',color:'#fff',fontFamily:'Instrument Serif',fontSize:22}}>E</div>
+            <div>
+              <h1 className="font-serif text-xl" style={{lineHeight:1.2,letterSpacing:'-0.02em'}}>HEI Event Observatory</h1>
+              <p className="text-xs" style={{color:'var(--text2)'}}>Taiwan Higher Education Event Intelligence</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-xs" style={{color:'var(--muted)'}}>v{meta.version}</span>
+            <button onClick={toggleTheme} className="w-9 h-9 rounded-full flex items-center justify-center transition-all" style={{background:'var(--elevated)',border:'1px solid var(--border)',cursor:'pointer',fontSize:16}} aria-label="Toggle theme">
+              {theme==='dark'?'\u2600\uFE0F':'\uD83C\uDF19'}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Tab bar */}
+      <nav className="px-6 py-3" style={{background:'var(--card)',borderBottom:'1px solid var(--border)'}}>
+        <div className="max-w-7xl mx-auto flex gap-2 overflow-x-auto" style={{scrollbarWidth:'none'}}>
+          {tabs.map((t,i)=>(
+            <button key={t} onClick={()=>setTab(i)} className={`tab-pill ${i===tab?'active':''}`}>
+              {t}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Content */}
+      <main className="max-w-7xl mx-auto px-6 py-8">
+        {tab===0&&<OverviewTab/>}
+        {tab===1&&<EventBrowserTab/>}
+        {tab===2&&<AnalysisTab/>}
+        {tab===3&&<SchoolProfileTab/>}
+        {tab===4&&<AdminTab/>}
+      </main>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-sm" style={{color:'var(--muted)',borderTop:'1px solid var(--border)'}}>
+        <span style={{fontFamily:'Instrument Serif',fontSize:16}}>HEI Event Observatory</span>
+        <span className="mx-2">&middot;</span>
+        <span className="font-mono text-xs">{meta.crawl_date}</span>
+        <span className="mx-2">&middot;</span>
+        {meta.total_events} events from {meta.schools_crawled} schools
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
