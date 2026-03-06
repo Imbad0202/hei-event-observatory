@@ -84,9 +84,27 @@ tr:hover td{background:var(--hover)}
 /* Heatmap cell */
 .heat-cell{display:flex;align-items:center;justify-content:center;font-size:12px;font-family:'JetBrains Mono',monospace;border-radius:6px;min-width:36px;height:32px;font-weight:500}
 
+/* Mobile card layout for table rows */
+.mobile-card{display:none}
+.desktop-table{display:block}
+
 @media (max-width:640px){
-  .tab-pill{padding:6px 14px;font-size:13px}
-  h1{font-size:1.25rem!important}
+  .tab-pill{padding:6px 12px;font-size:12px}
+  h1{font-size:1.15rem!important}
+  h2{font-size:1.4rem!important}
+  .card,.card-flat{border-radius:12px}
+  main{padding-left:12px!important;padding-right:12px!important}
+  .stat-num{font-size:1.8rem!important}
+  .mobile-card{display:block}
+  .desktop-table{display:none}
+  .mobile-event{padding:14px;border-bottom:1px solid var(--border)}
+  .mobile-event:last-child{border-bottom:none}
+  /* Tighter header */
+  header{padding:10px 12px!important}
+  nav{padding:8px 12px!important}
+}
+@media (min-width:641px) and (max-width:1023px){
+  main{padding-left:16px!important;padding-right:16px!important}
 }
 @media print{body{background:#fff;color:#000}.card{border:1px solid #ddd;box-shadow:none}body::before{display:none}}
 </style>
@@ -239,7 +257,7 @@ function OverviewTab(){
 
   return(
     <div className="anim-fade">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6 sm:mb-8">
         <StatCard label="Total Events" value={meta.total_events} sub={`${meta.date_range.start} ~ ${meta.date_range.end}`} delay={1}/>
         <StatCard label="Schools" value={meta.schools_crawled} sub={`${schools.filter(s=>s.type==='public').length} public / ${schools.filter(s=>s.type==='private').length} private`} delay={2}/>
         <StatCard label="Categories" value={catCount} sub="data-driven classification" delay={3}/>
@@ -299,7 +317,7 @@ function EventBrowserTab(){
     <div className="anim-fade">
       <div className="card-flat p-4 mb-5">
         <div className="flex flex-wrap gap-3 items-center">
-          <input className="flex-1 min-w-[200px]" placeholder="Search events, schools, units..." value={search} onChange={e=>setSearch(e.target.value)}/>
+          <input className="w-full sm:flex-1 sm:min-w-[200px]" placeholder="Search events, schools, units..." value={search} onChange={e=>setSearch(e.target.value)}/>
           <select value={catFilter} onChange={e=>setCatFilter(e.target.value)}>
             <option value="all">All Categories</option>
             {Object.entries(category_map).map(([k,v])=><option key={k} value={k}>{v.name}</option>)}
@@ -316,7 +334,8 @@ function EventBrowserTab(){
           <span className="text-sm font-mono font-medium" style={{color:'var(--accent)'}}>{filtered.length} results</span>
         </div>
       </div>
-      <div className="card-flat overflow-x-auto">
+      {/* Desktop table */}
+      <div className="card-flat desktop-table overflow-x-auto">
         <table>
           <thead>
             <tr>
@@ -338,20 +357,41 @@ function EventBrowserTab(){
                 <td className="min-w-[280px]">{e.title}</td>
                 <td className="text-sm" style={{color:'var(--text2)'}}>{e.unit}</td>
                 <td>{e.url?<a href={e.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium" style={{color:'var(--accent)',textDecoration:'underline',textUnderlineOffset:'3px'}}>Open</a>:<span className="text-xs" style={{color:'var(--muted)'}}>N/A</span>}</td>
-                <td><span className={`badge text-xs ${e.confidence==='high'?'':''}${e.confidence==='medium'?'':''}${e.confidence==='unverified'?'':''}`} style={{background:e.confidence==='high'?'#DCFCE7':e.confidence==='medium'?'#FEF3C7':'#F5F5F4',color:e.confidence==='high'?'#166534':e.confidence==='medium'?'#854D0E':'#78716C'}}>{e.confidence}</span></td>
+                <td><span className="badge text-xs" style={{background:e.confidence==='high'?'#DCFCE7':e.confidence==='medium'?'#FEF3C7':'#F5F5F4',color:e.confidence==='high'?'#166534':e.confidence==='medium'?'#854D0E':'#78716C'}}>{e.confidence}</span></td>
               </tr>
             ))}
             {pageEvents.length===0&&<tr><td colSpan={7} className="text-center py-10" style={{color:'var(--muted)'}}>No events found</td></tr>}
           </tbody>
         </table>
-        {totalPages>1&&(
-          <div className="flex items-center justify-between p-4" style={{borderTop:'1px solid var(--border)'}}>
-            <button className="btn btn-secondary" disabled={page<=1} onClick={()=>setPage(p=>p-1)} style={{opacity:page<=1?0.4:1}}>Previous</button>
-            <span className="text-sm font-mono" style={{color:'var(--text2)'}}>Page {page} / {totalPages}</span>
-            <button className="btn btn-secondary" disabled={page>=totalPages} onClick={()=>setPage(p=>p+1)} style={{opacity:page>=totalPages?0.4:1}}>Next</button>
-          </div>
-        )}
       </div>
+
+      {/* Mobile card list */}
+      <div className="card-flat mobile-card">
+        {pageEvents.map(e=>(
+          <div key={e.id} className="mobile-event">
+            <div className="flex items-start justify-between gap-2 mb-2">
+              <span className="badge text-xs" style={{background:`${catColor(e.category)}15`,color:catColor(e.category),flexShrink:0}}>{catName(e.category)}</span>
+              <span className="font-mono text-xs" style={{color:'var(--text2)',flexShrink:0}}>{fmtDate(e.date)}</span>
+            </div>
+            <div className="font-medium text-sm leading-snug mb-1.5">{e.url?<a href={e.url} target="_blank" rel="noopener noreferrer" style={{color:'var(--text)'}}>{e.title}</a>:e.title}</div>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-medium" style={{color:'var(--accent)'}}>{e.school_name}</span>
+              <span className="text-xs" style={{color:'var(--muted)'}}>{e.unit}</span>
+              <span className="badge text-xs" style={{background:e.confidence==='high'?'#DCFCE7':e.confidence==='medium'?'#FEF3C7':'#F5F5F4',color:e.confidence==='high'?'#166534':e.confidence==='medium'?'#854D0E':'#78716C'}}>{e.confidence}</span>
+            </div>
+          </div>
+        ))}
+        {pageEvents.length===0&&<div className="text-center py-10" style={{color:'var(--muted)'}}>No events found</div>}
+      </div>
+
+      {/* Pagination — shared */}
+      {totalPages>1&&(
+        <div className="card-flat mt-0 flex items-center justify-between p-3 sm:p-4" style={{borderTop:'1px solid var(--border)',borderTopLeftRadius:0,borderTopRightRadius:0}}>
+          <button className="btn btn-secondary text-sm" disabled={page<=1} onClick={()=>setPage(p=>p-1)} style={{opacity:page<=1?0.4:1}}>Prev</button>
+          <span className="text-sm font-mono" style={{color:'var(--text2)'}}>{page} / {totalPages}</span>
+          <button className="btn btn-secondary text-sm" disabled={page>=totalPages} onClick={()=>setPage(p=>p+1)} style={{opacity:page>=totalPages?0.4:1}}>Next</button>
+        </div>
+      )}
     </div>
   );
 }
@@ -624,7 +664,7 @@ function AdminTab(){
     <div className="anim-fade">
       <div className="card p-6 mb-6">
         <SectionHead title="Quality Metrics"/>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {[
             {label:'Verified',value:q.verified_count||0,color:'#16A34A'},
             {label:'Unverified',value:q.unverified_count||0,color:'#78716C'},
@@ -641,7 +681,7 @@ function AdminTab(){
 
       <div className="card p-6 mb-6">
         <SectionHead title="Crawl Status"/>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-2">
           {schools.map(s=>{
             const evts=events.filter(e=>e.school_id===s.id).length;
             const ok=evts>0;
