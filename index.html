@@ -141,6 +141,11 @@ const {useState,useEffect,useRef,useMemo,useCallback,memo}=React;
 const DATA=(typeof __EVENTS_DATA__==='string')?JSON.parse(__EVENTS_DATA__):__EVENTS_DATA__;
 const {meta,schools,events,category_map}=DATA;
 
+// ── Academic Year Context ──
+const YearCtx=React.createContext('all');
+const useYear=()=>React.useContext(YearCtx);
+const filterEvts=(year)=>year==='all'?events:events.filter(e=>e.academic_year===year);
+
 // ── Utilities ──
 const catColor=(cat)=>category_map[cat]?.color||'#78716C';
 const catName=(cat)=>category_map[cat]?.name||'其他';
@@ -207,26 +212,28 @@ function OverviewTab(){
   const barRef=useRef(null);
   const lineRef=useRef(null);
   const[theme]=useTheme();
+  const year=useYear();
+  const evts=useMemo(()=>filterEvts(year),[year]);
 
   const catDist=useMemo(()=>{
-    const m={};events.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
+    const m={};evts.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
     return Object.entries(m).sort((a,b)=>b[1]-a[1]);
-  },[]);
+  },[evts]);
 
   const schoolRank=useMemo(()=>{
-    const m={};events.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
+    const m={};evts.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
     return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,15);
-  },[]);
+  },[evts]);
 
   const monthly=useMemo(()=>{
-    const m={};events.forEach(e=>{const k=monthKey(e.date);if(k)m[k]=(m[k]||0)+1;});
+    const m={};evts.forEach(e=>{const k=monthKey(e.date);if(k)m[k]=(m[k]||0)+1;});
     return Object.entries(m).sort((a,b)=>a[0].localeCompare(b[0]));
-  },[]);
+  },[evts]);
 
   const now=new Date();
   const thisMonth=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
-  const thisMonthCount=events.filter(e=>monthKey(e.date)===thisMonth).length;
-  const catCount=new Set(events.map(e=>e.category)).size;
+  const thisMonthCount=evts.filter(e=>monthKey(e.date)===thisMonth).length;
+  const catCount=new Set(evts.map(e=>e.category)).size;
 
   useChart(pieRef,(th)=>{
     const o=chartOpts(th);
@@ -234,7 +241,7 @@ function OverviewTab(){
       labels:catDist.map(([c])=>catName(c)),
       datasets:[{data:catDist.map(([,v])=>v),backgroundColor:catDist.map(([c])=>catColor(c)),borderWidth:0,hoverOffset:8}]
     },options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'right',labels:{color:o.legendColor,font:{...chartFont,size:12},padding:10,usePointStyle:true,pointStyleWidth:8}}}}}
-  },[theme]);
+  },[theme,catDist]);
 
   useChart(barRef,(th)=>{
     const o=chartOpts(th);
@@ -244,7 +251,7 @@ function OverviewTab(){
       labels:schoolRank.map(([id])=>schools.find(s=>s.id===id)?.acronym||id),
       datasets:[{data:schoolRank.map(([,v])=>v),backgroundColor:schoolRank.map(([id])=>schoolType(id)==='public'?pubColor:priColor),borderRadius:6,barThickness:14,categoryPercentage:0.7,barPercentage:0.75}]
     },options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:chartFont}},y:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:12}}}}}}
-  },[theme]);
+  },[theme,schoolRank]);
 
   useChart(lineRef,(th)=>{
     const o=chartOpts(th);
@@ -253,12 +260,12 @@ function OverviewTab(){
       labels:monthly.map(([k])=>k),
       datasets:[{data:monthly.map(([,v])=>v),borderColor:lineColor,backgroundColor:lineColor+'18',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:lineColor,pointBorderColor:th==='dark'?'#292524':'#fff',pointBorderWidth:2}]
     },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{...chartFont,size:11}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
-  },[theme]);
+  },[theme,monthly]);
 
   return(
     <div className="anim-fade">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6 sm:mb-8">
-        <StatCard label="Total Events" value={meta.total_events} sub={`${meta.date_range.start} ~ ${meta.date_range.end}`} delay={1}/>
+        <StatCard label="Total Events" value={evts.length} sub={year==='all'?`${meta.date_range.start} ~ ${meta.date_range.end}`:`${year} 學年度`} delay={1}/>
         <StatCard label="Schools" value={meta.schools_crawled} sub={`${schools.filter(s=>s.type==='public').length} public / ${schools.filter(s=>s.type==='private').length} private`} delay={2}/>
         <StatCard label="Categories" value={catCount} sub="data-driven classification" delay={3}/>
         <StatCard label="This Month" value={thisMonthCount} sub={thisMonth} delay={4}/>
@@ -283,6 +290,8 @@ function OverviewTab(){
 
 // ════════════ TAB 2: EVENT BROWSER ════════════
 function EventBrowserTab(){
+  const year=useYear();
+  const evts=useMemo(()=>filterEvts(year),[year]);
   const[search,setSearch]=useState('');
   const[catFilter,setCatFilter]=useState('all');
   const[schoolFilter,setSchoolFilter]=useState('all');
@@ -293,7 +302,7 @@ function EventBrowserTab(){
   const perPage=20;
 
   const filtered=useMemo(()=>{
-    let r=events;
+    let r=evts;
     if(search){const q=search.toLowerCase();r=r.filter(e=>e.title.toLowerCase().includes(q)||e.school_name.includes(q)||e.unit.includes(q));}
     if(catFilter!=='all')r=r.filter(e=>e.category===catFilter);
     if(schoolFilter!=='all')r=r.filter(e=>e.school_id===schoolFilter);
@@ -308,7 +317,7 @@ function EventBrowserTab(){
 
   const totalPages=Math.max(1,Math.ceil(filtered.length/perPage));
   const pageEvents=filtered.slice((page-1)*perPage,page*perPage);
-  useEffect(()=>{setPage(1);},[search,catFilter,schoolFilter,typeFilter]);
+  useEffect(()=>{setPage(1);},[search,catFilter,schoolFilter,typeFilter,year]);
 
   const doSort=(col)=>{if(sortCol===col)setSortDir(d=>d==='asc'?'desc':'asc');else{setSortCol(col);setSortDir('asc');}};
   const sortIcon=(col)=>sortCol===col?(sortDir==='asc'?' \u25B2':' \u25BC'):'';
@@ -401,44 +410,46 @@ function AnalysisTab(){
   const trendRef=useRef(null);
   const compareRef=useRef(null);
   const[theme]=useTheme();
+  const year=useYear();
+  const evts=useMemo(()=>filterEvts(year),[year]);
 
   const topSchools=useMemo(()=>{
-    const m={};events.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
+    const m={};evts.forEach(e=>{m[e.school_id]=(m[e.school_id]||0)+1;});
     return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([id])=>id);
-  },[]);
+  },[evts]);
   const cats=Object.keys(category_map);
   const heatData=useMemo(()=>{
-    const m={};events.forEach(e=>{const k=`${e.school_id}-${e.category}`;m[k]=(m[k]||0)+1;});
+    const m={};evts.forEach(e=>{const k=`${e.school_id}-${e.category}`;m[k]=(m[k]||0)+1;});
     return m;
-  },[]);
+  },[evts]);
   const heatMax=Math.max(1,...Object.values(heatData));
 
   const monthlyByCat=useMemo(()=>{
     const months=new Set();const m={};
-    events.forEach(e=>{const mk=monthKey(e.date);if(!mk)return;months.add(mk);const k=`${e.category}-${mk}`;m[k]=(m[k]||0)+1;});
+    evts.forEach(e=>{const mk=monthKey(e.date);if(!mk)return;months.add(mk);const k=`${e.category}-${mk}`;m[k]=(m[k]||0)+1;});
     return{months:[...months].sort(),data:m};
-  },[]);
+  },[evts]);
 
   const keywords=useMemo(()=>{
     const stops=new Set(['的','與','及','在','之','了','和','為','是','中','大','全','年','月','日','大學','國立','活動','學','系','院','處','室','所','會','講座','研討','工作坊','論壇','成果','發表','中心','學系','辦理','計畫','教育','國際','台灣','技術']);
     const m={};
-    events.forEach(e=>{
+    evts.forEach(e=>{
       const words=e.title.replace(/[，。、：；「」（）\[\]\s\d\-\/]/g,' ').split(/\s+/).filter(w=>w.length>=2&&!stops.has(w));
       words.forEach(w=>{m[w]=(m[w]||0)+1;});
     });
     return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,24);
-  },[]);
+  },[evts]);
 
   const pvp=useMemo(()=>{
     const pub={},pri={};
-    events.forEach(e=>{const target=schoolType(e.school_id)==='public'?pub:pri;target[e.category]=(target[e.category]||0)+1;});
+    evts.forEach(e=>{const target=schoolType(e.school_id)==='public'?pub:pri;target[e.category]=(target[e.category]||0)+1;});
     return{pub,pri};
-  },[]);
+  },[evts]);
 
   const top5Cats=useMemo(()=>{
-    const m={};events.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
+    const m={};evts.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
     return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([c])=>c);
-  },[]);
+  },[evts]);
 
   useChart(trendRef,(th)=>{
     const o=chartOpts(th);
@@ -448,8 +459,8 @@ function AnalysisTab(){
         label:catName(c),data:monthlyByCat.months.map(mk=>monthlyByCat.data[`${c}-${mk}`]||0),
         borderColor:catColor(c),backgroundColor:catColor(c)+'15',tension:0.4,pointRadius:4,borderWidth:2.5
       }))
-    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:{...chartFont,size:11},usePointStyle:true}}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{...chartFont,size:10}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
-  },[theme]);
+    },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:{...chartFont,size:11},usePointStyle:true}}},scales:{x:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{...chartFont,size:10},maxTicksLimit:18}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
+  },[theme,monthlyByCat,top5Cats]);
 
   // Sort categories by total for the bar chart
   const sortedCats=useMemo(()=>{
@@ -468,7 +479,7 @@ function AnalysisTab(){
         {label:'Private',data:sortedCats.map(c=>pvp.pri[c]||0),backgroundColor:priC,borderRadius:4,barPercentage:0.75}
       ]
     },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:chartFont}}},scales:{x:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:10},maxRotation:45}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
-  },[theme]);
+  },[theme,pvp,sortedCats]);
 
   return(
     <div className="anim-fade">
@@ -525,8 +536,10 @@ function SchoolProfileTab(){
   const[compare,setCompare]=useState([]);
   const polarRef=useRef(null);
   const[theme]=useTheme();
+  const year=useYear();
+  const evts=useMemo(()=>filterEvts(year),[year]);
 
-  const schoolEvents=useMemo(()=>selected?events.filter(e=>e.school_id===selected):[],[selected]);
+  const schoolEvents=useMemo(()=>selected?evts.filter(e=>e.school_id===selected):[],[selected,evts]);
   const schoolCatDist=useMemo(()=>{
     const m={};schoolEvents.forEach(e=>{m[e.category]=(m[e.category]||0)+1;});
     return Object.entries(m).sort((a,b)=>b[1]-a[1]);
@@ -542,22 +555,22 @@ function SchoolProfileTab(){
     const topCats=(() => {
       const totals={};
       compSchools.forEach(sid=>{
-        events.filter(e=>e.school_id===sid).forEach(e=>{totals[e.category]=(totals[e.category]||0)+1;});
+        evts.filter(e=>e.school_id===sid).forEach(e=>{totals[e.category]=(totals[e.category]||0)+1;});
       });
       return Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,7).map(([c])=>c);
     })();
     return{type:'bar',data:{
       labels:topCats.map(c=>catName(c)),
       datasets:compSchools.map((sid,i)=>{
-        const evts=events.filter(e=>e.school_id===sid);
+        const sEvts=evts.filter(e=>e.school_id===sid);
         return{
           label:schools.find(s=>s.id===sid)?.acronym||sid,
-          data:topCats.map(c=>evts.filter(e=>e.category===c).length),
+          data:topCats.map(c=>sEvts.filter(e=>e.category===c).length),
           backgroundColor:chartColors[i%chartColors.length],borderRadius:4
         };
       })
     },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:{...chartFont,size:11}}}},scales:{x:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:11}}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
-  },[compSchools,theme]);
+  },[compSchools,theme,evts]);
 
   // Polar area for selected school
   useChart(polarRef,(th)=>{
@@ -567,7 +580,7 @@ function SchoolProfileTab(){
       labels:schoolCatDist.map(([c])=>catName(c)),
       datasets:[{data:schoolCatDist.map(([,v])=>v),backgroundColor:schoolCatDist.map(([c])=>catColor(c)+'B0'),borderWidth:0}]
     },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:o.legendColor,font:{...chartFont,size:11},usePointStyle:true}}},scales:{r:{grid:{color:o.gridColor},ticks:{display:false}}}}}
-  },[selected,schoolCatDist,theme]);
+  },[selected,schoolCatDist,theme,evts]);
 
   const toggleCompare=(sid)=>{
     setCompare(prev=>{
@@ -640,14 +653,17 @@ function SchoolProfileTab(){
 
 // ════════════ TAB 5: ADMIN ════════════
 function AdminTab(){
+  const year=useYear();
+  const evts=useMemo(()=>filterEvts(year),[year]);
+
   const exportXLSX=useCallback(()=>{
-    const rows=[['ID','School','School_EN','Category','Category_Name','Title','Date','Unit','URL','Confidence']];
-    events.forEach(e=>{rows.push([e.id,e.school_name,schools.find(s=>s.id===e.school_id)?.name_en||'',e.category,catName(e.category),e.title,e.date,e.unit,e.url||'',e.confidence]);});
+    const rows=[['ID','School','School_EN','AcademicYear','Category','Category_Name','Title','Date','Unit','URL','Confidence']];
+    evts.forEach(e=>{rows.push([e.id,e.school_name,schools.find(s=>s.id===e.school_id)?.name_en||'',e.academic_year||'',e.category,catName(e.category),e.title,e.date,e.unit,e.url||'',e.confidence]);});
     const ws=XLSX.utils.aoa_to_sheet(rows);
     const wb=XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb,ws,'Events');
-    XLSX.writeFile(wb,'hei-events-export.xlsx');
-  },[]);
+    XLSX.writeFile(wb,`hei-events-${year==='all'?'all':year}-export.xlsx`);
+  },[evts,year]);
 
   const exportJSON=useCallback(()=>{
     const blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'});
@@ -656,9 +672,10 @@ function AdminTab(){
     URL.revokeObjectURL(url);
   },[]);
 
-  const pubCount=events.filter(e=>schoolType(e.school_id)==='public').length;
-  const priCount=events.filter(e=>schoolType(e.school_id)==='private').length;
+  const pubCount=evts.filter(e=>schoolType(e.school_id)==='public').length;
+  const priCount=evts.filter(e=>schoolType(e.school_id)==='private').length;
   const q=meta.quality||{};
+  const yearBreakdown=(meta.academic_years||['114']).map(y=>({year:y,count:events.filter(e=>e.academic_year===y).length}));
 
   return(
     <div className="anim-fade">
@@ -683,13 +700,13 @@ function AdminTab(){
         <SectionHead title="Crawl Status"/>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-2">
           {schools.map(s=>{
-            const evts=events.filter(e=>e.school_id===s.id).length;
-            const ok=evts>0;
+            const cnt=evts.filter(e=>e.school_id===s.id).length;
+            const ok=cnt>0;
             return(
               <div key={s.id} className="flex items-center gap-3 p-3 rounded-lg" style={{background:'var(--elevated)'}}>
                 <div style={{width:8,height:8,borderRadius:'50%',background:ok?'#16A34A':'#DC2626',flexShrink:0}}></div>
                 <span className="text-sm flex-1 truncate font-medium">{s.name}</span>
-                <span className="font-mono text-xs font-semibold" style={{color:'var(--accent)'}}>{evts}</span>
+                <span className="font-mono text-xs font-semibold" style={{color:'var(--accent)'}}>{cnt}</span>
                 <span className="badge text-xs" style={{background:ok?'#DCFCE7':'#FEE2E2',color:ok?'#166534':'#991B1B'}}>{s.crawl_status}</span>
               </div>
             );
@@ -705,7 +722,9 @@ function AdminTab(){
               ['Version',meta.version],
               ['Crawl Date',meta.crawl_date],
               ['Date Range',`${meta.date_range.start} ~ ${meta.date_range.end}`],
-              ['Total Events',meta.total_events],
+              ['Academic Years',(meta.academic_years||['114']).join(' / ')],
+              ['Total Events (All)',events.length],
+              ['Shown Events (Filter)',evts.length],
               ['Public Events',pubCount],
               ['Private Events',priCount],
               ['Schools',meta.schools_crawled],
@@ -720,13 +739,27 @@ function AdminTab(){
         <div className="card p-6">
           <SectionHead title="Export"/>
           <div className="space-y-3 mb-6">
-            <button className="btn btn-primary w-full" onClick={exportXLSX}>Export XLSX</button>
-            <button className="btn btn-secondary w-full" onClick={exportJSON}>Export JSON</button>
+            <button className="btn btn-primary w-full" onClick={exportXLSX}>Export XLSX {year!=='all'?`(${year} 學年)`:'(All)'}</button>
+            <button className="btn btn-secondary w-full" onClick={exportJSON}>Export JSON (Full)</button>
+          </div>
+          <div className="p-4 rounded-xl mb-4" style={{background:'var(--elevated)'}}>
+            <div className="font-serif text-lg mb-2">學年度分布</div>
+            <div className="space-y-1.5">
+              {yearBreakdown.map(({year:y,count})=>(
+                <div key={y} className="flex items-center gap-3">
+                  <span className="font-mono text-xs font-medium" style={{color:'var(--text2)',width:28}}>{y}</span>
+                  <div className="flex-1 h-2 rounded-full overflow-hidden" style={{background:'var(--border)'}}>
+                    <div className="h-2 rounded-full" style={{width:`${Math.max(2,count/events.length*100)}%`,background:'var(--accent)'}}></div>
+                  </div>
+                  <span className="font-mono text-xs font-semibold" style={{color:'var(--accent)',width:28,textAlign:'right'}}>{count}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="p-4 rounded-xl" style={{background:'var(--elevated)'}}>
             <div className="font-serif text-lg mb-2">Data Freshness</div>
             <div className="text-sm" style={{color:'var(--text2)'}}>Last crawl: <span className="font-mono">{meta.crawl_date}</span></div>
-            <div className="text-sm" style={{color:'var(--text2)'}}>Coverage: <span className="font-mono">{schools.filter(s=>s.event_count>0).length}/{schools.length}</span> schools</div>
+            <div className="text-sm" style={{color:'var(--text2)'}}>Coverage: <span className="font-mono">{schools.length}/{schools.length}</span> schools</div>
           </div>
         </div>
       </div>
@@ -738,9 +771,12 @@ function AdminTab(){
 function App(){
   const[theme,toggleTheme]=useTheme();
   const[tab,setTab]=useState(0);
+  const[yearFilter,setYearFilter]=useState('all');
   const tabs=['Overview','Events','Analysis','Schools','Admin'];
+  const availableYears=(meta.academic_years||['114']);
 
   return(
+    <YearCtx.Provider value={yearFilter}>
     <div className="min-h-screen" style={{background:'var(--base)'}}>
       {/* Header */}
       <header className="sticky top-0 z-50 px-6 py-4" style={{background:'var(--card)',borderBottom:'1px solid var(--border)',boxShadow:'0 1px 3px var(--shadow)'}}>
@@ -749,10 +785,10 @@ function App(){
             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{background:'var(--accent)',color:'#fff',fontFamily:'Instrument Serif',fontSize:22}}>E</div>
             <div>
               <h1 className="font-serif text-xl" style={{lineHeight:1.2,letterSpacing:'-0.02em'}}>HEI Event Observatory</h1>
-              <p className="text-xs" style={{color:'var(--text2)'}}>Taiwan Higher Education Event Intelligence</p>
+              <p className="text-xs" style={{color:'var(--text2)'}}>Taiwan Higher Education Event Intelligence · {meta.date_range.start.slice(0,4)}–{meta.date_range.end.slice(0,4)}</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <span className="font-mono text-xs" style={{color:'var(--muted)'}}>v{meta.version}</span>
             <button onClick={toggleTheme} className="w-9 h-9 rounded-full flex items-center justify-center transition-all" style={{background:'var(--elevated)',border:'1px solid var(--border)',cursor:'pointer',fontSize:16}} aria-label="Toggle theme">
               {theme==='dark'?'\u2600\uFE0F':'\uD83C\uDF19'}
@@ -761,14 +797,21 @@ function App(){
         </div>
       </header>
 
-      {/* Tab bar */}
+      {/* Tab bar + Year filter */}
       <nav className="px-6 py-3" style={{background:'var(--card)',borderBottom:'1px solid var(--border)'}}>
-        <div className="max-w-7xl mx-auto flex gap-2 overflow-x-auto" style={{scrollbarWidth:'none'}}>
+        <div className="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto" style={{scrollbarWidth:'none'}}>
           {tabs.map((t,i)=>(
             <button key={t} onClick={()=>setTab(i)} className={`tab-pill ${i===tab?'active':''}`}>
               {t}
             </button>
           ))}
+          <div className="ml-auto flex-shrink-0 flex items-center gap-2">
+            <span className="text-xs font-medium" style={{color:'var(--text2)',whiteSpace:'nowrap'}}>學年度</span>
+            <select value={yearFilter} onChange={e=>setYearFilter(e.target.value)} style={{fontSize:13,padding:'5px 8px',borderRadius:8,minWidth:90}}>
+              <option value="all">全部</option>
+              {[...availableYears].reverse().map(y=><option key={y} value={y}>{y} 學年</option>)}
+            </select>
+          </div>
         </div>
       </nav>
 
@@ -787,9 +830,10 @@ function App(){
         <span className="mx-2">&middot;</span>
         <span className="font-mono text-xs">{meta.crawl_date}</span>
         <span className="mx-2">&middot;</span>
-        {meta.total_events} events from {meta.schools_crawled} schools
+        {events.length} events · {meta.schools_crawled} schools · {availableYears.length} academic years
       </footer>
     </div>
+    </YearCtx.Provider>
   );
 }
 

@@ -1,27 +1,31 @@
-// HEI Event Crawler Data — Auto-generated 2026-03-06
-// Total: 211 events from 27 schools
-// Categories: Data-driven (13 categories from keyword analysis)
-// Quality: 210 verified, 1 unverified
+// HEI Event Crawler Data — Auto-generated 2026-03-07
+// Total: 572 events (112-114 學年度) from 27 schools
+// Supports: 112 / 113 / 114 academic years
 var __EVENTS_DATA__ = {
   "meta": {
     "version": "1.0",
-    "crawl_date": "2026-03-06",
+    "crawl_date": "2026-03-07",
     "date_range": {
-      "start": "2025-08-01",
+      "start": "2023-08-01",
       "end": "2026-07-31"
     },
-    "total_events": 211,
+    "total_events": 572,
     "schools_crawled": 27,
     "quality": {
-      "verified_count": 210,
-      "unverified_count": 1,
-      "deduplicated_count": 0,
+      "verified_count": 567,
+      "unverified_count": 5,
+      "deduplicated_count": 3,
       "date_filtered_count": 0,
       "school_name_fixed": 0,
       "classification_fixed": 1,
-      "fact_check_pass_rate": 0.995
+      "fact_check_pass_rate": 0.991
     },
-    "category_note": "Data-driven categories derived from keyword analysis of event titles"
+    "category_note": "Data-driven categories derived from keyword analysis of event titles",
+    "academic_years": [
+      "112",
+      "113",
+      "114"
+    ]
   },
   "schools": [
     {
@@ -31,7 +35,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 10,
+        "113": 7,
+        "114": 10,
+        "total": 27
+      }
     },
     {
       "id": "NTHU",
@@ -40,7 +49,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTHU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 9,
+        "113": 15,
+        "114": 10,
+        "total": 34
+      }
     },
     {
       "id": "NYCU",
@@ -49,7 +63,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NYCU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 7,
+        "113": 7,
+        "114": 10,
+        "total": 24
+      }
     },
     {
       "id": "NCKU",
@@ -58,7 +77,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NCKU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 4,
+        "113": 7,
+        "114": 10,
+        "total": 21
+      }
     },
     {
       "id": "NCCU",
@@ -67,7 +91,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NCCU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 13
+      "event_count": {
+        "112": 6,
+        "113": 8,
+        "114": 13,
+        "total": 27
+      }
     },
     {
       "id": "NCU",
@@ -76,7 +105,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NCU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 4
+      "event_count": {
+        "112": 1,
+        "113": 7,
+        "114": 4,
+        "total": 12
+      }
     },
     {
       "id": "NSYSU",
@@ -85,7 +119,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NSYSU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 6,
+        "113": 11,
+        "114": 10,
+        "total": 27
+      }
     },
     {
       "id": "NCHU",
@@ -94,7 +133,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NCHU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 3
+      "event_count": {
+        "112": 5,
+        "113": 5,
+        "114": 3,
+        "total": 13
+      }
     },
     {
       "id": "NTNU",
@@ -103,7 +147,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTNU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 5
+      "event_count": {
+        "112": 2,
+        "113": 5,
+        "114": 5,
+        "total": 12
+      }
     },
     {
       "id": "NTUT",
@@ -112,7 +161,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTUT",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 6
+      "event_count": {
+        "112": 7,
+        "113": 7,
+        "114": 6,
+        "total": 20
+      }
     },
     {
       "id": "NTUST",
@@ -121,7 +175,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTUST",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 9
+      "event_count": {
+        "112": 14,
+        "113": 15,
+        "114": 9,
+        "total": 38
+      }
     },
     {
       "id": "CCU",
@@ -130,7 +189,12 @@ var __EVENTS_DATA__ = {
       "acronym": "CCU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 4
+      "event_count": {
+        "112": 5,
+        "113": 14,
+        "114": 4,
+        "total": 23
+      }
     },
     {
       "id": "NUK",
@@ -139,7 +203,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NUK",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 14
+      "event_count": {
+        "112": 19,
+        "113": 10,
+        "114": 14,
+        "total": 43
+      }
     },
     {
       "id": "NCNU",
@@ -148,7 +217,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NCNU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 4
+      "event_count": {
+        "112": 5,
+        "113": 17,
+        "114": 4,
+        "total": 26
+      }
     },
     {
       "id": "NTOU",
@@ -157,7 +231,12 @@ var __EVENTS_DATA__ = {
       "acronym": "NTOU",
       "type": "public",
       "crawl_status": "completed",
-      "event_count": 8
+      "event_count": {
+        "112": 4,
+        "113": 9,
+        "114": 8,
+        "total": 21
+      }
     },
     {
       "id": "FJU",
@@ -166,7 +245,12 @@ var __EVENTS_DATA__ = {
       "acronym": "FJU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 7
+      "event_count": {
+        "112": 8,
+        "113": 8,
+        "114": 7,
+        "total": 23
+      }
     },
     {
       "id": "SCU",
@@ -175,7 +259,12 @@ var __EVENTS_DATA__ = {
       "acronym": "SCU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 7
+      "event_count": {
+        "112": 3,
+        "113": 5,
+        "114": 7,
+        "total": 15
+      }
     },
     {
       "id": "THU",
@@ -184,7 +273,12 @@ var __EVENTS_DATA__ = {
       "acronym": "THU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 8
+      "event_count": {
+        "112": 4,
+        "113": 9,
+        "114": 8,
+        "total": 21
+      }
     },
     {
       "id": "TKU",
@@ -193,7 +287,12 @@ var __EVENTS_DATA__ = {
       "acronym": "TKU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 10
+      "event_count": {
+        "112": 5,
+        "113": 5,
+        "114": 10,
+        "total": 20
+      }
     },
     {
       "id": "FCU",
@@ -202,7 +301,12 @@ var __EVENTS_DATA__ = {
       "acronym": "FCU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 9
+      "event_count": {
+        "112": 3,
+        "113": 7,
+        "114": 9,
+        "total": 19
+      }
     },
     {
       "id": "CYCU",
@@ -211,7 +315,12 @@ var __EVENTS_DATA__ = {
       "acronym": "CYCU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 9
+      "event_count": {
+        "112": 3,
+        "113": 8,
+        "114": 9,
+        "total": 20
+      }
     },
     {
       "id": "YZU",
@@ -220,7 +329,12 @@ var __EVENTS_DATA__ = {
       "acronym": "YZU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 5
+      "event_count": {
+        "112": 4,
+        "113": 3,
+        "114": 5,
+        "total": 12
+      }
     },
     {
       "id": "CGU",
@@ -229,7 +343,12 @@ var __EVENTS_DATA__ = {
       "acronym": "CGU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 8
+      "event_count": {
+        "112": 8,
+        "113": 3,
+        "114": 8,
+        "total": 19
+      }
     },
     {
       "id": "SHU",
@@ -238,7 +357,12 @@ var __EVENTS_DATA__ = {
       "acronym": "SHU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 6
+      "event_count": {
+        "112": 2,
+        "113": 4,
+        "114": 6,
+        "total": 12
+      }
     },
     {
       "id": "PCCU",
@@ -247,7 +371,12 @@ var __EVENTS_DATA__ = {
       "acronym": "PCCU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 5
+      "event_count": {
+        "112": 4,
+        "113": 2,
+        "114": 5,
+        "total": 11
+      }
     },
     {
       "id": "MCU",
@@ -256,7 +385,12 @@ var __EVENTS_DATA__ = {
       "acronym": "MCU",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 14
+      "event_count": {
+        "112": 5,
+        "113": 5,
+        "114": 11,
+        "total": 21
+      }
     },
     {
       "id": "USC",
@@ -265,12 +399,17 @@ var __EVENTS_DATA__ = {
       "acronym": "USC",
       "type": "private",
       "crawl_status": "completed",
-      "event_count": 3
+      "event_count": {
+        "112": 6,
+        "113": 2,
+        "114": 3,
+        "total": 11
+      }
     }
   ],
   "events": [
     {
-      "id": "YZU-001",
+      "id": "YZU-114001",
       "school_id": "YZU",
       "school_name": "元智大學",
       "category": "TEC",
@@ -280,10 +419,11 @@ var __EVENTS_DATA__ = {
       "unit": "化學工程與材料科學學系",
       "url": "https://www.che.yzu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "PCCU-001",
+      "id": "PCCU-114001",
       "school_id": "PCCU",
       "school_name": "中國文化大學",
       "category": "HUM",
@@ -293,10 +433,11 @@ var __EVENTS_DATA__ = {
       "unit": "韓國學研究中心",
       "url": "https://cks.pccu.edu.tw/",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-001",
+      "id": "NTUST-114001",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "AI",
@@ -306,10 +447,11 @@ var __EVENTS_DATA__ = {
       "unit": "營建工程系",
       "url": "https://www.ct.ntust.edu.tw/ct/articles/articleList/17",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "PCCU-002",
+      "id": "PCCU-114002",
       "school_id": "PCCU",
       "school_name": "中國文化大學",
       "category": "HUM",
@@ -319,10 +461,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家發展與中國大陸研究所",
       "url": "https://crrysm.pccu.edu.tw/p/403-1153-11-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-001",
+      "id": "FJU-114001",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "TALK",
@@ -332,10 +475,11 @@ var __EVENTS_DATA__ = {
       "unit": "餐旅管理學系",
       "url": "https://www.rhim.fju.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-001",
+      "id": "TKU-114001",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "AI",
@@ -345,10 +489,11 @@ var __EVENTS_DATA__ = {
       "unit": "教務處",
       "url": "https://www.cna.com.tw/postwrite/chi/385493",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-001",
+      "id": "SHU-114001",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "AI",
@@ -358,10 +503,11 @@ var __EVENTS_DATA__ = {
       "unit": "口語傳播暨社群媒體學系",
       "url": "https://speech.shu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "USC-001",
+      "id": "USC-114001",
       "school_id": "USC",
       "school_name": "實踐大學",
       "category": "AI",
@@ -371,10 +517,11 @@ var __EVENTS_DATA__ = {
       "unit": "通識教育中心",
       "url": "https://www.usc.edu.tw/",
       "source": "websearch",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-001",
+      "id": "CGU-114001",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "MED",
@@ -384,10 +531,11 @@ var __EVENTS_DATA__ = {
       "unit": "長庚醫療財團法人",
       "url": "https://www.cgmh.org.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-001",
+      "id": "CYCU-114001",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "TEC",
@@ -397,10 +545,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.cycu.edu.tw/學術演講",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-002",
+      "id": "NTUST-114002",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "CONF",
@@ -410,10 +559,11 @@ var __EVENTS_DATA__ = {
       "unit": "營建工程系",
       "url": "https://www.ct.ntust.edu.tw/ct/articles/articleList/17",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-001",
+      "id": "THU-114001",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "IND",
@@ -423,10 +573,11 @@ var __EVENTS_DATA__ = {
       "unit": "日本語言文化學系",
       "url": "https://japan.thu.edu.tw/web/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "THU-002",
+      "id": "THU-114002",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "HUM",
@@ -436,10 +587,11 @@ var __EVENTS_DATA__ = {
       "unit": "日本語言文化學系",
       "url": "https://japan.thu.edu.tw/web/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-002",
+      "id": "CGU-114002",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "MED",
@@ -449,10 +601,11 @@ var __EVENTS_DATA__ = {
       "unit": "臨床醫學研究所",
       "url": "https://www.cgu.edu.tw/gicm/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-002",
+      "id": "SHU-114002",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "AI",
@@ -462,10 +615,11 @@ var __EVENTS_DATA__ = {
       "unit": "公共關係暨廣告學系",
       "url": "https://pc.wp.shu.edu.tw/?p=131819",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-001",
+      "id": "NTHU-114001",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "AI",
@@ -475,10 +629,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://www.ctm.nthu.edu.tw/tw/article/1186-2025-sia-ban-nian-du-sun-yun-syun",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTNU-001",
+      "id": "NTNU-114001",
       "school_id": "NTNU",
       "school_name": "國立臺灣師範大學",
       "category": "CONF",
@@ -488,10 +643,11 @@ var __EVENTS_DATA__ = {
       "unit": "華語文與科技研究中心",
       "url": "https://top.ntnu.edu.tw/2025NCL/CH/home.aspx",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-001",
+      "id": "NSYSU-114001",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "CONF",
@@ -501,10 +657,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育研究所",
       "url": "https://apera-tera2025.nsysu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-002",
+      "id": "NTHU-114002",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "TALK",
@@ -514,10 +671,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://www.ctm.nthu.edu.tw/tw/article/1186-2025-sia-ban-nian-du-sun-yun-syun",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-001",
+      "id": "FCU-114001",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "CONF",
@@ -527,10 +685,11 @@ var __EVENTS_DATA__ = {
       "unit": "財經法律研究所",
       "url": "https://econlaw.fcu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-003",
+      "id": "SHU-114003",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "AI",
@@ -540,10 +699,11 @@ var __EVENTS_DATA__ = {
       "unit": "傳播管理學系",
       "url": "https://cm.wp.shu.edu.tw/",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-002",
+      "id": "CYCU-114002",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "TEC",
@@ -553,10 +713,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧運算與量子資訊學院",
       "url": "https://icqi.cycu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "YZU-002",
+      "id": "YZU-114002",
       "school_id": "YZU",
       "school_name": "元智大學",
       "category": "IND",
@@ -566,10 +727,11 @@ var __EVENTS_DATA__ = {
       "unit": "人文社會學院",
       "url": "https://www.hs.yzu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-004",
+      "id": "SHU-114004",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "AI",
@@ -579,10 +741,11 @@ var __EVENTS_DATA__ = {
       "unit": "新聞傳播學院、管理學院",
       "url": "https://sites.google.com/view/2025-shu-bmbaim-ai/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-001",
+      "id": "NUK-114001",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "CONF",
@@ -592,10 +755,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-003",
+      "id": "CYCU-114003",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "TEC",
@@ -605,10 +769,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.cycu.edu.tw/學術演講",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-001",
+      "id": "NYCU-114001",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "LAW",
@@ -618,10 +783,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技法律學院",
       "url": "https://law.nycu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-002",
+      "id": "NUK-114002",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "AI",
@@ -631,10 +797,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊管理學系",
       "url": "https://im.nuk.edu.tw/p/426-1038-37.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-002",
+      "id": "TKU-114002",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "CONF",
@@ -644,10 +811,11 @@ var __EVENTS_DATA__ = {
       "unit": "土木工程學系",
       "url": "https://www.engineering.tku.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-003",
+      "id": "NTHU-114003",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "AI",
@@ -657,10 +825,11 @@ var __EVENTS_DATA__ = {
       "unit": "電機工程學系",
       "url": "https://dee.site.nthu.edu.tw/p/406-1175-299130,r2629.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-004",
+      "id": "NTHU-114004",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "AI",
@@ -670,10 +839,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育學院",
       "url": "https://icei.ce.nthu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "PCCU-003",
+      "id": "PCCU-114003",
       "school_id": "PCCU",
       "school_name": "中國文化大學",
       "category": "CONF",
@@ -683,10 +853,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家發展與中國大陸研究所",
       "url": "https://crrysm.pccu.edu.tw/p/403-1153-11-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-001",
+      "id": "NTUT-114001",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "AI",
@@ -696,10 +867,11 @@ var __EVENTS_DATA__ = {
       "unit": "人文與社會科學學院",
       "url": "https://chass.ntut.edu.tw/p/404-1019-149931.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-004",
+      "id": "CYCU-114004",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "TEC",
@@ -709,10 +881,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.cycu.edu.tw/學術演講",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "YZU-003",
+      "id": "YZU-114003",
       "school_id": "YZU",
       "school_name": "元智大學",
       "category": "AI",
@@ -722,10 +895,11 @@ var __EVENTS_DATA__ = {
       "unit": "電機工程學系",
       "url": "https://eea.ee.yzu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-003",
+      "id": "NTUST-114003",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "TALK",
@@ -735,10 +909,11 @@ var __EVENTS_DATA__ = {
       "unit": "永續能源與環境發展中心",
       "url": "https://seed.ntust.edu.tw/p/406-1083-142271,r11.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-004",
+      "id": "NTUST-114004",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "EDU",
@@ -748,10 +923,11 @@ var __EVENTS_DATA__ = {
       "unit": "營建工程系",
       "url": "https://www.ct.ntust.edu.tw/ct/articles/articleList/17",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-003",
+      "id": "NUK-114003",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "AI",
@@ -761,10 +937,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊管理學系",
       "url": "https://im.nuk.edu.tw/p/426-1038-37.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-003",
+      "id": "THU-114003",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "HUM",
@@ -774,10 +951,11 @@ var __EVENTS_DATA__ = {
       "unit": "日本語言文化學系",
       "url": "https://japan.thu.edu.tw/web/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-002",
+      "id": "NSYSU-114002",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "TEC",
@@ -787,10 +965,11 @@ var __EVENTS_DATA__ = {
       "unit": "國立中山大學",
       "url": "https://automation2025.nsysu.edu.tw/",
       "source": "websearch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-001",
+      "id": "SCU-114001",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "LAW",
@@ -800,10 +979,11 @@ var __EVENTS_DATA__ = {
       "unit": "政治學系國會研究中心",
       "url": "https://scups.ppo.scu.edu.tw/article4/26/1",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-002",
+      "id": "NTUT-114002",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "TEC",
@@ -813,10 +993,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧鐵道產業人才學院研發中心",
       "url": "https://srs.ntut.edu.tw/p/404-1139-149593.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-004",
+      "id": "NUK-114004",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "TALK",
@@ -826,10 +1007,11 @@ var __EVENTS_DATA__ = {
       "unit": "推廣教育中心",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-002",
+      "id": "SCU-114002",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "HUM",
@@ -839,10 +1021,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會學系",
       "url": "https://scusoc.pso.scu.edu.tw/news/all/1",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-002",
+      "id": "FCU-114002",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "STU",
@@ -852,10 +1035,11 @@ var __EVENTS_DATA__ = {
       "unit": "產學營運與推廣處",
       "url": "https://www.fcu.edu.tw/en/events/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-005",
+      "id": "NTHU-114005",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "LAW",
@@ -865,10 +1049,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://www.ctm.nthu.edu.tw/tw/article/1186-2025-sia-ban-nian-du-sun-yun-syun",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-004",
+      "id": "THU-114004",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "HUM",
@@ -878,10 +1063,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://japan.thu.edu.tw/web/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCNU-001",
+      "id": "NCNU-114001",
       "school_id": "NCNU",
       "school_name": "國立暨南國際大學",
       "category": "ESG",
@@ -891,10 +1077,11 @@ var __EVENTS_DATA__ = {
       "unit": "環安衛中心",
       "url": "https://www.ncnu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-001",
+      "id": "NCCU-114001",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "AI",
@@ -904,10 +1091,11 @@ var __EVENTS_DATA__ = {
       "unit": "人工智慧應用學位學程",
       "url": "https://www.nccu.edu.tw/p/406-1000-21454,r43.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-005",
+      "id": "NUK-114005",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "TALK",
@@ -917,10 +1105,11 @@ var __EVENTS_DATA__ = {
       "unit": "推廣教育中心",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-006",
+      "id": "NUK-114006",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "TALK",
@@ -930,10 +1119,11 @@ var __EVENTS_DATA__ = {
       "unit": "應用經濟學系",
       "url": "https://econ.nuk.edu.tw/p/403-1022-357-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-005",
+      "id": "CYCU-114005",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "TEC",
@@ -943,10 +1133,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.cycu.edu.tw/學術演講",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-003",
+      "id": "CGU-114003",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "ART",
@@ -956,10 +1147,11 @@ var __EVENTS_DATA__ = {
       "unit": "通識教育中心",
       "url": "https://www.cgu.edu.tw/ge",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-006",
+      "id": "NTHU-114006",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "AI",
@@ -969,10 +1161,11 @@ var __EVENTS_DATA__ = {
       "unit": "電機工程學系",
       "url": "https://dee.site.nthu.edu.tw/p/406-1175-300343,r2629.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-004",
+      "id": "CGU-114004",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "AI",
@@ -982,10 +1175,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧運算學院",
       "url": "https://www.cgu.edu.tw/coic",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTNU-002",
+      "id": "NTNU-114002",
       "school_id": "NTNU",
       "school_name": "國立臺灣師範大學",
       "category": "AI",
@@ -995,10 +1189,11 @@ var __EVENTS_DATA__ = {
       "unit": "國立臺灣師範大學（共同主辦）",
       "url": "https://taai2025.org/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-007",
+      "id": "NUK-114007",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "TALK",
@@ -1008,10 +1203,11 @@ var __EVENTS_DATA__ = {
       "unit": "推廣教育中心",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-005",
+      "id": "CGU-114005",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "MED",
@@ -1021,10 +1217,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧運算學院",
       "url": "https://www.cgu.edu.tw/coic",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-003",
+      "id": "NTUT-114003",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "ESG",
@@ -1034,10 +1231,11 @@ var __EVENTS_DATA__ = {
       "unit": "水環境研究中心",
       "url": "https://wwwwec.ntut.edu.tw/p/404-1095-150485.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-005",
+      "id": "THU-114005",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "TALK",
@@ -1047,10 +1245,11 @@ var __EVENTS_DATA__ = {
       "unit": "日本語言文化學系",
       "url": "https://japan.thu.edu.tw/web/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-001",
+      "id": "NTU-114001",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "TEC",
@@ -1060,10 +1259,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家理論科學研究中心物理組",
       "url": "https://phys.ncts.ntu.edu.tw/en/act/Seminars",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-003",
+      "id": "SCU-114003",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "IND",
@@ -1073,10 +1273,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會學系",
       "url": "https://scusoc.pso.scu.edu.tw/news/all/1",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-008",
+      "id": "NUK-114008",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "AI",
@@ -1086,10 +1287,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊管理學系",
       "url": "https://im.nuk.edu.tw/p/426-1038-37.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-006",
+      "id": "CGU-114006",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "AI",
@@ -1099,10 +1301,11 @@ var __EVENTS_DATA__ = {
       "unit": "健康資料科學研究所",
       "url": "https://www.cgu.edu.tw/coic",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-002",
+      "id": "NTU-114002",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "TALK",
@@ -1112,10 +1315,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家理論科學研究中心物理組",
       "url": "https://phys.ncts.ntu.edu.tw/en/act/Seminars",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-001",
+      "id": "NTOU-114001",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "HUM",
@@ -1125,10 +1329,11 @@ var __EVENTS_DATA__ = {
       "unit": "海洋文化研究所",
       "url": "https://rshp.npust.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "YZU-004",
+      "id": "YZU-114004",
       "school_id": "YZU",
       "school_name": "元智大學",
       "category": "AI",
@@ -1138,10 +1343,11 @@ var __EVENTS_DATA__ = {
       "unit": "人文社會學院",
       "url": "https://www.hs.yzu.edu.tw/",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-002",
+      "id": "FJU-114002",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "EDU",
@@ -1151,10 +1357,11 @@ var __EVENTS_DATA__ = {
       "unit": "外語學院",
       "url": "http://cfl.fju.edu.tw/research.asp?AR_ID=6",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-003",
+      "id": "NSYSU-114003",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "ESG",
@@ -1164,10 +1371,11 @@ var __EVENTS_DATA__ = {
       "unit": "校園公告",
       "url": "https://enews.nsysu.edu.tw/p/404-1046-370211.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "USC-002",
+      "id": "USC-114002",
       "school_id": "USC",
       "school_name": "實踐大學",
       "category": "EDU",
@@ -1177,10 +1385,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://www.usc.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-005",
+      "id": "NTUST-114005",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "AI",
@@ -1190,10 +1399,11 @@ var __EVENTS_DATA__ = {
       "unit": "管理學院",
       "url": "https://www.ntust.edu.tw/p/403-1000-167-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-009",
+      "id": "NUK-114009",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "ESG",
@@ -1203,10 +1413,11 @@ var __EVENTS_DATA__ = {
       "unit": "副校長室",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-004",
+      "id": "NTUT-114004",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "CONF",
@@ -1216,10 +1427,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://oia.ntut.edu.tw/p/404-1032-151401.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-002",
+      "id": "NCCU-114002",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "AI",
@@ -1229,10 +1441,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊科學系",
       "url": "https://www.nccu.edu.tw/p/406-1000-21817,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-006",
+      "id": "NTUST-114006",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "HUM",
@@ -1242,10 +1455,11 @@ var __EVENTS_DATA__ = {
       "unit": "研究發展處",
       "url": "https://www.ntust.edu.tw/p/403-1000-167-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-010",
+      "id": "NUK-114010",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "CONF",
@@ -1255,10 +1469,11 @@ var __EVENTS_DATA__ = {
       "unit": "政治法律學系",
       "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCHU-001",
+      "id": "NCHU-114001",
       "school_id": "NCHU",
       "school_name": "國立中興大學",
       "category": "MED",
@@ -1268,10 +1483,11 @@ var __EVENTS_DATA__ = {
       "unit": "醫學院",
       "url": "https://www2.nchu.edu.tw/news-detail/id/61283",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCU-001",
+      "id": "NCU-114001",
       "school_id": "NCU",
       "school_name": "國立中央大學",
       "category": "TALK",
@@ -1281,10 +1497,11 @@ var __EVENTS_DATA__ = {
       "unit": "國立中央大學",
       "url": "https://www.acad.ntnu.edu.tw/zh_tw/ord/1news/1104",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-004",
+      "id": "SCU-114004",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "LAW",
@@ -1294,10 +1511,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會學系",
       "url": "https://scusoc.pso.scu.edu.tw/news/all/1",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-005",
+      "id": "NTUT-114005",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "HUM",
@@ -1307,10 +1525,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://oia.ntut.edu.tw/p/404-1032-151579.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-003",
+      "id": "NCCU-114003",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "LAW",
@@ -1320,10 +1539,11 @@ var __EVENTS_DATA__ = {
       "unit": "中國大陸研究中心",
       "url": "https://www.nccu.edu.tw/p/406-1000-21898,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCU-002",
+      "id": "NCU-114002",
       "school_id": "NCU",
       "school_name": "國立中央大學",
       "category": "TALK",
@@ -1333,10 +1553,11 @@ var __EVENTS_DATA__ = {
       "unit": "地球科學學院",
       "url": "https://escollege.ncu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-004",
+      "id": "NSYSU-114004",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "CONF",
@@ -1346,10 +1567,11 @@ var __EVENTS_DATA__ = {
       "unit": "海洋科學學院",
       "url": "https://2026ocean.drseotw.com/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCNU-002",
+      "id": "NCNU-114002",
       "school_id": "NCNU",
       "school_name": "國立暨南國際大學",
       "category": "STU",
@@ -1359,10 +1581,11 @@ var __EVENTS_DATA__ = {
       "unit": "體育室",
       "url": "https://www.ncnu.edu.tw/p/422-1000-12.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-003",
+      "id": "FCU-114003",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "AI",
@@ -1372,10 +1595,11 @@ var __EVENTS_DATA__ = {
       "unit": "中國文學系",
       "url": "https://www.fcu.edu.tw/en/news/2025022101/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-004",
+      "id": "FCU-114004",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "AI",
@@ -1385,10 +1609,11 @@ var __EVENTS_DATA__ = {
       "unit": "秘書處",
       "url": "https://www.fcu.edu.tw/news/2025021801/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCNU-003",
+      "id": "NCNU-114003",
       "school_id": "NCNU",
       "school_name": "國立暨南國際大學",
       "category": "STU",
@@ -1398,10 +1623,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處",
       "url": "https://www.ncnu.edu.tw/p/422-1000-12.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCNU-004",
+      "id": "NCNU-114004",
       "school_id": "NCNU",
       "school_name": "國立暨南國際大學",
       "category": "EDU",
@@ -1411,10 +1637,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會政策與社會工作學系",
       "url": "https://spsw.ncnu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-004",
+      "id": "NCCU-114004",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "EDU",
@@ -1424,10 +1651,11 @@ var __EVENTS_DATA__ = {
       "unit": "英語教學資源中心",
       "url": "https://www.nccu.edu.tw/p/406-1000-21929,r43.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-005",
+      "id": "SCU-114005",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "EDU",
@@ -1437,10 +1665,11 @@ var __EVENTS_DATA__ = {
       "unit": "教學資源中心",
       "url": "https://mobile.sys.scu.edu.tw/calendar/list",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "PCCU-004",
+      "id": "PCCU-114004",
       "school_id": "PCCU",
       "school_name": "中國文化大學",
       "category": "CONF",
@@ -1450,10 +1679,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊管理學系",
       "url": "https://mis.pccu.edu.tw/p/403-1199-1425-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-007",
+      "id": "NTUST-114007",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "HUM",
@@ -1463,10 +1693,11 @@ var __EVENTS_DATA__ = {
       "unit": "建築系",
       "url": "https://www.ntust.edu.tw/p/403-1000-167-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-001",
+      "id": "NCKU-114001",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "CONF",
@@ -1476,10 +1707,11 @@ var __EVENTS_DATA__ = {
       "unit": "韌性智慧能源研究中心",
       "url": "https://www.acad.ntnu.edu.tw/zh_tw/ord/1news/1104",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "USC-003",
+      "id": "USC-114003",
       "school_id": "USC",
       "school_name": "實踐大學",
       "category": "ART",
@@ -1489,10 +1721,11 @@ var __EVENTS_DATA__ = {
       "unit": "設計學院",
       "url": "https://www.usc.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-005",
+      "id": "NCCU-114005",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "AI",
@@ -1502,10 +1735,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會科學學院",
       "url": "https://css.nccu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCU-003",
+      "id": "NCU-114003",
       "school_id": "NCU",
       "school_name": "國立中央大學",
       "category": "TALK",
@@ -1515,10 +1749,11 @@ var __EVENTS_DATA__ = {
       "unit": "天文研究所",
       "url": "https://www.ncu.edu.tw/tw/events/index.php?search_kind=4",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCHU-002",
+      "id": "NCHU-114002",
       "school_id": "NCHU",
       "school_name": "國立中興大學",
       "category": "TEC",
@@ -1528,10 +1763,11 @@ var __EVENTS_DATA__ = {
       "unit": "電機工程學系",
       "url": "https://www2.nchu.edu.tw/news-detail/id/45321",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-006",
+      "id": "CYCU-114006",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "AI",
@@ -1541,10 +1777,11 @@ var __EVENTS_DATA__ = {
       "unit": "教學發展中心",
       "url": "https://www.cycu.edu.tw/news/",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-005",
+      "id": "SHU-114005",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "CONF",
@@ -1554,10 +1791,11 @@ var __EVENTS_DATA__ = {
       "unit": "公共關係暨廣告學系",
       "url": "https://pc.wp.shu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "SHU-006",
+      "id": "SHU-114006",
       "school_id": "SHU",
       "school_name": "世新大學",
       "category": "AI",
@@ -1567,10 +1805,11 @@ var __EVENTS_DATA__ = {
       "unit": "數位多媒體設計學系",
       "url": "https://dma.wp.shu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-006",
+      "id": "NCCU-114006",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "TALK",
@@ -1580,10 +1819,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務學院",
       "url": "https://www.nccu.edu.tw/p/406-1000-21968,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-007",
+      "id": "NCCU-114007",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "TALK",
@@ -1593,10 +1833,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務學院",
       "url": "https://www.nccu.edu.tw/p/406-1000-21967,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCU-004",
+      "id": "NCU-114004",
       "school_id": "NCU",
       "school_name": "國立中央大學",
       "category": "TALK",
@@ -1606,10 +1847,11 @@ var __EVENTS_DATA__ = {
       "unit": "地球科學學院",
       "url": "https://escollege.ncu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-008",
+      "id": "NTUST-114008",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "TEC",
@@ -1619,10 +1861,11 @@ var __EVENTS_DATA__ = {
       "unit": "研究發展處",
       "url": "https://www.ntust.edu.tw/p/403-1000-167-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUST-009",
+      "id": "NTUST-114009",
       "school_id": "NTUST",
       "school_name": "國立臺灣科技大學",
       "category": "STU",
@@ -1632,10 +1875,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處",
       "url": "https://www.ntust.edu.tw/p/403-1000-168-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-003",
+      "id": "FJU-114003",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "ART",
@@ -1645,10 +1889,11 @@ var __EVENTS_DATA__ = {
       "unit": "天主教學術研究院",
       "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-007",
+      "id": "CYCU-114007",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "ART",
@@ -1658,10 +1903,11 @@ var __EVENTS_DATA__ = {
       "unit": "全人教育藝術中心",
       "url": "https://www.cycu.edu.tw/news/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-004",
+      "id": "FJU-114004",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "IND",
@@ -1671,10 +1917,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處特殊教育資源中心",
       "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-003",
+      "id": "NTU-114003",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "TALK",
@@ -1684,10 +1931,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家理論科學研究中心物理組",
       "url": "https://phys.ncts.ntu.edu.tw/en/act/Seminars",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-008",
+      "id": "NCCU-114008",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "TEC",
@@ -1697,10 +1945,11 @@ var __EVENTS_DATA__ = {
       "unit": "統計學系",
       "url": "https://www.nccu.edu.tw/p/406-1000-21984,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-009",
+      "id": "NCCU-114009",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "TALK",
@@ -1710,10 +1959,11 @@ var __EVENTS_DATA__ = {
       "unit": "神經科學研究所",
       "url": "https://www.nccu.edu.tw/p/406-1000-21981,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-011",
+      "id": "NUK-114011",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "TALK",
@@ -1723,10 +1973,11 @@ var __EVENTS_DATA__ = {
       "unit": "推廣教育中心",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-002",
+      "id": "NTOU-114002",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "ART",
@@ -1736,10 +1987,11 @@ var __EVENTS_DATA__ = {
       "unit": "藝文中心",
       "url": "https://www.ntou.edu.tw/post/活動情報",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-002",
+      "id": "NCKU-114002",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "EDU",
@@ -1749,10 +2001,11 @@ var __EVENTS_DATA__ = {
       "unit": "教務處教學發展中心",
       "url": "https://ctld.ncku.edu.tw/p/404-1047-294164.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-003",
+      "id": "NCKU-114003",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "EDU",
@@ -1762,10 +2015,11 @@ var __EVENTS_DATA__ = {
       "unit": "教務處教學發展中心",
       "url": "https://ctld.ncku.edu.tw/p/404-1047-294157.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-004",
+      "id": "NCKU-114004",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "CONF",
@@ -1775,10 +2029,11 @@ var __EVENTS_DATA__ = {
       "unit": "國家理論科學研究中心",
       "url": "https://phys.ncts.ntu.edu.tw/en/act/Conferences/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-005",
+      "id": "NSYSU-114005",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "TALK",
@@ -1788,10 +2043,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-005",
+      "id": "FJU-114005",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "HUM",
@@ -1801,10 +2057,11 @@ var __EVENTS_DATA__ = {
       "unit": "天主教學術研究院",
       "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-006",
+      "id": "FJU-114006",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "IND",
@@ -1814,10 +2071,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處職涯發展與就業輔導組",
       "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FJU-007",
+      "id": "FJU-114007",
       "school_id": "FJU",
       "school_name": "輔仁大學",
       "category": "STU",
@@ -1827,10 +2085,11 @@ var __EVENTS_DATA__ = {
       "unit": "全人教育課程中心",
       "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-006",
+      "id": "THU-114006",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "IND",
@@ -1840,10 +2099,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處就業輔導組",
       "url": "https://tevent.thu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-004",
+      "id": "NTU-114004",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "EDU",
@@ -1853,10 +2113,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處國際學生組",
       "url": "https://ann.cc.ntu.edu.tw/asp/Show.asp?num=113474",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-005",
+      "id": "NTU-114005",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "HUM",
@@ -1866,10 +2127,11 @@ var __EVENTS_DATA__ = {
       "unit": "臺灣歐盟中心",
       "url": "https://ann.cc.ntu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-002",
+      "id": "NYCU-114002",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "IND",
@@ -1879,10 +2141,11 @@ var __EVENTS_DATA__ = {
       "unit": "國立陽明交通大學",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260200279",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CCU-001",
+      "id": "CCU-114001",
       "school_id": "CCU",
       "school_name": "國立中正大學",
       "category": "HUM",
@@ -1892,10 +2155,11 @@ var __EVENTS_DATA__ = {
       "unit": "文學院",
       "url": "https://colliber.ccu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-012",
+      "id": "NUK-114012",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "ESG",
@@ -1905,10 +2169,11 @@ var __EVENTS_DATA__ = {
       "unit": "環安衛中心",
       "url": "https://www.nuk.edu.tw/p/403-1000-102-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-007",
+      "id": "THU-114007",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "EDU",
@@ -1918,10 +2183,11 @@ var __EVENTS_DATA__ = {
       "unit": "通識中心",
       "url": "https://tevent.thu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "THU-008",
+      "id": "THU-114008",
       "school_id": "THU",
       "school_name": "東海大學",
       "category": "ESG",
@@ -1931,10 +2197,11 @@ var __EVENTS_DATA__ = {
       "unit": "工學院",
       "url": "https://tevent.thu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-003",
+      "id": "NTOU-114003",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "TEC",
@@ -1944,10 +2211,11 @@ var __EVENTS_DATA__ = {
       "unit": "師資培育中心",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-005",
+      "id": "FCU-114005",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "STU",
@@ -1957,10 +2225,11 @@ var __EVENTS_DATA__ = {
       "unit": "產學營運與推廣處",
       "url": "https://www.fcu.edu.tw/en/events/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-006",
+      "id": "NTU-114006",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "IND",
@@ -1970,10 +2239,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處學生職涯發展中心",
       "url": "https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261304_01",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-005",
+      "id": "NCKU-114005",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "MED",
@@ -1983,10 +2253,11 @@ var __EVENTS_DATA__ = {
       "unit": "醫學院",
       "url": "https://med.ncku.edu.tw/p/404-1015-294077.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-004",
+      "id": "NTOU-114004",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "LAW",
@@ -1996,10 +2267,11 @@ var __EVENTS_DATA__ = {
       "unit": "海洋法政學士學位學程",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-005",
+      "id": "NTOU-114005",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "HUM",
@@ -2009,10 +2281,11 @@ var __EVENTS_DATA__ = {
       "unit": "海洋法政學士學位學程",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-006",
+      "id": "SCU-114006",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "IND",
@@ -2022,10 +2295,11 @@ var __EVENTS_DATA__ = {
       "unit": "東吳生涯發展中心",
       "url": "https://mobile.sys.scu.edu.tw/calendar/list",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-007",
+      "id": "NTU-114007",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "AI",
@@ -2035,10 +2309,11 @@ var __EVENTS_DATA__ = {
       "unit": "創新設計學院創創學程",
       "url": "https://ann.cc.ntu.edu.tw/asp/Show.asp?num=113450",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-003",
+      "id": "NYCU-114003",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "MED",
@@ -2048,10 +2323,11 @@ var __EVENTS_DATA__ = {
       "unit": "癌症與免疫研究中心",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260300034",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-006",
+      "id": "NCKU-114006",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "TEC",
@@ -2061,10 +2337,11 @@ var __EVENTS_DATA__ = {
       "unit": "計算機與網路中心",
       "url": "https://cc.ncku.edu.tw/p/404-1213-294159.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-010",
+      "id": "NCCU-114010",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "AI",
@@ -2074,10 +2351,11 @@ var __EVENTS_DATA__ = {
       "unit": "勞工研究所",
       "url": "https://www.nccu.edu.tw/p/406-1000-21960,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-011",
+      "id": "NCCU-114011",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "EDU",
@@ -2087,10 +2365,11 @@ var __EVENTS_DATA__ = {
       "unit": "語言學研究所",
       "url": "https://www.nccu.edu.tw/p/406-1000-21933,r43.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-003",
+      "id": "TKU-114003",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "ESG",
@@ -2100,10 +2379,11 @@ var __EVENTS_DATA__ = {
       "unit": "經濟學系",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-006",
+      "id": "FCU-114006",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "IND",
@@ -2113,10 +2393,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生成功中心",
       "url": "https://www.fcu.edu.tw/en/event/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-007",
+      "id": "CGU-114007",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "AI",
@@ -2126,10 +2407,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧運算學院",
       "url": "https://www.cgu.edu.tw/coic",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-004",
+      "id": "NYCU-114004",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "LAW",
@@ -2139,10 +2421,11 @@ var __EVENTS_DATA__ = {
       "unit": "生命科學院",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260200204",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-012",
+      "id": "NCCU-114012",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "ART",
@@ -2152,10 +2435,11 @@ var __EVENTS_DATA__ = {
       "unit": "藝文中心",
       "url": "https://events.nccu.edu.tw/more.do?key=8809",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-006",
+      "id": "NTOU-114006",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "MED",
@@ -2165,10 +2449,11 @@ var __EVENTS_DATA__ = {
       "unit": "光電與材料科技學系",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-008",
+      "id": "CYCU-114008",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "IND",
@@ -2178,10 +2463,11 @@ var __EVENTS_DATA__ = {
       "unit": "學生事務處就業輔導組",
       "url": "https://www.cycu.edu.tw/news/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CGU-008",
+      "id": "CGU-114008",
       "school_id": "CGU",
       "school_name": "長庚大學",
       "category": "MED",
@@ -2191,10 +2477,11 @@ var __EVENTS_DATA__ = {
       "unit": "健康資料科學研究所",
       "url": "https://www.cgu.edu.tw/coic",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-006",
+      "id": "NSYSU-114006",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "TALK",
@@ -2204,10 +2491,11 @@ var __EVENTS_DATA__ = {
       "unit": "物理學系",
       "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CCU-002",
+      "id": "CCU-114002",
       "school_id": "CCU",
       "school_name": "國立中正大學",
       "category": "HUM",
@@ -2217,10 +2505,11 @@ var __EVENTS_DATA__ = {
       "unit": "歷史學系",
       "url": "https://colliber.ccu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-013",
+      "id": "NUK-114013",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "AI",
@@ -2230,10 +2519,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊管理學系",
       "url": "https://im.nuk.edu.tw/p/426-1038-37.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-007",
+      "id": "NTOU-114007",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "LAW",
@@ -2243,10 +2533,11 @@ var __EVENTS_DATA__ = {
       "unit": "河海工程學系",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTOU-008",
+      "id": "NTOU-114008",
       "school_id": "NTOU",
       "school_name": "國立臺灣海洋大學",
       "category": "HUM",
@@ -2256,10 +2547,11 @@ var __EVENTS_DATA__ = {
       "unit": "運輸科學系",
       "url": "https://www.ntou.edu.tw/post/演講公告",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-004",
+      "id": "TKU-114004",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "AI",
@@ -2269,10 +2561,11 @@ var __EVENTS_DATA__ = {
       "unit": "日本語文學系",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-008",
+      "id": "NTU-114008",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "ART",
@@ -2282,10 +2575,11 @@ var __EVENTS_DATA__ = {
       "unit": "文學院外語教學暨資源中心",
       "url": "https://ann.cc.ntu.edu.tw/asp/Show.asp?num=113452",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-005",
+      "id": "NYCU-114005",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "AI",
@@ -2295,10 +2589,11 @@ var __EVENTS_DATA__ = {
       "unit": "心智哲學與意識研究所",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260200229",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-007",
+      "id": "NSYSU-114007",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "TALK",
@@ -2308,10 +2603,11 @@ var __EVENTS_DATA__ = {
       "unit": "海洋科學學院海下技術研究所",
       "url": "https://iut.nsysu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-005",
+      "id": "TKU-114005",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "AI",
@@ -2321,10 +2617,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊與圖書館學系",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-001",
+      "id": "MCU-114001",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "ESG",
@@ -2334,10 +2631,11 @@ var __EVENTS_DATA__ = {
       "unit": "傳播學院",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-002",
+      "id": "MCU-114002",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "CONF",
@@ -2347,23 +2645,11 @@ var __EVENTS_DATA__ = {
       "unit": "管理學院",
       "url": "https://ms.mcu.edu.tw/conference/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-003",
-      "school_id": "MCU",
-      "school_name": "銘傳大學",
-      "category": "AI",
-      "category_name": "AI/數位",
-      "title": "2026追求高教卓越國際學術研討會——AI與互動媒體科技",
-      "date": "2026-03-13",
-      "unit": "資訊暨電子工程學院",
-      "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
-      "source": "webfetch",
-      "confidence": "high"
-    },
-    {
-      "id": "MCU-004",
+      "id": "MCU-114004",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "CONF",
@@ -2373,23 +2659,11 @@ var __EVENTS_DATA__ = {
       "unit": "資訊暨電子工程學院",
       "url": "https://soit.mcu.edu.tw/confrence",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-005",
-      "school_id": "MCU",
-      "school_name": "銘傳大學",
-      "category": "EDU",
-      "category_name": "教育教學",
-      "title": "2026追求高教卓越國際學術研討會——應用中文與華語教學國際研討會",
-      "date": "2026-03-13",
-      "unit": "應用中文學系",
-      "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
-      "source": "webfetch",
-      "confidence": "high"
-    },
-    {
-      "id": "NCKU-007",
+      "id": "NCKU-114007",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "MED",
@@ -2399,10 +2673,11 @@ var __EVENTS_DATA__ = {
       "unit": "醫學院",
       "url": "https://med.ncku.edu.tw/p/404-1015-294078.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CYCU-009",
+      "id": "CYCU-114009",
       "school_id": "CYCU",
       "school_name": "中原大學",
       "category": "STU",
@@ -2412,10 +2687,11 @@ var __EVENTS_DATA__ = {
       "unit": "智慧運算與量子資訊學院",
       "url": "https://icqi.cycu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-006",
+      "id": "MCU-114006",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "ESG",
@@ -2425,10 +2701,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育研究所",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "YZU-005",
+      "id": "YZU-114005",
       "school_id": "YZU",
       "school_name": "元智大學",
       "category": "CONF",
@@ -2438,10 +2715,11 @@ var __EVENTS_DATA__ = {
       "unit": "研究發展處",
       "url": "https://www.yzu.edu.tw/admin/rd/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-006",
+      "id": "TKU-114006",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "TALK",
@@ -2451,10 +2729,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育心理與諮商研究所",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCCU-013",
+      "id": "NCCU-114013",
       "school_id": "NCCU",
       "school_name": "國立政治大學",
       "category": "AI",
@@ -2464,10 +2743,11 @@ var __EVENTS_DATA__ = {
       "unit": "勞工研究所",
       "url": "https://www.nccu.edu.tw/p/406-1000-21978,r41.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTNU-003",
+      "id": "NTNU-114003",
       "school_id": "NTNU",
       "school_name": "國立臺灣師範大學",
       "category": "ART",
@@ -2477,10 +2757,11 @@ var __EVENTS_DATA__ = {
       "unit": "英語學系",
       "url": "https://www.eng.ntnu.edu.tw/",
       "source": "websearch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-007",
+      "id": "NTHU-114007",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "TALK",
@@ -2490,10 +2771,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://sunspeech.site.nthu.edu.tw/p/423-1448-3630.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCHU-003",
+      "id": "NCHU-114003",
       "school_id": "NCHU",
       "school_name": "國立中興大學",
       "category": "CONF",
@@ -2503,10 +2785,11 @@ var __EVENTS_DATA__ = {
       "unit": "國立中興大學",
       "url": "https://www2.nchu.edu.tw/news-detail/id/61380",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-007",
+      "id": "TKU-114007",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "TALK",
@@ -2516,10 +2799,11 @@ var __EVENTS_DATA__ = {
       "unit": "化學學系",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-007",
+      "id": "MCU-114007",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "AI",
@@ -2529,10 +2813,11 @@ var __EVENTS_DATA__ = {
       "unit": "犯罪防治學系",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTUT-006",
+      "id": "NTUT-114006",
       "school_id": "NTUT",
       "school_name": "國立臺北科技大學",
       "category": "HUM",
@@ -2542,10 +2827,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務處",
       "url": "https://oia.ntut.edu.tw/p/404-1032-152124.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-008",
+      "id": "NCKU-114008",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "AI",
@@ -2555,10 +2841,11 @@ var __EVENTS_DATA__ = {
       "unit": "生涯組",
       "url": "https://grad-osa.ncku.edu.tw/p/404-1054-294025.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-007",
+      "id": "FCU-114007",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "TEC",
@@ -2568,10 +2855,11 @@ var __EVENTS_DATA__ = {
       "unit": "秘書處",
       "url": "https://oia.fcu.edu.tw/events-list/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-008",
+      "id": "FCU-114008",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "EDU",
@@ -2581,10 +2869,11 @@ var __EVENTS_DATA__ = {
       "unit": "圖書館讀者服務組",
       "url": "https://oia.fcu.edu.tw/events-list/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-006",
+      "id": "NYCU-114006",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "TEC",
@@ -2594,10 +2883,11 @@ var __EVENTS_DATA__ = {
       "unit": "學術單位",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260300117",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-007",
+      "id": "NYCU-114007",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "MED",
@@ -2607,10 +2897,11 @@ var __EVENTS_DATA__ = {
       "unit": "癌症與免疫研究中心",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260300035",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-008",
+      "id": "NSYSU-114008",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "IND",
@@ -2620,10 +2911,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際生留臺職涯與就業輔導基地",
       "url": "https://employment.nsysu.edu.tw/p/404-1374-371166.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-008",
+      "id": "NYCU-114008",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "AI",
@@ -2633,10 +2925,11 @@ var __EVENTS_DATA__ = {
       "unit": "學術單位",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260300087",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-009",
+      "id": "NCKU-114009",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "ESG",
@@ -2646,10 +2939,11 @@ var __EVENTS_DATA__ = {
       "unit": "生涯組",
       "url": "https://grad-osa.ncku.edu.tw/p/404-1054-294139.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-008",
+      "id": "MCU-114008",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "ESG",
@@ -2659,23 +2953,11 @@ var __EVENTS_DATA__ = {
       "unit": "法律學院",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-009",
-      "school_id": "MCU",
-      "school_name": "銘傳大學",
-      "category": "LAW",
-      "category_name": "法政治理",
-      "title": "2026追求高教卓越國際學術研討會——第20屆轉型與治理年度研討會",
-      "date": "2026-03-27",
-      "unit": "公共事務學系",
-      "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
-      "source": "webfetch",
-      "confidence": "high"
-    },
-    {
-      "id": "NTU-009",
+      "id": "NTU-114009",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "STU",
@@ -2685,10 +2967,11 @@ var __EVENTS_DATA__ = {
       "unit": "體育室",
       "url": "https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20253704_24",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "PCCU-005",
+      "id": "PCCU-114005",
       "school_id": "PCCU",
       "school_name": "中國文化大學",
       "category": "HUM",
@@ -2698,10 +2981,11 @@ var __EVENTS_DATA__ = {
       "unit": "韓國學研究中心",
       "url": "https://cks.pccu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-008",
+      "id": "TKU-114008",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "CONF",
@@ -2711,10 +2995,11 @@ var __EVENTS_DATA__ = {
       "unit": "教學發展中心",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "FCU-009",
+      "id": "FCU-114009",
       "school_id": "FCU",
       "school_name": "逢甲大學",
       "category": "IND",
@@ -2724,10 +3009,11 @@ var __EVENTS_DATA__ = {
       "unit": "招生事務處",
       "url": "https://www.fcu.edu.tw/openfestival/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NCKU-010",
+      "id": "NCKU-114010",
       "school_id": "NCKU",
       "school_name": "國立成功大學",
       "category": "EDU",
@@ -2737,10 +3023,11 @@ var __EVENTS_DATA__ = {
       "unit": "研究發展處",
       "url": "https://web.ncku.edu.tw/p/422-1000-1005.php",
       "source": "webfetch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-008",
+      "id": "NTHU-114008",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "HUM",
@@ -2750,10 +3037,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://sunspeech.site.nthu.edu.tw/p/423-1448-3630.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-009",
+      "id": "NYCU-114009",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "EDU",
@@ -2763,10 +3051,11 @@ var __EVENTS_DATA__ = {
       "unit": "教學發展中心",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260300078",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTNU-004",
+      "id": "NTNU-114004",
       "school_id": "NTNU",
       "school_name": "國立臺灣師範大學",
       "category": "TALK",
@@ -2776,10 +3065,11 @@ var __EVENTS_DATA__ = {
       "unit": "地理學系",
       "url": "https://www.geo.ntnu.edu.tw/",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-010",
+      "id": "MCU-114010",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "CONF",
@@ -2789,10 +3079,11 @@ var __EVENTS_DATA__ = {
       "unit": "財金學院",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTNU-005",
+      "id": "NTNU-114005",
       "school_id": "NTNU",
       "school_name": "國立臺灣師範大學",
       "category": "CONF",
@@ -2802,10 +3093,11 @@ var __EVENTS_DATA__ = {
       "unit": "地理學系",
       "url": "https://www.geo.ntnu.edu.tw/index.php/igct2026/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-009",
+      "id": "TKU-114009",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "EDU",
@@ -2815,10 +3107,11 @@ var __EVENTS_DATA__ = {
       "unit": "教學發展中心",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "SCU-007",
+      "id": "SCU-114007",
       "school_id": "SCU",
       "school_name": "東吳大學",
       "category": "LAW",
@@ -2828,10 +3121,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會學系",
       "url": "https://scusoc.pso.scu.edu.tw/news/all/1",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-011",
+      "id": "MCU-114011",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "CONF",
@@ -2841,10 +3135,11 @@ var __EVENTS_DATA__ = {
       "unit": "國際事務學院",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-009",
+      "id": "NSYSU-114009",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "CONF",
@@ -2854,10 +3149,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育研究所",
       "url": "https://tera-wera2026.nsysu.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-009",
+      "id": "NTHU-114009",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "MED",
@@ -2867,10 +3163,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://sunspeech.site.nthu.edu.tw/p/423-1448-3630.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "TKU-010",
+      "id": "TKU-114010",
       "school_id": "TKU",
       "school_name": "淡江大學",
       "category": "AI",
@@ -2880,10 +3177,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育心理與諮商研究所",
       "url": "https://enroll.tku.edu.tw/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-012",
+      "id": "MCU-114012",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "EDU",
@@ -2893,10 +3191,11 @@ var __EVENTS_DATA__ = {
       "unit": "英語教學系",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CCU-003",
+      "id": "CCU-114003",
       "school_id": "CCU",
       "school_name": "國立中正大學",
       "category": "EDU",
@@ -2906,10 +3205,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育學研究所",
       "url": "https://deptedu.ccu.edu.tw/p/406-1231-82750,r3045.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-013",
+      "id": "MCU-114013",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "MED",
@@ -2919,10 +3219,11 @@ var __EVENTS_DATA__ = {
       "unit": "體育事務處",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTU-010",
+      "id": "NTU-114010",
       "school_id": "NTU",
       "school_name": "國立臺灣大學",
       "category": "AI",
@@ -2932,10 +3233,11 @@ var __EVENTS_DATA__ = {
       "unit": "計算機與資訊網路中心教學研究組",
       "url": "https://ann.cc.ntu.edu.tw/asp/Show.asp?num=113477",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "CCU-004",
+      "id": "CCU-114004",
       "school_id": "CCU",
       "school_name": "國立中正大學",
       "category": "ESG",
@@ -2945,10 +3247,11 @@ var __EVENTS_DATA__ = {
       "unit": "社會福利學系",
       "url": "https://counsel.utaipei.edu.tw/p/406-1057-128842,r3.php",
       "source": "websearch",
-      "confidence": "medium"
+      "confidence": "medium",
+      "academic_year": "114"
     },
     {
-      "id": "MCU-014",
+      "id": "MCU-114014",
       "school_id": "MCU",
       "school_name": "銘傳大學",
       "category": "AI",
@@ -2958,10 +3261,11 @@ var __EVENTS_DATA__ = {
       "unit": "教育研究所",
       "url": "https://academic.mcu.edu.tw/mcuinternationalsymposia/",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NTHU-010",
+      "id": "NTHU-114010",
       "school_id": "NTHU",
       "school_name": "國立清華大學",
       "category": "ESG",
@@ -2971,10 +3275,11 @@ var __EVENTS_DATA__ = {
       "unit": "科技管理學院",
       "url": "https://sunspeech.site.nthu.edu.tw/p/423-1448-3630.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NYCU-010",
+      "id": "NYCU-114010",
       "school_id": "NYCU",
       "school_name": "國立陽明交通大學",
       "category": "CONF",
@@ -2984,10 +3289,11 @@ var __EVENTS_DATA__ = {
       "unit": "學術單位",
       "url": "https://infonews.nycu.edu.tw/index.php?id=20260200255",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NSYSU-010",
+      "id": "NSYSU-114010",
       "school_id": "NSYSU",
       "school_name": "國立中山大學",
       "category": "ESG",
@@ -2997,10 +3303,11 @@ var __EVENTS_DATA__ = {
       "unit": "西灣學院",
       "url": "https://siwan.nsysu.edu.tw/p/404-1029-370921.php",
       "source": "webfetch",
-      "confidence": "high"
+      "confidence": "high",
+      "academic_year": "114"
     },
     {
-      "id": "NUK-014",
+      "id": "NUK-114014",
       "school_id": "NUK",
       "school_name": "國立高雄大學",
       "category": "MED",
@@ -3010,7 +3317,5123 @@ var __EVENTS_DATA__ = {
       "unit": "資訊工程學系",
       "url": "https://www.csie.nuk.edu.tw/speech",
       "source": "webfetch",
+      "confidence": "high",
+      "academic_year": "114"
+    },
+    {
+      "id": "NTU-113001",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "跨文化的課堂管理：國際生是機會或命運？",
+      "date": "2024-09-26",
+      "unit": "雙語教育中心",
+      "url": "https://ann.cc.ntu.edu.tw/asp/jsopContent.asp?num=102776",
+      "source": "webfetch",
       "confidence": "high"
+    },
+    {
+      "id": "NTU-113002",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "NTU-IBM Quantum System Users Meeting 2024 and Qiskit Hackathon Taiwan 2024",
+      "date": "2024-08-19",
+      "unit": "臺灣大學-IBM量子電腦中心",
+      "url": "https://cqse.ntu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-113003",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "2024 Joint Symposium on Quantum Computing",
+      "date": "2024-08-22",
+      "unit": "NCTS物理組、臺大量子科學與工程中心",
+      "url": "https://phys.ncts.ntu.edu.tw/act/actnews/Joint-76815218/home",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-113004",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "CUDA-Q Bootcamp - NTU x KQCC",
+      "date": "2024-10-25",
+      "unit": "臺灣大學-IBM量子電腦中心",
+      "url": "https://cqse.ntu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-113005",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "Multimedia in the Metaverse（元宇宙中的多媒體）",
+      "date": "2024-11-22",
+      "unit": "資訊工程學系",
+      "url": "https://www.csie.ntu.edu.tw/en/more_announcement/%5B2024-11-22%5D%C2%A0Dr-Shannon-Chen-Meta-Multimedia-in-the-Metaverse-66710617",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-113006",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "椰林講座創智系列：台積電創辦人張忠謀先生「半導體生涯的教訓」",
+      "date": "2024-12-16",
+      "unit": "國立臺灣大學（校長室）",
+      "url": "https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20243700_12",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-113007",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Road to Quantum Utility Workshop 2025",
+      "date": "2025-01-21",
+      "unit": "臺灣大學-IBM量子電腦中心",
+      "url": "https://cqse.ntu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113001",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：童子賢「產業發展與世界局勢」",
+      "date": "2024-12-23",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113002",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：游錫堃「詩說台灣民主路」",
+      "date": "2024-11-14",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113003",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "MED",
+      "category_name": "醫療健康",
+      "title": "孫運璿科技講座：陳威明「創新與溫度—醫療進步的動力」",
+      "date": "2024-10-30",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113004",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：朱平「生意人、悅日人、漣漪人」",
+      "date": "2024-10-24",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113005",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：花敬群「居住與房產的對話」",
+      "date": "2024-10-17",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113006",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "LAW",
+      "category_name": "法政人文",
+      "title": "2024衛生法律與政策年度研討會：健康一體的法制創新與韌性建構",
+      "date": "2024-10-25",
+      "unit": "科技法律研究所",
+      "url": "https://www.lst.nthu.edu.tw/NationalTsingHuaUniversityScienceandTechnologyLaw/%E3%80%90%E9%96%8B%E6%94%BE%E5%A0%B1%E5%90%8D%E3%80%912024%E8%A1%9B%E7%94%9F%E6%B3%95%E5%BE%8B%E8%88%87%E6%94%BF%E7%AD%96%E5%B9%B4%E5%BA%A6%E7%A0%94%E8%A8%8E%E6%9C%83:%E5%81%A5%E5%BA%B7%E4%B8%80%E9%AB%94%E7%9A%84%E6%B3%95%E5%88%B6%E5%89%B5%E6%96%B0%E8%88%87%E9%9F%8C%E6%80%A7%E5%BB%BA%E6%A7%8B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113007",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024韌性與管理國際研討會",
+      "date": "2024-11-29",
+      "unit": "韌性研究中心",
+      "url": "https://www.ctm.nthu.edu.tw/tw/article/972-2024-ren-sing-yu-guan-li-guo-ji",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113008",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育教學",
+      "title": "2024第十五屆教育創新國際學術研討會：3AI趨勢下的教育沙盒——跨越教與學的多模態創新",
+      "date": "2024-11-22",
+      "unit": "竹師教育學院",
+      "url": "https://delt.site.nthu.edu.tw/p/405-1129-272344,c174.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113009",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "科管院2024載物論壇：公司治理未來趨勢",
+      "date": "2024-12-10",
+      "unit": "科技管理學院",
+      "url": "https://www.ctm.nthu.edu.tw/tw/article/1006-12-yueh-10-rih-2024-zai-wu-lun",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113010",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：洪一中「千勝標竿，12強之巔，台灣棒球如何攀向下一座高峰」",
+      "date": "2025-02-26",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113011",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：陳其邁「城市治理的基本功：從高雄的三個經驗談起」",
+      "date": "2025-03-11",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113012",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "電機系電控校友分享講座：奇景光電陳平波副總",
+      "date": "2024-10-22",
+      "unit": "電機工程學系",
+      "url": "https://dee.site.nthu.edu.tw/p/403-1175-2629-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113013",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "電機系演講：Further with AI, Faster on RTX",
+      "date": "2024-09-26",
+      "unit": "電機工程學系",
+      "url": "https://dee.site.nthu.edu.tw/p/403-1175-2629-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113014",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "電機系勤英講座：An Intellectual's Coherent View",
+      "date": "2024-11-19",
+      "unit": "電機工程學系",
+      "url": "https://dee.site.nthu.edu.tw/p/403-1175-2629-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-113015",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "孫運璿科技講座：梁永斐「農家子弟的斜槓人生」",
+      "date": "2025-04-17",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113001",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024台灣網際網路研討會（TANET 2024）：AI科技與社會永續發展",
+      "date": "2024-10-24",
+      "unit": "資訊技術服務中心",
+      "url": "https://tanet2024.conf.nycu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113002",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "ESG",
+      "category_name": "永續環境",
+      "title": "博雅講座：Dr. Gunter Pauli「淨零的藍色創新／Blue Innovations for Net Zero」",
+      "date": "2024-10-01",
+      "unit": "博雅書苑",
+      "url": "https://sdgs.nycu.edu.tw/lecture-dr-gunter-pauli-blue-innovtions-for-net-zero/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113003",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "電機系電控校友分享講座：碩天科技何濓洵總經理",
+      "date": "2024-11-06",
+      "unit": "電機工程學系",
+      "url": "https://dee.nycu.edu.tw/news.php?pa=getList&category=1&locale=tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113004",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "電機系演講：旺宏金矽獎校園講座——工研院張世杰所長",
+      "date": "2024-12-12",
+      "unit": "電機工程學系",
+      "url": "https://dee.nycu.edu.tw/news.php?pa=getList&category=1&locale=tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113005",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "電機系演講：韓國首爾大學 Dr. Jonghyun Choi",
+      "date": "2024-12-11",
+      "unit": "電機工程學系",
+      "url": "https://dee.nycu.edu.tw/news.php?pa=getList&category=1&locale=tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113006",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "電機系演講：華仁全球講座——COSMOS WORLD FOUNDATION MODELS FOR PHYSICAL AI",
+      "date": "2025-05-15",
+      "unit": "電機工程學系",
+      "url": "https://dee.nycu.edu.tw/news.php?pa=getList&category=1&locale=tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-113007",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "電機系演講：2025 TSMC Technical Career Talk",
+      "date": "2025-07-14",
+      "unit": "電機工程學系",
+      "url": "https://dee.nycu.edu.tw/news.php?pa=getList&category=1&locale=tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113001",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "量子電腦體驗課程：IBM雲端量子電腦操作",
+      "date": "2024-11-09",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113002",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Quantumness of electron transport in quantum dot devices（量子點元件中電子傳輸的量子特性）",
+      "date": "2024-08-23",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113003",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Quantum Train: A Novel Hybrid Quantum-Classical Machine Learning Approach",
+      "date": "2024-09-16",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113004",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Quantinuum's Trapped-Ion Quantum Computers",
+      "date": "2024-09-06",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113005",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "HUM",
+      "category_name": "人文學術",
+      "title": "EMI Seminar: Nikah Siri and temporality: Indonesian Migrant Workers Intimacy and Mobility in Taiwan",
+      "date": "2024-11-01",
+      "unit": "台灣文學系",
+      "url": "https://twl.ncku.edu.tw/p/404-1143-274712.php?Lang=en",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113006",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Joint International Workshop on Quantum Computing",
+      "date": "2025-06-23",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-113007",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "2025第六屆高中生量子電腦微課程",
+      "date": "2025-07-19",
+      "unit": "前沿量子科技研究中心（QFort）",
+      "url": "https://qfort.ncku.edu.tw/events",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113002",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024現代中國國家社會關係工作坊：重構利維坦——習近平時代的中國國家治理",
+      "date": "2024-10-29",
+      "unit": "國際關係研究中心、東亞研究所",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCCU-113003",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "WHO大流行病公約談判（2024）國際研討會：Multilayered Health Governance and the Possibility of Taiwan's Participation",
+      "date": "2024-11-20",
+      "unit": "國際經貿組織暨法律研究中心",
+      "url": "https://tradelaw.nccu.edu.tw/sample-page/%E6%BC%94%E8%AC%9B%E8%B3%87%E6%96%99/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113004",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "跨境電子商務與數位貿易發展學術研討會（含大學生國際經貿競賽論文發表）",
+      "date": "2024-12-28",
+      "unit": "國際經貿組織暨法律研究中心",
+      "url": "https://tradelaw.nccu.edu.tw/sample-page/%E6%BC%94%E8%AC%9B%E8%B3%87%E6%96%99/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113005",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "東亞語言文化研究的前瞻與挑戰國際學術研討會（年輕世代的東亞語言文化研究）",
+      "date": "2024-10-18",
+      "unit": "日本語文學系",
+      "url": "https://japanese.nccu.edu.tw/PageDoc?fid=5973",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113007",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "HUM",
+      "category_name": "人文學術",
+      "title": "英文系演講：翻譯職涯",
+      "date": "2025-04-30",
+      "unit": "英國語文學系",
+      "url": "https://english.nccu.edu.tw/PageDoc?fid=7883",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113008",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "中國新時代次國家治理國際研討會",
+      "date": "2025-06-27",
+      "unit": "國際關係研究中心",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113009",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "人工智慧與大語言模型在國際安全研究中的角色研討會",
+      "date": "2025-07-16",
+      "unit": "國際關係研究中心、美國喬治亞理工大學",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-113010",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "113",
+      "category": "LAW",
+      "category_name": "法政人文",
+      "title": "關稅戰、貿易戰與兩岸地緣政治風險研討會",
+      "date": "2025-06-14",
+      "unit": "國際關係研究中心",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113001",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "人工智慧時代中的人性研討會",
+      "date": "2024-09-12",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113002",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "教育使命與理念傳承學術研討會",
+      "date": "2024-10-28",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113003",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "SPARK計畫培育課程：醫材法規與風險管理導論",
+      "date": "2024-10-01",
+      "unit": "事業發展處",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113004",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024生醫領域智慧財產權發展研討會",
+      "date": "2024-11-29",
+      "unit": "事業發展處",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113005",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "生醫轉譯與創業資源研討會",
+      "date": "2024-12-04",
+      "unit": "事業發展處",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113006",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "SPARK計畫：醫療器材法規與保險給付制度",
+      "date": "2025-01-13",
+      "unit": "事業發展處",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113007",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第八屆郎尼根與當代思潮學術研討會：哲學與神學的對話",
+      "date": "2025-03-05",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-113009",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "數位健康技術國際研討會",
+      "date": "2025-05-16",
+      "unit": "生物醫學海量資料分析碩士學位學程",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "SCU-113001",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "王明珂院士學術演講：歷史文本與社會情境",
+      "date": "2024-11-13",
+      "unit": "歷史學系",
+      "url": "https://history1972.idc.scu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "SCU-113002",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "113",
+      "category": "STU",
+      "category_name": "學生發展",
+      "title": "2024閱人青年職涯論壇",
+      "date": "2024-12-07",
+      "unit": "學生事務處",
+      "url": "https://www.phys.scu.edu.tw/events-detail/234/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "SCU-113003",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024從課室到社會永續：教學實踐與跨域創新研討會",
+      "date": "2024-11-01",
+      "unit": "教學資源中心",
+      "url": "https://2024conf.my.canva.site/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "SCU-113004",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "品德講堂─攜夢同行，做你喜歡的自己",
+      "date": "2025-03-09",
+      "unit": "學生活動（美育）",
+      "url": "https://mobile.sys.scu.edu.tw/calendar/list?type=static&calendar=scu4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "SCU-113005",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教學創新",
+      "title": "Web of Science西文引用文獻資料庫利用教育",
+      "date": "2025-03-11",
+      "unit": "圖書館",
+      "url": "https://mobile.sys.scu.edu.tw/calendar/list?type=static&calendar=scu4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113001",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024第七屆人工智慧與法律國際學術研討會：AI基本法與生成式AI",
+      "date": "2024-11-02",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113002",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第一屆金融保險法學術研討會暨卓俊雄紀念演講",
+      "date": "2024-12-27",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113003",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第十二屆台中醫事法論壇暨第四屆彰化醫事法論壇",
+      "date": "2024-12-22",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113004",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "日本特殊詐欺與立法政策現況",
+      "date": "2024-12-19",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113005",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "刑事司法案例系列（三）：新興毒品",
+      "date": "2024-12-11",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113006",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "最高行政法院大法庭",
+      "date": "2025-02-27",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113007",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "留學美國：從第一天開始的身份策略",
+      "date": "2025-03-20",
+      "unit": "法律學院",
+      "url": "https://law.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-113008",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/科技",
+      "title": "東海大學資訊工程學系研討會：智慧校園升級：AI精準應答系統與資安整合服務",
+      "date": "2024-10-15",
+      "unit": "資訊工程學系",
+      "url": "https://www.cs.thu.edu.tw/web/news/list.php?lang=zh_tw&cid=9",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "THU-113009",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2025年會暨「川普新政與美中臺新變局」國際學術研討會",
+      "date": "2025-03-15",
+      "unit": "政治學系",
+      "url": "https://politics.thu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "TKU-113001",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024亞太大學智慧校園研討會暨成果展",
+      "date": "2024-11-21",
+      "unit": "淡江大學、優久大學聯盟",
+      "url": "https://2024.icsc.tku.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-113002",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "IWES 2024 國際研討會",
+      "date": "2024-11-15",
+      "unit": "管理科學學系",
+      "url": "https://iwes2024.gms.tku.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-113003",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2025幾丁質幾丁聚醣生物材料科技研討會",
+      "date": "2025-02-13",
+      "unit": "化學工程與材料工程學系",
+      "url": "https://enroll.tku.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-113004",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2025淡江大學化工與材料研討會",
+      "date": "2025-01-08",
+      "unit": "化學工程與材料工程學系",
+      "url": "https://enroll.tku.edu.tw/course.aspx?cid=tedx20250108",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-113007",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第九屆發展研究年會暨未來前瞻國際學術研討會：亞洲2050",
+      "date": "2024-11-01",
+      "unit": "未來研究所",
+      "url": "https://enroll.tku.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FCU-113001",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "【人文與科技大講堂】台灣瓷器的國際舞台與品牌力量（陳立恆）",
+      "date": "2024-10-16",
+      "unit": "秘書處",
+      "url": "https://registration.fcu.edu.tw/news-detail/?id=47290",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113002",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "【人文與科技大講堂】台灣精密製造的產業故事（梁又文）",
+      "date": "2024-10-31",
+      "unit": "秘書處",
+      "url": "https://registration.fcu.edu.tw/news-detail/?id=47290",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113003",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/科技",
+      "title": "【人文與科技大講堂】人工智慧在影音創作的應用（馬維英）",
+      "date": "2024-11-06",
+      "unit": "秘書處",
+      "url": "https://registration.fcu.edu.tw/news-detail/?id=47290",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113004",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "點廢成金：楊秋忠院士特邀講座",
+      "date": "2024-11-08",
+      "unit": "研究發展處",
+      "url": "https://student.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113005",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "ART",
+      "category_name": "藝文活動",
+      "title": "113-1外語教學中心文化活動饗宴",
+      "date": "2024-10-16",
+      "unit": "文理學院外語教學中心",
+      "url": "https://student.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113006",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024漢字文化研習會：文化智慧與AI時代的思維互動",
+      "date": "2024-12-21",
+      "unit": "文理學院中國文學系",
+      "url": "https://student.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "FCU-113007",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "113",
+      "category": "STU",
+      "category_name": "學生發展",
+      "title": "113-2企業永續發展學分學程成果發表會",
+      "date": "2025-06-06",
+      "unit": "商學院",
+      "url": "https://www.fcu.edu.tw/fcuweekly/news-detail/?id=45385",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113001",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：AlOx磁性穿隧接面中電荷動態的隨機特性（洪振湧）",
+      "date": "2024-09-17",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113002",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：從重力透鏡窺探宇宙的暗物質世界（譚雪瑩）",
+      "date": "2024-11-19",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113003",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：物理人的藍海之路（李寧）",
+      "date": "2024-11-26",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113004",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：XEOL、TR-XEOL與HB-T干涉儀的結合（林碧軒）",
+      "date": "2024-12-10",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113005",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：工研院材料與化工研究所應用分享（江叡涵）",
+      "date": "2024-12-31",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CYCU-113006",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024年第十三屆「開創華語文教育與僑民教育之新視野」國際學術研討會",
+      "date": "2024-11-01",
+      "unit": "應用華語文學系",
+      "url": "https://deptweb.cycu.edu.tw/tcsl/%E5%AD%B8%E8%A1%93%E5%B0%88%E5%8D%80/%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CYCU-113007",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第24屆台灣華語文教學年會暨國際學術研討會",
+      "date": "2024-12-01",
+      "unit": "應用華語文學系",
+      "url": "https://deptweb.cycu.edu.tw/tcsl/%E5%AD%B8%E8%A1%93%E5%B0%88%E5%8D%80/%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CYCU-113009",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "學術演講：探索黑洞的最新進展（孫維新）",
+      "date": "2025-02-19",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCU-113001",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024年第31屆金聲研討會",
+      "date": "2024-09-30",
+      "unit": "中國文學系",
+      "url": "https://www.chinese.ncu.edu.tw/zh_tw/News/Conference",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCU-113002",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第五屆文字學青年學者暨研究生論文研討會",
+      "date": "2025-04-17",
+      "unit": "中國文學系",
+      "url": "https://www.chinese.ncu.edu.tw/zh_tw/News/Conference",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCU-113003",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "在地與跨域流動：亞洲華文文學國際學術研討會",
+      "date": "2025-05-23",
+      "unit": "人文藝術中心、文學院學士班、中國文學系",
+      "url": "https://www.ncu.edu.tw/tw/events/show.php?num=18983",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCU-113004",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "TGIS 2025 台灣地理資訊學會年會暨學術研討會",
+      "date": "2025-07-09",
+      "unit": "太空及遙測研究中心",
+      "url": "https://tgis2025.csrsr.ncu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCU-113005",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "113學年度上學期化學系專題演講",
+      "date": "2024-09-06",
+      "unit": "化學系",
+      "url": "https://www.chem.ncu.edu.tw/zh_tw/news/news102",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCU-113006",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "113學年度下學期化學系專題演講",
+      "date": "2025-02-18",
+      "unit": "化學系",
+      "url": "https://www.chem.ncu.edu.tw/zh_tw/news/news102",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCU-113007",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第五屆中日大學化學工作坊（CHUO/NCU Chemistry Workshop）",
+      "date": "2025-01-14",
+      "unit": "化學系",
+      "url": "https://www.chem.ncu.edu.tw/zh_tw/news/news102",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NSYSU-113001",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024國際IDG論壇：從氣膠科學看地球永續",
+      "date": "2024-10-22",
+      "unit": "待確認",
+      "url": "https://www.nsysu.edu.tw/p/422-1000-1332.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113002",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "ART",
+      "category_name": "藝文展演",
+      "title": "「藝術生態大解析：趨勢、創新、體制與市場」論壇",
+      "date": "2024-10-15",
+      "unit": "藝術管理與創業研究所",
+      "url": "https://www.nsysu.edu.tw/p/422-1000-1332.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113003",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（林宮玄 研究技師）",
+      "date": "2024-10-16",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113004",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（黃國瑋 博士）",
+      "date": "2024-10-23",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113005",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（蔡欣融 助理教授）",
+      "date": "2024-10-30",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113006",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（廖文德 教授）",
+      "date": "2024-11-06",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113007",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（呂杰翰 助理教授）",
+      "date": "2024-11-13",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113008",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（洪振湧 副教授）",
+      "date": "2024-11-20",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113009",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系本週演講（陳曉新 教授）",
+      "date": "2024-12-11",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113010",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "MED",
+      "category_name": "醫療健康",
+      "title": "Kumamoto University - NSYSU Joint Webinar: Metabolic Syndrome",
+      "date": "2025-04-18",
+      "unit": "醫學院",
+      "url": "https://www.nsysu.edu.tw/p/422-1000-1332.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-113011",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "亞太教育研究學會暨台灣教育研究學會2025國際學術研討會",
+      "date": "2025-05-12",
+      "unit": "教育研究所",
+      "url": "https://www.nsysu.edu.tw/p/422-1000-1332.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-113001",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "生成式AI賦能智慧農業",
+      "date": "2024-11-18",
+      "unit": "農業暨自然資源學院",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-113002",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "讓AI成為你的專屬小幫手—華語教學與繪本創作之應用",
+      "date": "2024-11-13",
+      "unit": "華語中心",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-113003",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "台灣化學工程學會產學研討列車（113年12月6日）",
+      "date": "2024-12-06",
+      "unit": "工學院",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-113004",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "臺灣原生百合與石蒜研討會",
+      "date": "2024-10-12",
+      "unit": "園藝系",
+      "url": "https://canr.nchu.edu.tw/web/news/detail.php?lang=zh_tw&cid=0&id=801",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-113005",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育教學",
+      "title": "2024教師專業發展學術研討會",
+      "date": "2024-11-16",
+      "unit": "師資培育中心、教師專業發展研究所",
+      "url": "https://www.proedu.nchu.edu.tw/article_01-108",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTNU-113001",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第三十一屆國立臺灣師範大學國文學系研究生學術論文研討會",
+      "date": "2025-03-08",
+      "unit": "國文學系",
+      "url": "https://www.ch.ntnu.edu.tw/index.php/2024/10/09/1131009/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTNU-113002",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第十五屆「數位典藏與數位人文國際學術研討會」",
+      "date": "2024-11-30",
+      "unit": "歷史學系、臺灣史研究所、臺灣語文學系",
+      "url": "https://www.his.ntnu.edu.tw/index.php/2024/11/18/1131118-1/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTNU-113003",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024兒童發展與家庭研究國際學術研討會",
+      "date": "2024-10-05",
+      "unit": "幼兒與家庭科學學系",
+      "url": "https://www.cfs.ntnu.edu.tw/index.php/2024conference/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTNU-113004",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第33屆微分方程及相關領域研討會",
+      "date": "2024-12-07",
+      "unit": "數學系",
+      "url": "https://cantor.math.ntnu.edu.tw/index.php/2024/10/29/forum20241207-08/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTNU-113005",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "113",
+      "category": "ART",
+      "category_name": "藝文展演",
+      "title": "【元宇宙系列講座】元宇宙X敘事X科技藝術演講活動",
+      "date": "2024-10-09",
+      "unit": "文學院",
+      "url": "https://www.cla.ntnu.edu.tw/index.php/2024/09/13/metaseries1/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUT-113001",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Mixed methods design for action research in applied linguistics",
+      "date": "2024-11-25",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113002",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "Sharings on cross-disciplinary explorations（IBM 資訊工程師 Haowen Jiang）",
+      "date": "2024-10-29",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113003",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Speech acquisition of fricatives and difficult-to-pronounce names",
+      "date": "2024-10-01",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113004",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Let's play! Fanfiction for language teaching",
+      "date": "2025-04-21",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113005",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Assessing reliability in survey design",
+      "date": "2025-05-22",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113006",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "鐵道車輛系統學程說明會",
+      "date": "2024-12-03",
+      "unit": "智慧鐵道產業人才學院研發中心",
+      "url": "https://news.ntut.edu.tw/p/422-1000-1079.php",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-113007",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "2025軌道菁英研習營（第八屆）",
+      "date": "2025-01-01",
+      "unit": "機械工程系",
+      "url": "https://news.ntut.edu.tw/p/422-1000-1079.php",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUST-113002",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Ye Jun-Wei (National Tsing Hua University, Materials Science)",
+      "date": "2024-09-25",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113003",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Dr. Ruijie Ye (Forschungszentrum Jülich GmbH)",
+      "date": "2024-10-11",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113004",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Payam Kaghazchi (Forschungszentrum Jülich GmbH)",
+      "date": "2024-10-23",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113005",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "美國微軟公司 Walson Lee 演講",
+      "date": "2024-11-06",
+      "unit": "電機工程系",
+      "url": "https://www.ee.ntust.edu.tw/p/403-1027-1372.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113006",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Andy Xue-Liang Sun (Western University)",
+      "date": "2025-01-03",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113007",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Yuegang Zhang (Tsinghua University)",
+      "date": "2025-01-15",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113008",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Yong-Mook Kang (Korea University)",
+      "date": "2025-01-23",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113009",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Uchida Hiroyuki (University of Yamanashi)",
+      "date": "2025-02-12",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113011",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "台積電智能製造中心校園講座：智能製造 • 智造未來",
+      "date": "2025-03-17",
+      "unit": "電機工程系",
+      "url": "https://www.ee.ntust.edu.tw/p/403-1027-1372.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUST-113012",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "科技時代教育發展的挑戰與創新國際學術研討會",
+      "date": "2025-04-29",
+      "unit": "資訊應用與人力資源發展研究所",
+      "url": "https://www.gidle.ntust.edu.tw/p/403-1006-420.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUST-113013",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Seung-Taek Myung (Sejong University)",
+      "date": "2025-05-02",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113014",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Dr. Felix Herrmann Richter (Justus-Liebig-Universität Gießen)",
+      "date": "2025-05-06",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113015",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "Energy Control for Distributed Modular Converter Systems (演講)",
+      "date": "2025-05-22",
+      "unit": "電機工程系",
+      "url": "https://www.ee.ntust.edu.tw/p/403-1027-1372.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113016",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Prof. Akihiko Kudo (Tokyo University of Science)",
+      "date": "2025-06-16",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-113017",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "SEED Seminar — Dr. Caiyun Wang (University of Wollongong)",
+      "date": "2025-06-23",
+      "unit": "永續能源發展中心 (SEED)",
+      "url": "https://seed.ntust.edu.tw/p/412-1083-11419.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113001",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "113學年度上學期 研究所專題演講 — Papers and Patents: Insights from the Science of Science（賴孚權，中央研究院）",
+      "date": "2024-10-07",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113002",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "113學年度上學期 研究所專題演講 — 宏觀經濟與貨幣搜索研究（朱玉琦，國立臺灣大學）",
+      "date": "2024-10-14",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113003",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "113學年度上學期 研究所專題演講 — Market design of college-major switches（高一誠，金融研訓院）",
+      "date": "2024-10-28",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113004",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "113學年度上學期 研究所專題演講 — 企業合併模擬研究（胡偉民，國立政治大學財政系）",
+      "date": "2024-11-04",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113005",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "台灣經濟學會年會暨學術研討會（含 Prof. Dan Galai 演講）",
+      "date": "2024-11-29",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113006",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "113學年度上學期 研究所專題演講 — 美中貿易戰的制度性視角分析（葉俊顯，中央研究院經濟所）",
+      "date": "2024-12-02",
+      "unit": "經濟學系",
+      "url": "https://econ.ccu.edu.tw/p/406-1117-67567,r1451.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113007",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "演講公告 113-2 — 神經退化機制的分子計算研究（中正大學助理教授）",
+      "date": "2025-02-18",
+      "unit": "化學暨生物化學系",
+      "url": "https://deptche.ccu.edu.tw/p/404-1078-68586.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113008",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "演講公告 113-2 — 非標準環狀肽合成簡化方法（香港科技大學教授）",
+      "date": "2025-02-25",
+      "unit": "化學暨生物化學系",
+      "url": "https://deptche.ccu.edu.tw/p/404-1078-68586.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113009",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "演講公告 113-2 — 奈米化學與光物質交互作用（普林斯頓大學教授）",
+      "date": "2025-03-11",
+      "unit": "化學暨生物化學系",
+      "url": "https://deptche.ccu.edu.tw/p/404-1078-68586.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113010",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "演講公告 113-2 — 半導體晶體的刻面依賴性行為（清華大學教授）",
+      "date": "2025-03-18",
+      "unit": "化學暨生物化學系",
+      "url": "https://deptche.ccu.edu.tw/p/404-1078-68586.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113015",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "會計暨資訊系學術活動 — EY Taiwan 稅務服務演講",
+      "date": "2024-12-02",
+      "unit": "會計暨資訊系",
+      "url": "https://ait.ccu.edu.tw/p/403-1119-2652-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113016",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "會計暨資訊系學術活動 — Fordham University Gabriel School of Business 訪校演講",
+      "date": "2024-12-16",
+      "unit": "會計暨資訊系",
+      "url": "https://ait.ccu.edu.tw/p/403-1119-2652-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113017",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "會計暨資訊系學術活動 — 東海大學會計學系助理教授演講",
+      "date": "2024-11-04",
+      "unit": "會計暨資訊系",
+      "url": "https://ait.ccu.edu.tw/p/403-1119-2652-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-113018",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育學習",
+      "title": "教育系講座 113-2 — 公務人員高普考經驗分享（職涯講座）",
+      "date": "2025-03-20",
+      "unit": "教育學系",
+      "url": "https://deptedu.ccu.edu.tw/p/412-1231-2778.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113001",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "法律服務社講座 — 蕭奕弘律師談法律科普心路歷程",
+      "date": "2024-09-10",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113002",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "LAW",
+      "category_name": "法律政治",
+      "title": "法學院公益講座 — 車禍了，怎麼辦？談車禍相關救濟、調解、訴訟流程",
+      "date": "2024-10-22",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113003",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI與數位科技",
+      "title": "法學院學產鏈結講座 — AI人工智能發展與資安問題",
+      "date": "2024-11-01",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NUK-113004",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "法學院學產鏈結講座 — 企業法務之非傳統法律人發展路徑",
+      "date": "2024-12-02",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113005",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "LAW",
+      "category_name": "法律政治",
+      "title": "法學院學產鏈結講座 — 從日劇學房產法律與實務",
+      "date": "2024-12-07",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113006",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "國立高雄大學韓國研究中心第十屆國際學術會議 — 臺韓關係暨東亞韓國學研究教育的探索",
+      "date": "2024-09-13",
+      "unit": "東亞語文學系",
+      "url": "https://deal.nuk.edu.tw/p/403-1049-670-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113007",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "中華民國韓國研究學會第31屆國際學術會議",
+      "date": "2024-10-21",
+      "unit": "東亞語文學系",
+      "url": "https://deal.nuk.edu.tw/p/403-1049-670-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113008",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024 Asia Virtual Academy 國際學術研討會",
+      "date": "2024-09-20",
+      "unit": "國際事務處",
+      "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113009",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "ESG",
+      "category_name": "永續環境",
+      "title": "Net Zero Team Taiwan! 論壇",
+      "date": "2024-12-31",
+      "unit": "環境安全衛生中心",
+      "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-113011",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "法學院博士班經典講座暨信華法律管理講座系列（第2學期開講）",
+      "date": "2025-01-29",
+      "unit": "法學院",
+      "url": "https://lawyuan.nuk.edu.tw/p/412-1031-5593.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCNU-113001",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — van der Waals Epitaxy on 2D Material Surfaces（林時彥，中央研究院）",
+      "date": "2024-09-20",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113002",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — 鈣鈦礦太陽電池研究（張勝雄，國立臺灣海洋大學）",
+      "date": "2024-10-11",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113003",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — 量子點顯示技術（林明毅，國立聯合大學）",
+      "date": "2024-11-08",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113004",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — TFTLCD Introduction（蔡宙霖，友達光電）",
+      "date": "2024-11-27",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113005",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — 電阻抗光譜應用（程德勝，國立中興大學）",
+      "date": "2024-11-29",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113006",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第1學期應光系專題演講 — 混合太陽電池研究（魏大程，國立成功大學）",
+      "date": "2024-12-04",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2530.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113007",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "「永續x照顧」系列研討會 — NPO與長期照顧：非營利組織、長期照顧與永續發展",
+      "date": "2024-11-29",
+      "unit": "社會政策與社會工作學系",
+      "url": "https://ch.ncnu.edu.tw/p/406-1002-24217,r47.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113008",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "「永續x照顧」系列研討會 — 生命週期中的照顧需求與挑戰",
+      "date": "2024-11-30",
+      "unit": "社會政策與社會工作學系",
+      "url": "https://ch.ncnu.edu.tw/p/406-1002-24217,r47.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113009",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育學習",
+      "title": "華語教學碩士學程演講 — AI時代的語言教學思維與研究應用（連育仁）",
+      "date": "2024-12-10",
+      "unit": "華語文教學碩士學位學程",
+      "url": "https://tcasl.ncnu.edu.tw/p/412-1031-962.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113010",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育學習",
+      "title": "華語教學碩士學程演講 — 華語非同步影音教材設計及AI工具應用於微課程開發（歐喜強）",
+      "date": "2024-12-03",
+      "unit": "華語文教學碩士學位學程",
+      "url": "https://tcasl.ncnu.edu.tw/p/412-1031-962.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113011",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育學習",
+      "title": "華語教學碩士學程演講 — 日月潭文武廟の前世今生（童萬益）",
+      "date": "2024-11-12",
+      "unit": "華語文教學碩士學位學程",
+      "url": "https://tcasl.ncnu.edu.tw/p/412-1031-962.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113012",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育學習",
+      "title": "華語教學碩士學程演講 — 華裔華文+國際中文：重新定義世界華裔教育（吳英成）",
+      "date": "2024-10-22",
+      "unit": "華語文教學碩士學位學程",
+      "url": "https://tcasl.ncnu.edu.tw/p/412-1031-962.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113013",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第2學期應光系專題演講 — 植物葉片衍生石墨烯量子點的物理性質介紹（莊家翔，中原大學）",
+      "date": "2025-03-14",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2694.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113014",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "ESG",
+      "category_name": "永續環境",
+      "title": "113學年度第2學期應光系專題演講 — 淨零減塑下循環聚酯技術之發展契機（林哲增，工業技術研究院）",
+      "date": "2025-03-19",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2694.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113015",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第2學期應光系專題演講 — 有機紅螢烯無接觸式液晶配向技術（許哲儒，聯合大學）",
+      "date": "2025-04-18",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2694.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113016",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第2學期應光系專題演講 — 無基底表面電漿奈米雷射製造方法（周昱薰，國立成功大學）",
+      "date": "2025-04-25",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2694.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-113017",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "113學年度第2學期應光系專題演講 — 鈉電池材料發展與應用（林秀芬，虎尾科技大學）",
+      "date": "2025-05-23",
+      "unit": "應用光電科學學系",
+      "url": "https://amoe.ncnu.edu.tw/p/412-1021-2694.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113001",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024海洋文化國際學術研討會暨第十一屆東亞島嶼與海洋國際論壇",
+      "date": "2024-11-01",
+      "unit": "海洋事務與資源管理研究所",
+      "url": "https://ioc.ntou.edu.tw/p/16-1050-105720.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113002",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI與數位科技",
+      "title": "資訊工程學系演講 113.12.05 — 即時多任務電腦視覺系統的應用（王建堯，中央研究院資訊科學研究所）",
+      "date": "2024-12-05",
+      "unit": "資訊工程學系",
+      "url": "https://cse.ntou.edu.tw/p/406-1063-107801,r1034.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113003",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "STU",
+      "category_name": "學生發展",
+      "title": "2024戶外教育年會宣言發布會暨頒獎典禮",
+      "date": "2024-11-18",
+      "unit": "臺灣海洋教育中心",
+      "url": "https://tmec.ntou.edu.tw/p/405-1016-109262,c12192.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTOU-113004",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "師資培育中心演講 — 從星空航海找回人生與決策的原點（張沛檥主任）",
+      "date": "2025-03-07",
+      "unit": "師資培育中心",
+      "url": "https://www.ntou.edu.tw/post/演講公告",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113005",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "LAW",
+      "category_name": "法律政治",
+      "title": "海洋法政學士學位學程演講 — 國際經貿法規範與供應鏈變化：以臺灣在日本產扇貝出口體系中之角色為例（陳韋仲）",
+      "date": "2025-03-09",
+      "unit": "海洋法政學士學位學程",
+      "url": "https://www.ntou.edu.tw/post/演講公告",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113007",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "光電與材料科技學系演講 — 非破壞性三維同調光學成像於醫學與半導體應用（蔡孟燦教授）",
+      "date": "2025-03-11",
+      "unit": "光電與材料科技學系",
+      "url": "https://www.ntou.edu.tw/post/演講公告",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113008",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "TEC",
+      "category_name": "科技工程",
+      "title": "河海工程學系演講 — 我國防災策略：強韌臺灣大規模風災震災整備與協作計畫（朱峻平總經理）",
+      "date": "2025-03-12",
+      "unit": "河海工程學系",
+      "url": "https://www.ntou.edu.tw/post/演講公告",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113009",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "ART",
+      "category_name": "藝文活動",
+      "title": "《大海漫遊》羅尊膠彩創作展暨藝術家講座",
+      "date": "2025-03-04",
+      "unit": "藝文中心",
+      "url": "https://www.ntou.edu.tw/post/活動情報",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-113010",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "運輸科學系演講 — 留學經驗分享：日本與英國（蘇儀軒）",
+      "date": "2025-03-12",
+      "unit": "運輸科學系",
+      "url": "https://www.ntou.edu.tw/post/演講公告",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "YZU-113001",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2024年第八屆實驗教育國際研討會",
+      "date": "2024-12-07",
+      "unit": "通識教學部",
+      "url": "https://www.ge.yzu.edu.tw/modules/news/visit.php?fileid=7877",
+      "source": "websearch",
+      "confidence": "medium",
+      "note": "2024-12-07~08；主辦含國立政治大學，元智通識教學部協辦；主題：「牽阮的手」融合式教育"
+    },
+    {
+      "id": "YZU-113002",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "Google Kaggle 2024 AOCR 急性闌尾炎電腦斷層影像辨識競賽成果展示",
+      "date": "2024-12-01",
+      "unit": "電機通訊學院",
+      "url": "https://www.en.yzu.edu.tw/",
+      "source": "websearch",
+      "confidence": "low",
+      "note": "電機通訊學院師生參賽獲冠軍；與亞東醫院影像醫學科合作；實際發表日期待確認"
+    },
+    {
+      "id": "YZU-113003",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "113",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "TOEIC榮譽學院計畫合作備忘錄簽署暨雙語人才培育講座",
+      "date": "2025-03-01",
+      "unit": "電機通訊學院",
+      "url": "https://www.en.yzu.edu.tw/",
+      "source": "websearch",
+      "confidence": "low",
+      "note": "與忠欣股份有限公司合作；推動專業教育與英語能力並重；媒體報導 2026-03-02，簽署日期待確認"
+    },
+    {
+      "id": "CGU-113001",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "可信賴人工智慧與數位媒體鑑識：應對模型的自我感知、真實性與安全挑戰",
+      "date": "2024-11-05",
+      "unit": "智慧運算學院 / 人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/coic/Subject/Detail/56072?nodeId=608",
+      "source": "webfetch",
+      "confidence": "high",
+      "note": "講者：紐約州立大學奧本尼分校電腦科學系張明清副教授；地點：管理大樓11樓AI講堂；14:10-16:00"
+    },
+    {
+      "id": "CGU-113002",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Wearable and Contactless Sensing for Physiotherapy: Advancements in Knee Angle Measurement and Real-Time Gait Phase Detection",
+      "date": "2024-11-26",
+      "unit": "電子工程學系",
+      "url": "https://elec.cgu.edu.tw/p/412-1084-5339.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "high",
+      "note": "講者：Monash University（澳洲蒙那許大學）Dr. Nemai Chandra Karmakar；10:30-12:30；工學大樓1F院務區會議室(一)"
+    },
+    {
+      "id": "CGU-113003",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "長庚醫療品質國際研討會——智慧x永續x平等",
+      "date": "2025-06-07",
+      "unit": "醫務管理學系（長庚醫療體系主辦）",
+      "url": "https://www.cgu.edu.tw/hcm/Subject/Detail/66602?nodeId=8718",
+      "source": "webfetch",
+      "confidence": "high",
+      "note": "08:30-17:00；林口長庚紀念醫院長庚國際會議中心；三大主題：智慧醫療、醫療永續、健康平等"
+    },
+    {
+      "id": "SHU-113001",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "AI的五哩路：生成式AI跨域與專才學術研討會",
+      "date": "2024-10-14",
+      "unit": "新聞傳播學院",
+      "url": "https://cjc.shu.edu.tw/events/%E6%95%AC%E9%82%80%E5%8F%83%E5%8A%A010-14%E4%B8%80%E3%80%8Cai%E7%9A%84%E4%BA%94%E5%93%A9%E8%B7%AF%EF%BC%9A%E7%94%9F%E6%88%90%E5%BC%8Fai%E8%B7%A8%E5%9F%9F%E8%88%87%E5%B0%88%E6%89%8D%E3%80%8D%E5%AD%B8/",
+      "source": "websearch",
+      "confidence": "high",
+      "note": "地點：管理學院二樓國際會議廳；協辦：中華電信；邀請數位部長黃彥男、中華電信董事長簡志誠等"
+    },
+    {
+      "id": "SHU-113003",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "AI、ESG與金融新趨勢學術研討會",
+      "date": "2024-11-28",
+      "unit": "財務金融學系 / 管理學院",
+      "url": "https://www.limedia.tw/edu/55767/",
+      "source": "websearch",
+      "confidence": "medium",
+      "note": "五大主題：財務金融與AI、ESG與永續、金融行銷、風險管理、財務文字探勘；發表11篇論文；媒體報導日期 2024-11-28"
+    },
+    {
+      "id": "SHU-113004",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "2025年「@AI：顛覆或鞏固傳播研究」研討會",
+      "date": "2025-03-21",
+      "unit": "口語傳播暨社群媒體學系",
+      "url": "https://speech.shu.edu.tw/2025%E5%B9%B4-ai%E9%A1%9B%E8%A6%86%E6%88%96%E9%9E%8F%E5%9B%BA%E5%82%B3%E6%92%AD%E7%A0%94%E7%A9%B6%E7%A0%94%E8%A8%8E%E6%9C%83%E5%BE%B5%E7%A8%BF/",
+      "source": "websearch",
+      "confidence": "high",
+      "note": "探討AI對傳播模式、研究方法、倫理挑戰的影響；投稿截止 2025-02-04"
+    },
+    {
+      "id": "SHU-113005",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "AI與百工百業：跨域創新與未來對話研討會",
+      "date": "2024-11-14",
+      "unit": "新聞傳播學院",
+      "url": "https://cjc.shu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium",
+      "note": "地點：世新大學管理學院二樓；部分搜尋結果顯示 2025-11-14，暫標 2024-11-14 待確認"
+    },
+    {
+      "id": "PCCU-113001",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "113",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "「從法律入伍生到Top Gun的歷程」實務講座",
+      "date": "2025-01-26",
+      "unit": "法律學系",
+      "url": "https://law.pccu.edu.tw/announcements/events",
+      "source": "webfetch",
+      "confidence": "medium",
+      "note": "城中校區大新館B1圓形會議廳；發布日 2026-01-26，活動實際日期為 2025 或 2026 待確認"
+    },
+    {
+      "id": "PCCU-113002",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "第29屆國際資訊管理暨實務研討會（IMP2024）",
+      "date": "2024-11-07",
+      "unit": "資訊管理學系",
+      "url": "https://mis.pccu.edu.tw/p/403-1199-1425-1.php",
+      "source": "webfetch",
+      "confidence": "medium",
+      "note": "IMP2024 主辦為臺北商業大學，PCCU資管系轉知；公告發布日 2024-11-07"
+    },
+    {
+      "id": "MCU-113001",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "113",
+      "category": "HUM",
+      "category_name": "人文學術",
+      "title": "第26屆銘傳大學國際應用英語教學研討會暨工作坊（TEFL & Applied Linguistics）",
+      "date": "2025-03-07",
+      "unit": "應用英語學系",
+      "url": "https://dae.mcu.edu.tw/2025conference/",
+      "source": "webfetch",
+      "confidence": "high",
+      "note": "2025-03-07~08；Jihe Campus；主題：AI輔助教學、雙語教育、ESG融入英語教育；指導：國科會；共辦：政治大學EMI資源中心"
+    },
+    {
+      "id": "MCU-113002",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2025管理與創新學術研討會",
+      "date": "2025-03-14",
+      "unit": "管理學院",
+      "url": "https://ms.mcu.edu.tw/conference/",
+      "source": "websearch",
+      "confidence": "high",
+      "note": "年度管理學院大型研討會，每年3月舉辦"
+    },
+    {
+      "id": "MCU-113003",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "113",
+      "category": "EDU",
+      "category_name": "教育教學",
+      "title": "聯合國永續發展目標在教育中的實踐與改善國際學術研討會",
+      "date": "2025-05-24",
+      "unit": "教育研究所",
+      "url": "https://gse.mcu.edu.tw/en/full-time-faculty/international-symposia/",
+      "source": "webfetch",
+      "confidence": "high",
+      "note": "The Practice and Improvement of the UN SDGs in Education；每年舉辦的國際研討會系列"
+    },
+    {
+      "id": "MCU-113004",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "2025「超越想像：AI設計創新未來」國際學術研討會",
+      "date": "2025-03-14",
+      "unit": "設計學院",
+      "url": "http://web.sdsymposia.mcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium",
+      "note": "AI設計創新主題；含口頭及海報報告；與管理學院研討會同日"
+    },
+    {
+      "id": "MCU-113005",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "2025銘傳大學追求高教卓越國際學術研討會——人工智慧與互動媒體科技組",
+      "date": "2025-03-13",
+      "unit": "資訊學院 / 人工智慧應用學系",
+      "url": "https://aai.mcu.edu.tw/%E9%8A%98%E5%82%B3%E5%A4%A7%E5%AD%B8%E7%A0%94%E8%A8%8E%E6%9C%83/",
+      "source": "websearch",
+      "confidence": "medium",
+      "note": "系列研討會 2025-03-13~05-23；多校區（台北、基河、桃園、金門）；論文截止 2024-12-28"
+    },
+    {
+      "id": "USC-113003",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "113",
+      "category": "CONF",
+      "category_name": "學術研討",
+      "title": "2025年第13屆管理與決策學術暨實務研討會",
+      "date": "2025-05-22",
+      "unit": "企業管理學系(所)",
+      "url": "https://bmanagement3.nhu.edu.tw/Web/Pages?v=1&mid=7372&n=%E7%AE%A1%E7%90%86%E8%88%87%E6%B1%BA%E7%AD%96%E5%AD%B8%E8%A1%93%E6%9A%A8%E5%AF%A6%E5%8B%99%E7%A0%94%E8%A8%8E%E6%9C%83",
+      "source": "webfetch",
+      "confidence": "high",
+      "note": "投稿截止114年5月13日；研討會發表114年5月22日（2025-05-22）；跨校聯合（亞博出版社）"
+    },
+    {
+      "id": "USC-113004",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "113",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "2024 AI人工智慧產學發展論壇暨第29屆資訊管理暨實務研討會",
+      "date": "2024-11-01",
+      "unit": "資訊管理學系",
+      "url": "https://www.nhu.edu.tw/",
+      "source": "websearch",
+      "confidence": "low",
+      "note": "搜尋結果提及此論壇，具體日期待確認，暫標2024-11"
+    },
+    {
+      "id": "NTU-112001",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "午餐演講：The Survival of Authoritarian Regime: Problems of Power Sharing and Control in Xi Jinping's China",
+      "date": "2023-10-02",
+      "unit": "政治學系",
+      "url": "https://politics.ntu.edu.tw/?p=27791",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112002",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "午餐演講：質性研究過程與省思——以參與式預算為例（孫煒教授主講）",
+      "date": "2023-10-26",
+      "unit": "政治學系",
+      "url": "https://politics.ntu.edu.tw/?p=27860",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112003",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "演講：制度基因：中國制度與極權主義制度的起源（許成鋼教授，史丹佛大學）",
+      "date": "2023-12-04",
+      "unit": "政治學系",
+      "url": "https://politics.ntu.edu.tw/?p=28256",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112004",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "歷史與國際關係 VII：強權競爭霸主，小國求生存",
+      "date": "2023-12-11",
+      "unit": "政治學系、人文社會高等研究院",
+      "url": "https://politics.ntu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTU-112005",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "Joint CQSE & NCTS Seminar",
+      "date": "2023-10-20",
+      "unit": "物理學系 / 量子科學與工程研究中心",
+      "url": "https://www.phys.ntu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTU-112006",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "AI-Mat Frontier Workshop",
+      "date": "2023-10-06",
+      "unit": "凝態科學研究中心",
+      "url": "https://www.ntu-ccms.ntu.edu.tw/en/seminar/706",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTU-112007",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024兩岸經濟管理理論與實務研討會",
+      "date": "2024-03-30",
+      "unit": "管理學院",
+      "url": "https://management.ntu.edu.tw/board/detail/sn/17235",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112008",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "午餐演講：地方政府的組織約束感知與永續政策執行",
+      "date": "2024-05-31",
+      "unit": "政治學系",
+      "url": "https://politics.ntu.edu.tw/?p=28927",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112009",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024 台灣物理年會暨國科會計畫成果發表會",
+      "date": "2024-01-24",
+      "unit": "物理學系 / 自然科學及永續研究推展中心",
+      "url": "https://spec.ntu.edu.tw/20240124-semi-phys/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTU-112010",
+      "school_id": "NTU",
+      "school_name": "國立臺灣大學",
+      "academic_year": "112",
+      "category": "HUM",
+      "category_name": "人文/藝術",
+      "title": "第18屆台灣西洋古典、中世紀暨文藝復興學會國際學術研討會",
+      "date": "2024-06-01",
+      "unit": "外國語文學系暨研究所",
+      "url": "https://www.forex.ntu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTHU-112001",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "孫運璿科技講座：生成式AI的發展與應用（劉峻誠）",
+      "date": "2023-11-02",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112002",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "孫運璿科技講座：末期心臟衰竭的外科治療趨勢（蔡建松）",
+      "date": "2023-11-23",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112003",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "HUM",
+      "category_name": "人文/藝術",
+      "title": "孫運璿科技講座：用筆來唱歌－原住民族文學形成的背景發展與意義（孫大川）",
+      "date": "2023-11-30",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112004",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "孫運璿科技講座：金融學術研究轉戰人工智能創業之旅（段錦泉）",
+      "date": "2024-03-28",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112005",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "MED",
+      "category_name": "醫療/健康",
+      "title": "孫運璿科技講座：疫後醫療新趨勢（吳明賢）",
+      "date": "2024-05-02",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112006",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "孫運璿科技講座：等閒識得東風面，當亞當史密斯遇見孔子（孫震）",
+      "date": "2024-05-23",
+      "unit": "科技管理學院",
+      "url": "https://sunspeech.site.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112008",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育/教學",
+      "title": "112學年度第1學期生命科學暨醫學院專題演講系列（9月-12月，共15場）",
+      "date": "2023-09-21",
+      "unit": "生命科學暨醫學院",
+      "url": "https://cls.site.nthu.edu.tw/p/406-1469-253138,r8084.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112009",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "Fall 2023 Seminar Series: China in the World 2024",
+      "date": "2024-05-06",
+      "unit": "臺北政治經濟學院（TSE）",
+      "url": "https://www.tse.nthu.edu.tw/post/268-fall-seminar-series-china-in-the-world-what",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTHU-112010",
+      "school_id": "NTHU",
+      "school_name": "國立清華大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/數位",
+      "title": "AI Forum 2023",
+      "date": "2023-10-01",
+      "unit": "資訊工程學系",
+      "url": "https://aiforum2023.cs.nthu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NYCU-112001",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023陽明人社講座：文化中的身體、身體中的文化（余舜德）",
+      "date": "2023-11-07",
+      "unit": "心智哲學研究所",
+      "url": "https://phil.nycu.edu.tw/post-2023/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112002",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023陽明人社講座：台灣茶會儀式中的身體感營造（余舜德）",
+      "date": "2023-11-09",
+      "unit": "心智哲學研究所",
+      "url": "https://phil.nycu.edu.tw/post-2023/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112003",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "新興媒體與SDGs傳播論壇（第二屆）—兩岸三地學術交流：陽明交大、上海交大、香港浸會首度合辦",
+      "date": "2024-04-10",
+      "unit": "傳播與科技學系（ICS）",
+      "url": "https://ics.nycu.edu.tw/2024-03-06%e3%80%90%e7%a0%94%e8%a8%8e%e6%9c%83%e3%80%91",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112004",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "Innovations in Molecular Medicine: UCD and NYCU Research Showcase 研討會",
+      "date": "2024-04-22",
+      "unit": "醫學系 / 研究發展處",
+      "url": "https://hlm.tzuchi.com.tw/mr/index.php/newsmessage/news/672-20240417-001",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112005",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "ESG",
+      "category_name": "永續/社會責任",
+      "title": "2024關鍵商業與人權議題講座",
+      "date": "2024-04-10",
+      "unit": "科技法律學院 / 文化研究國際中心",
+      "url": "https://sdgs.nycu.edu.tw/2024%E9%97%9C%E9%8D%B5%E5%95%86%E6%A5%AD%E8%88%87%E4%BA%BA%E6%AC%8A%E8%AD%B0%E9%A1%8C/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112007",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "TEC",
+      "category_name": "科技/工程",
+      "title": "The Future is Flavourful — Flavour Physics Workshop",
+      "date": "2024-06-04",
+      "unit": "物理研究所",
+      "url": "https://phys.nycu.edu.tw/en/the-future-is-flavourful/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NYCU-112008",
+      "school_id": "NYCU",
+      "school_name": "國立陽明交通大學",
+      "academic_year": "112",
+      "category": "ESG",
+      "category_name": "永續/社會責任",
+      "title": "112年教育部USR計畫SIG議題「綠色科技・健康社會・人才永續」交流論壇",
+      "date": "2023-08-14",
+      "unit": "永續發展辦公室",
+      "url": "https://sdgs.nycu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCKU-112002",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "112",
+      "category": "HUM",
+      "category_name": "人文/藝術",
+      "title": "DADH2023：第14屆台灣數位人文國際研討會",
+      "date": "2023-12-01",
+      "unit": "中文系 / 文學院",
+      "url": "https://dadh2023.chinese.ncku.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCKU-112003",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "112",
+      "category": "TEC",
+      "category_name": "科技/工程",
+      "title": "AsiaJCIS 2024 — 第19屆亞洲資訊安全聯合研討會",
+      "date": "2024-05-01",
+      "unit": "資訊工程學系",
+      "url": "https://asiajcis2024.web2.ncku.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCKU-112004",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "112",
+      "category": "MED",
+      "category_name": "醫療/健康",
+      "title": "台灣高齡照護暨教育協會成立10週年暨國際老人日學術研討會",
+      "date": "2024-01-28",
+      "unit": "老年學研究所",
+      "url": "https://iog.ncku.edu.tw/p/412-1169-22953.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCKU-112006",
+      "school_id": "NCKU",
+      "school_name": "國立成功大學",
+      "academic_year": "112",
+      "category": "MED",
+      "category_name": "醫療/健康",
+      "title": "Walk the Talk 2023：新生成長營暨普渡雙學位計畫說明",
+      "date": "2023-09-01",
+      "unit": "教務處 / 國際事務處",
+      "url": "https://web.ncku.edu.tw/p/406-1000-258195,r3530.php?Lang=en",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCCU-112002",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第3屆中共統戰工作研究與寫作工作坊（第二場）",
+      "date": "2023-12-01",
+      "unit": "國際關係研究中心",
+      "url": "https://iir.nccu.edu.tw/PageDoc/Detail?fid=7478&id=21422",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-112004",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "TANET 2023 — 台灣網際網路研討會暨全國計算機會議",
+      "date": "2023-10-01",
+      "unit": "資訊科學系",
+      "url": "https://tanet2023.nccu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCCU-112005",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023 The Challenges of Interpreting and Teaching 'the Second Culture' in Local Contexts 國際研討會",
+      "date": "2023-11-01",
+      "unit": "外國語文學院",
+      "url": "https://foreign.nccu.edu.tw/en/2023-the-challenges-of-interpreting-and-teaching-the-second-culture-in-local-contexts-call-for-papers/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCCU-112006",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "日語文學系學術講座：日本語文研究的展望與挑戰",
+      "date": "2023-10-19",
+      "unit": "日本語文學系",
+      "url": "https://japanese.nccu.edu.tw/PageDoc?fid=354",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCCU-112007",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "國際關係研究中心：「美國總統大選後印太安全治理」國際研討會",
+      "date": "2024-01-06",
+      "unit": "國際關係研究中心",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCCU-112008",
+      "school_id": "NCCU",
+      "school_name": "國立政治大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "科技產業跨界投資與在地治理：效應與影響研討會",
+      "date": "2024-04-19",
+      "unit": "國際關係研究中心",
+      "url": "https://iir.nccu.edu.tw/PageDoc?fid=7478",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCU-112001",
+      "school_id": "NCU",
+      "school_name": "國立中央大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023東亞文化暨文字訓詁研討會",
+      "date": "2023-12-15",
+      "unit": "中國文學系",
+      "url": "https://www.chinese.ncu.edu.tw/zh_tw/News/Conference/2023%E6%9D%B1%E4%BA%9E%E6%96%87%E5%8C%96%E6%9A%A8%E6%96%87%E5%AD%97%E8%A8%93%E8%A9%81%E7%A0%94%E8%A8%8E%E6%9C%83-59172794",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-112003",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "IEDMS 2023 第28屆國際電子元件與材料研討會",
+      "date": "2023-11-01",
+      "unit": "工學院",
+      "url": "https://iedms2023.nsysu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NSYSU-112004",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系專題演講（張凱鈞、洪瑋駿博士候選人）",
+      "date": "2023-10-12",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-3.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NSYSU-112005",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系專題演講（李華白副教授）",
+      "date": "2023-10-26",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-3.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NSYSU-112006",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系專題演講（Prof. Toshifumi Futamase, Tohoku University）",
+      "date": "2023-11-02",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-3.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NSYSU-112007",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "【諾貝爾獎系列講座】室溫超導體的發現競逐諾貝爾獎之路（洪敦楊講座教授）",
+      "date": "2023-11-15",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-3.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NSYSU-112008",
+      "school_id": "NSYSU",
+      "school_name": "國立中山大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "物理系專題演講（Dr. Martin Spinrath & Prof. Atsushi Yabushita）",
+      "date": "2023-11-23",
+      "unit": "物理學系",
+      "url": "https://phys.nsysu.edu.tw/p/403-1181-11-3.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCHU-112001",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023 International Symposium on Advanced and Sustainable Science and Technology（2023國際前瞻永續科技研討會）",
+      "date": "2023-09-11",
+      "unit": "理學院（化學系、物理系、數學系、生命科學院）",
+      "url": "https://science.nchu.edu.tw/news-details.php?id=356",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-112003",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "惠蓀講堂暨淨零永續高峰論壇（錢復大使、薛富盛院長主講）",
+      "date": "2023-12-20",
+      "unit": "圖書館",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCHU-112004",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "材料科學演講（黃俊儒教授）",
+      "date": "2023-10-16",
+      "unit": "工學院",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCHU-112005",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業合作",
+      "title": "2023有機農產品CSR提案跨域媒合會",
+      "date": "2023-09-25",
+      "unit": "農業暨自然資源學院",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCHU-112006",
+      "school_id": "NCHU",
+      "school_name": "國立中興大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI與科技",
+      "title": "2024 GenAI Forum：生成式AI Generate Your Future",
+      "date": "2024-05-10",
+      "unit": "待確認",
+      "url": "https://www2.nchu.edu.tw/news/id/4",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTNU-112001",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023年教育體質的檢視與再造—教改30面向未來國際學術研討會",
+      "date": "2023-11-01",
+      "unit": "教育學系",
+      "url": "https://www.ed.ntnu.edu.tw/zh_tw/news2/2023%E5%B9%B4%E6%95%99%E8%82%B2%E9%AB%94%E8%B3%AA%E7%9A%84%E6%AA%A2%E8%A6%96%E8%88%87%E5%86%8D%E9%80%A0-%E6%95%99%E6%94%B930%E9%9D%A2%E5%90%91%E6%9C%AA%E4%BE%86%E5%9C%8B%E9%9A%9B%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%BE%B5%E7%A8%BF%E4%B8%AD-42338990",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTNU-112002",
+      "school_id": "NTNU",
+      "school_name": "國立臺灣師範大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024年「面對不確定的時代：打造教育的幸福工程」國際學術研討會",
+      "date": "2024-05-01",
+      "unit": "教育學系",
+      "url": "https://www.ed.ntnu.edu.tw/zh_tw/news2/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUT-112001",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "International Joint Conference of APLX, ETRA40, and TESPA 2023（Advancing empowerment and resilience: Language, culture, policy and pedagogy）",
+      "date": "2023-10-11",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15343.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-112002",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "The Tower of Babel? The Myths, Misconceptions, and Debates Surrounding Bi- and Multilingualism（Dr. Michał B. Paradowski, University of Warsaw）",
+      "date": "2023-10-24",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-112003",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Designing mixed-methods research in language education（Dr. Jim Y.H. Chan, Newcastle University）",
+      "date": "2023-11-27",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-112004",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023 International Conference on Algorithms, Computing and Data Processing（ACDP 2023）",
+      "date": "2023-11-01",
+      "unit": "資訊工程相關系所",
+      "url": "https://ntut-staging.elsevierpure.com/zh/activities/2023-international-conference-on-algorithms-computing-and-data-pr-2",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUT-112005",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "專題演講",
+      "title": "Communication and Swallowing Disorders in Parkinson's disease（Dr. Yu-Wen Chen, 臺大附設醫院）",
+      "date": "2024-05-30",
+      "unit": "應用英文系",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15344.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-112006",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "第46屆全國比較文學會議「微法西斯」（The 46th Comparative Literature Conference「Microfascisms」）",
+      "date": "2024-06-01",
+      "unit": "應用英文系 x CLAROC",
+      "url": "https://eng.ntut.edu.tw/p/412-1091-15343.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUT-112007",
+      "school_id": "NTUT",
+      "school_name": "國立臺北科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業合作",
+      "title": "中華技術講座-軌道營運管理",
+      "date": "2024-05-02",
+      "unit": "機械工程系、智慧鐵道產業人才學院研發中心",
+      "url": "https://news.ntut.edu.tw/p/422-1000-1079.php",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTUST-112001",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "ARIS 2023 國際研討會",
+      "date": "2023-08-30",
+      "unit": "工業工程與管理系",
+      "url": "https://www.industry4.ntust.edu.tw/p/404-1084-111245.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112002",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023科學教育國際研討會（ASET 2023）",
+      "date": "2023-08-02",
+      "unit": "數位學習與教育研究所",
+      "url": "https://www.gidle.ntust.edu.tw/p/403-1006-420.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112003",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：玉山商業銀行總經理劉奇勳演講",
+      "date": "2023-10-05",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112004",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：第一證券投資信託協理闕慧如演講",
+      "date": "2023-10-12",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112005",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：晶碩光學及友通資訊財務長演講",
+      "date": "2023-10-19",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112006",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：兆豐商業銀行經理宋民泰演講",
+      "date": "2023-10-26",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112007",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：全球人壽協理許嘉玲演講",
+      "date": "2023-11-02",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112008",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：Calastone亞洲區客戶管理聯席董事謝恆恩演講",
+      "date": "2023-11-09",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112009",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "財務計量學術研習營",
+      "date": "2023-11-14",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112010",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：國際票劵金融公司陳信誠演講",
+      "date": "2023-11-16",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112011",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：馬英九基金會執行長蕭旭岑演講",
+      "date": "2023-11-23",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112012",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：第一商業銀行資深協理陳婉麗演講",
+      "date": "2023-11-30",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112013",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：台新綜合證券經理吳振榮演講",
+      "date": "2023-12-07",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTUST-112014",
+      "school_id": "NTUST",
+      "school_name": "國立臺灣科技大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：群益綜合證券副總經理陳定遠演講",
+      "date": "2023-12-14",
+      "unit": "財務金融研究所",
+      "url": "https://www.fn.ntust.edu.tw/p/403-1002-1260.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-112001",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "隱私強化技術之概覽（陳昱圻副教授）",
+      "date": "2023-11-13",
+      "unit": "資訊工程學系",
+      "url": "https://cs.ccu.edu.tw/var/file/94/1094/img/213774138.pdf",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-112002",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "中正資工邀請國立臺灣大學創新設計學院王秋玄博士演講",
+      "date": "2023-12-11",
+      "unit": "資訊工程學系",
+      "url": "https://events.lib.ccu.edu.tw/event/detail/list/1178/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-112003",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024第十屆研究生論文發表研討會",
+      "date": "2024-04-20",
+      "unit": "教育政策與行政學系",
+      "url": "https://deptedu.ccu.edu.tw/index.php?option=module&lang=cht&task=showlist&id=443&index=5",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "CCU-112004",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "產業講座：環鴻科技（日月光半導體集團）周柏鋒演講－從實習到IT新一代領導人",
+      "date": "2023-10-26",
+      "unit": "資訊管理學系",
+      "url": "https://mis.ccu.edu.tw/p/406-1120-36716,r499.php?Lang=en",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CCU-112005",
+      "school_id": "CCU",
+      "school_name": "國立中正大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024教育的韌性與永續發展國際學術研討會（Call for Papers）",
+      "date": "2024-04-26",
+      "unit": "教育政策與行政學系",
+      "url": "https://deptedu.ccu.edu.tw/index.php?option=module&lang=cht&task=showlist&id=443&index=5",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112001",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：劉彥甫先生演講（系友分享）",
+      "date": "2023-10-11",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112002",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "應化系專題演講：郭美璘副董事長（聚和國際）演講",
+      "date": "2023-10-12",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112003",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "應化系專題演講：黃澤翔副理（日月光半導體）演講",
+      "date": "2023-10-26",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112004",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：吳東昆教授（陽明交大）演講",
+      "date": "2023-11-30",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112005",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：楊吉水教授（臺灣大學）演講",
+      "date": "2023-12-21",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112006",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "應化系專題演講：蔡禎祥總經理（百達精密化學）演講",
+      "date": "2023-12-28",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112007",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "應化系專題演講：新應材股份有限公司演講",
+      "date": "2024-02-29",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112008",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "應化系專題演講：包郁傑博士（工研院材化所）演講",
+      "date": "2024-03-28",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112009",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：張夢揚教授（高雄醫學大學）演講",
+      "date": "2024-04-11",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112010",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：廖美儀教授（國立屏東大學）演講",
+      "date": "2024-04-25",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112011",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "應化系專題演講：黃智峯教授（中興大學化學工程學系）演講",
+      "date": "2024-05-02",
+      "unit": "應用化學系",
+      "url": "https://chem.nuk.edu.tw/p/403-1036-1239-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112012",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第九屆韓國研究中心國際學術會議",
+      "date": "2023-09-15",
+      "unit": "東亞語文學系",
+      "url": "https://deal.nuk.edu.tw/p/403-1049-670-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112013",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第三屆越南文化國際學術研討會",
+      "date": "2023-12-05",
+      "unit": "東亞語文學系",
+      "url": "https://deal.nuk.edu.tw/p/403-1049-670-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112014",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "越南語能力認證國際工作坊",
+      "date": "2024-03-20",
+      "unit": "東亞語文學系",
+      "url": "https://deal.nuk.edu.tw/p/403-1049-670-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112015",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023全球商業經營管理學術研討會",
+      "date": "2023-10-01",
+      "unit": "工業工程與管理學系",
+      "url": "https://iem.nuk.edu.tw/p/403-1023-386-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NUK-112016",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023第二十二屆北商大學術論壇暨國際企業經營管理研討會",
+      "date": "2023-11-01",
+      "unit": "工業工程與管理學系",
+      "url": "https://iem.nuk.edu.tw/p/403-1023-386-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NUK-112017",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "國際行政執行制度研討會",
+      "date": "2023-10-26",
+      "unit": "國際事務處",
+      "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112018",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "高雄懷舊、高雄開講歷史研討會",
+      "date": "2023-12-01",
+      "unit": "國際事務處",
+      "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NUK-112019",
+      "school_id": "NUK",
+      "school_name": "國立高雄大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023亞洲虛擬學院線上研討會（Asia Virtual Academy Q2 Seminar）",
+      "date": "2023-12-07",
+      "unit": "國際事務處",
+      "url": "https://www.nuk.edu.tw/p/403-1000-68-1.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-112001",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023年台灣東南亞研究年會（ACSEAST）第25屆－後疫情時代的人的流動與定錨",
+      "date": "2023-10-27",
+      "unit": "東南亞學系暨人文學院",
+      "url": "https://dseas.ncnu.edu.tw/p/404-1030-13965.php?Lang=en",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-112002",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024第十屆研究生論文發表研討會",
+      "date": "2024-04-20",
+      "unit": "教育政策與行政學系",
+      "url": "https://epa.ncnu.edu.tw/p/403-1065-828.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NCNU-112003",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023臺灣國際儒學學術論壇",
+      "date": "2023-10-01",
+      "unit": "通識教育中心",
+      "url": "https://gec.ncnu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCNU-112004",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育創新",
+      "title": "通識教育×SDGs×EMI×教學實踐研究國際學術研討會",
+      "date": "2023-11-01",
+      "unit": "通識教育中心",
+      "url": "https://gec.ncnu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NCNU-112005",
+      "school_id": "NCNU",
+      "school_name": "國立暨南國際大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023第13屆教育政策前瞻研討會：跨域探究導向的教與學",
+      "date": "2023-09-01",
+      "unit": "教育政策與行政學系",
+      "url": "https://epa.ncnu.edu.tw/p/403-1065-828.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTOU-112001",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產學合作",
+      "title": "資安人的職場生涯（張凱棊，沅盛資本）",
+      "date": "2023-09-21",
+      "unit": "資訊工程學系",
+      "url": "https://cse.ntou.edu.tw/p/406-1063-91368,r1116.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-112002",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "112",
+      "category": "STU",
+      "category_name": "學生發展",
+      "title": "2024法律×法遵科技黑客松（2024 Law x Legal Compliance Tech Hackathon）",
+      "date": "2024-06-01",
+      "unit": "資訊工程學系",
+      "url": "https://cse.ntou.edu.tw/p/406-1063-99169,r1117.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "NTOU-112003",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "工程師的人生戰略：職涯選擇與投資決策",
+      "date": "2023-09-01",
+      "unit": "電機工程學系",
+      "url": "https://academics.ntou.edu.tw/speech/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "NTOU-112004",
+      "school_id": "NTOU",
+      "school_name": "國立臺灣海洋大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023臺灣海洋聯盟大會－2030海洋新世紀：海洋科學現在與未來",
+      "date": "2023-11-24",
+      "unit": "國立臺灣海洋大學",
+      "url": "http://isot.com.tw/page/news/show.aspx?num=44&lang=TW",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FJU-112001",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023比較文學與跨文化研究學術研討會：跨文化新視域",
+      "date": "2023-08-24",
+      "unit": "跨文化研究所",
+      "url": "https://giccs.fju.edu.tw/news_detail.php?news_rkey=KW2CIRPWR4",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-112002",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第八屆基督宗教諮商輔導研討會",
+      "date": "2023-10-24",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-112003",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "生醫領域智慧財產權發展策略研討會",
+      "date": "2023-11-29",
+      "unit": "事業發展處",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-112004",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "天主教國際學術研討會",
+      "date": "2024-04-10",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FJU-112005",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/科技",
+      "title": "醫學院數據科學中心研討會",
+      "date": "2024-05-01",
+      "unit": "生物醫學海量資料分析碩士學位學程",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FJU-112006",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "華裔學志漢學國際會議",
+      "date": "2024-06-06",
+      "unit": "天主教學術研究院",
+      "url": "https://www.fju.edu.tw/news.jsp?newsClassID=26",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FJU-112007",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育",
+      "title": "2024輔仁大學教育學院第四屆教育學術及產業研討會：AI在教育運動健康領域的運用及展望",
+      "date": "2024-05-11",
+      "unit": "教育學院",
+      "url": "https://www.educ.fju.edu.tw/conference/2024/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "FJU-112008",
+      "school_id": "FJU",
+      "school_name": "輔仁大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "講座演講",
+      "title": "跨文化傳播與醫療口譯：理論與實務工作坊",
+      "date": "2024-05-04",
+      "unit": "跨文化研究所",
+      "url": "https://giccs.fju.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "SCU-112001",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "人類世對德語文國家研究的挑戰—永續、韌性與聯合國永續發展目標（SDGs）國際研討會",
+      "date": "2023-10-01",
+      "unit": "外國語文學院德文系",
+      "url": "https://web-ch.scu.edu.tw/foreign/web_page/990",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "SCU-112002",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育",
+      "title": "新進教師輔導暨教師教學精進系列研習活動",
+      "date": "2023-08-23",
+      "unit": "東吳大學",
+      "url": "https://mobile.sys.scu.edu.tw/calendar/year?year=2024&month=1&day=1&type=static&calendar=scu",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "SCU-112003",
+      "school_id": "SCU",
+      "school_name": "東吳大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "國會學術研討會（第13屆）",
+      "date": "2023-11-01",
+      "unit": "政治學系國會研究中心",
+      "url": "https://twcongress.weebly.com/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "THU-112001",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "講座演講",
+      "title": "青年發展與台灣教育的未來講座",
+      "date": "2023-09-25",
+      "unit": "社科院都市暨區域發展研究中心",
+      "url": "https://tevent.thu.edu.tw/tEvent_front/tEvent.php?type=0&conference_code=2023090047",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-112002",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023東海大學二語教學與研究國際研討會（SLTR）",
+      "date": "2023-10-21",
+      "unit": "文學院",
+      "url": "https://sltrthu.wixsite.com/sltr-thu/en",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "THU-112003",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "AI/科技",
+      "title": "從資料驅動到體驗建構：AI的未來專題演講",
+      "date": "2023-09-01",
+      "unit": "資訊工程學系",
+      "url": "https://www.cs.thu.edu.tw/web/news/list.php?cid=4",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "THU-112004",
+      "school_id": "THU",
+      "school_name": "東海大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024第12屆創新實務與個案研討會（CTW物流論文獎暨研討會）",
+      "date": "2024-05-01",
+      "unit": "企業管理學系",
+      "url": "https://ba.thu.edu.tw/Education/cate/%E6%BC%94%E8%AC%9B%E8%88%87%E5%AD%B8%E8%A1%93%E6%B4%BB%E5%8B%95/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "TKU-112001",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育",
+      "title": "2023年台灣教育傳播暨科技學會年會@TKU國際學術研討會：AI智慧時代教育科技新展望",
+      "date": "2023-12-01",
+      "unit": "教育科技學系",
+      "url": "https://sites.google.com/view/taect2023/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-112002",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023當代會計研討會暨2024穩懋當代會計學者授證典禮",
+      "date": "2023-12-16",
+      "unit": "會計學系",
+      "url": "https://www.acc.tku.edu.tw/acc/?page_id=2328",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-112003",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024當代會計研討會",
+      "date": "2024-05-04",
+      "unit": "會計學系",
+      "url": "https://www.acc.tku.edu.tw/acc/?page_id=2328",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "TKU-112004",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業",
+      "title": "企業財報常見缺失解析（安侯建業KPMG）",
+      "date": "2024-03-06",
+      "unit": "會計學系",
+      "url": "https://www.acc.tku.edu.tw/acc/?page_id=2328",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "TKU-112005",
+      "school_id": "TKU",
+      "school_name": "淡江大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2023構築教育實踐研討會",
+      "date": "2023-11-01",
+      "unit": "教育科技學系",
+      "url": "http://li.csu.edu.tw/UIPWeb/wSite/ct?xItem=354567&ctNode=19730&mp=a03000",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FCU-112001",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "講座演講",
+      "title": "人文與科技大講堂：千里之行的奇妙旅程——台灣半導體產業0-1",
+      "date": "2023-10-01",
+      "unit": "通識教育中心",
+      "url": "https://genedu.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FCU-112002",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "112",
+      "category": "LAW",
+      "category_name": "法律",
+      "title": "AI時代下的稅務挑戰與法律前瞻研討會",
+      "date": "2024-01-01",
+      "unit": "財經法律研究所",
+      "url": "https://econlaw.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "FCU-112003",
+      "school_id": "FCU",
+      "school_name": "逢甲大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "講座演講",
+      "title": "台灣ICT產業鏈之連結與前瞻講座",
+      "date": "2023-09-01",
+      "unit": "通識教育中心",
+      "url": "https://genedu.fcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CYCU-112001",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "第14屆工業工程與管理國際研討會",
+      "date": "2023-12-15",
+      "unit": "工業與系統工程學系",
+      "url": "https://ise.cycu.edu.tw/en/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CYCU-112003",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "研討會",
+      "title": "2024 EALA年會暨國際應用語言學學術研討會",
+      "date": "2024-05-01",
+      "unit": "應用外國語文學系",
+      "url": "https://alls.cycu.edu.tw/en/category/conference-information-en/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CYCU-112004",
+      "school_id": "CYCU",
+      "school_name": "中原大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "講座演講",
+      "title": "物理系學術演講：台灣應用材料系列課程—先進半導體設備",
+      "date": "2023-10-01",
+      "unit": "物理學系",
+      "url": "https://phys.cycu.edu.tw/%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "YZU-112001",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "112",
+      "category": "ESG",
+      "category_name": "永續發展",
+      "title": "ESG永續與綠能科技人才發展基地培訓計畫",
+      "date": "2024-03-26",
+      "unit": "終身教育部",
+      "url": "https://lifelong.yzu.edu.tw/net/manual/2024training/index.asp",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "YZU-112002",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024 CSMOT國際研討會（電腦視覺與模式識別）",
+      "date": "2024-06-01",
+      "unit": "資訊傳播學系",
+      "url": "https://dept.cm.yzu.edu.tw/csmot2024/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "YZU-112003",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "112",
+      "category": "TALK",
+      "category_name": "學術演講",
+      "title": "2024全球衛生菁英培力營：永續發展議程下之非傳染病防治與健康老化",
+      "date": "2024-07-06",
+      "unit": "永續發展辦公室（ESDG）",
+      "url": "https://esdg.yzu.edu.tw/index.php/tw/home-2/2023-12-05-08-58-09/2024-2",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "YZU-112004",
+      "school_id": "YZU",
+      "school_name": "元智大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "元智大學企業博覽會暨職涯規劃講座",
+      "date": "2024-05-01",
+      "unit": "學務處職涯發展組",
+      "url": "https://www.yzu.edu.tw/admin/st/",
+      "source": "websearch",
+      "confidence": "low"
+    },
+    {
+      "id": "CGU-112001",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "AI Seminar：From Academic to Commercial: The Evolution of Large Language Models（古倫維博士，中研院資訊科學研究所）",
+      "date": "2023-10-03",
+      "unit": "人工智慧學系",
+      "url": "https://ai2.cgu.edu.tw/p/405-1059-107231,c198.php?Lang=zh-tw",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112002",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "AI Seminar：Leveraging Natural Language Processing in Large Language Models for Academic Advancement and Bias Mitigation（Quoc-Viet Dang，UCI）",
+      "date": "2023-10-17",
+      "unit": "人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/aic",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112003",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "AI Seminar：Extending the Data Science pipeline: Integrating Machine Learning into Edge Environments（Omer Rana，Cardiff University）",
+      "date": "2023-10-31",
+      "unit": "人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/aic",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112004",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "AI Seminar：Learning Representations For Robust Human-Robot Interaction（Yen-Ling Kuo，University of Virginia）",
+      "date": "2023-12-19",
+      "unit": "人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/aic",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112005",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "AI Seminar：Edge Intelligence and Smart Sensing for Smart Healthcare Applications（Bahman Javadi，Western Sydney University）",
+      "date": "2023-12-19",
+      "unit": "人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/aic",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112006",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "第26屆人工智慧論壇 AI Forum 2024 暨學術海報展",
+      "date": "2024-05-24",
+      "unit": "智慧運算學院、人工智慧研究中心",
+      "url": "https://www.cgu.edu.tw/coic/Subject/Detail/35556?nodeId=608",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "CGU-112007",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "MED",
+      "category_name": "醫學健康",
+      "title": "中醫藥與健康科技研討會（民生學院校慶系列學術活動）",
+      "date": "2024-05-16",
+      "unit": "民生學院",
+      "url": "https://research.cgu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "CGU-112008",
+      "school_id": "CGU",
+      "school_name": "長庚大學",
+      "academic_year": "112",
+      "category": "AI",
+      "category_name": "人工智慧",
+      "title": "資訊工程系暨人工智慧學士學位學程聯合畢業專題展暨產業演講（台灣微軟技術中心副總蔡景鷹）",
+      "date": "2023-12-05",
+      "unit": "資訊工程學系、人工智慧學士學位學程",
+      "url": "https://www.cgu.edu.tw/csie/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "SHU-112003",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024資訊與傳播學術研討會：生成式AI—技術應用、風險與信任",
+      "date": "2024-05-31",
+      "unit": "資訊傳播學系",
+      "url": "https://ics.wp.shu.edu.tw/?cat=6",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "SHU-112004",
+      "school_id": "SHU",
+      "school_name": "世新大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024圖文傳播與跨界創新學術研討會",
+      "date": "2024-05-01",
+      "unit": "圖文傳播學系",
+      "url": "https://gc.shu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "PCCU-112001",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024商學與管理學術研討會（TIIBS第13屆）",
+      "date": "2024-05-17",
+      "unit": "商學院、國際企業管理學系",
+      "url": "https://crb.pccu.edu.tw/p/16-1030-120911.php?Lang=zh-tw",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "PCCU-112002",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024地球科學系統學術論壇：新能源帶來的機遇與挑戰",
+      "date": "2024-03-16",
+      "unit": "理工學院（大氣與地質科學系、生命科學系、地理學系）",
+      "url": "https://ses.pccu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "PCCU-112003",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "2023 TalentNXT職場即戰力人才培育計畫（溫世仁文教基金會）",
+      "date": "2023-09-01",
+      "unit": "法律學系",
+      "url": "https://law.pccu.edu.tw/announcements/events/xiao-wai-huo-dong-wen-shi-ren-wen-jiao-ji-jin-hui-2023-talentnxt-zhi-chang-ji-zhan-li-ren-cai-pei-yu-ji-hua",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "PCCU-112004",
+      "school_id": "PCCU",
+      "school_name": "中國文化大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024 ICGB全球商務學術研討會（International Conference on Global Business）",
+      "date": "2024-05-24",
+      "unit": "全球商務學位學程",
+      "url": "https://crbgmba.pccu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "MCU-112001",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023銘傳觀光國際研討會：現代化的餐旅、觀光和休閒—科技、社群媒體與管理",
+      "date": "2023-11-01",
+      "unit": "觀光學院",
+      "url": "https://tourism.mcu.edu.tw/%E5%9C%8B%E9%9A%9B%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "MCU-112002",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2023國際體育運動與健康休閒學術研討會",
+      "date": "2023-11-18",
+      "unit": "體育教學中心",
+      "url": "https://www.peic.mcu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "MCU-112003",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024銘傳觀光國際研討會：起風揚帆—觀光、休憩暨餐旅產業於AI時代下之永續發展",
+      "date": "2024-05-01",
+      "unit": "觀光學院",
+      "url": "https://tourism.mcu.edu.tw/%E5%9C%8B%E9%9A%9B%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83/",
+      "source": "webfetch",
+      "confidence": "medium"
+    },
+    {
+      "id": "MCU-112004",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "112",
+      "category": "IND",
+      "category_name": "產業職涯",
+      "title": "銘傳大學2024企業博覽會（Enterprise Expo 2024）",
+      "date": "2024-05-07",
+      "unit": "前程規劃處",
+      "url": "https://cpc.mcu.edu.tw/en/2024/05/07/%E9%8A%98%E5%82%B3%E5%A4%A7%E5%AD%B82024%E4%BC%81%E6%A5%AD%E5%8D%9A%E8%A6%BD%E6%9C%83/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "MCU-112005",
+      "school_id": "MCU",
+      "school_name": "銘傳大學",
+      "academic_year": "112",
+      "category": "EDU",
+      "category_name": "教育創新",
+      "title": "第11屆全國高中生英語簡報暨個人演講比賽（銘傳大學應用英語系主辦）",
+      "date": "2024-03-01",
+      "unit": "應用英語學系",
+      "url": "https://dae.mcu.edu.tw/2024-competition/",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "USC-112001",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "ART",
+      "category_name": "藝術文化",
+      "title": "2024年文化創意與科技應用學術研討會",
+      "date": "2024-03-16",
+      "unit": "管理學院文化創意事業管理學系",
+      "url": "https://nhuwebfile.nhu.edu.tw/UploadedFiles/2024/1/4abc95ff-f2af-4bfd-b237-c4e33d550c70.pdf",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "USC-112002",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024財務金融與管理研討會（2024FMC）",
+      "date": "2024-03-23",
+      "unit": "管理學院財務金融學系",
+      "url": "https://cm3.nhu.edu.tw/Web/Pages?mid=1068",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "USC-112003",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024年第十二屆管理與決策學術暨實務研討會",
+      "date": "2024-05-23",
+      "unit": "管理學院企業管理學系",
+      "url": "https://bmanagement3.nhu.edu.tw/",
+      "source": "webfetch",
+      "confidence": "high"
+    },
+    {
+      "id": "USC-112004",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "CONF",
+      "category_name": "學術研討會",
+      "title": "2024年第三屆【慢運動思維下的地方創生】國際論壇暨地球市集",
+      "date": "2024-06-23",
+      "unit": "USR計畫總辦公室",
+      "url": "https://usr.nhu.edu.tw/",
+      "source": "websearch",
+      "confidence": "high"
+    },
+    {
+      "id": "USC-112005",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "ESG",
+      "category_name": "永續發展",
+      "title": "2024運動健康永續人生：全民運動與健康政策國際研討會",
+      "date": "2024-07-01",
+      "unit": "自然與社會科學學院（運動健康相關學系）",
+      "url": "https://nhuwebfile.nhu.edu.tw/UploadedFiles/2024/8/25540127-dcf7-4507-868b-156b7e873699.pdf",
+      "source": "websearch",
+      "confidence": "medium"
+    },
+    {
+      "id": "USC-112006",
+      "school_id": "USC",
+      "school_name": "南華大學",
+      "academic_year": "112",
+      "category": "HUM",
+      "category_name": "人文社會",
+      "title": "傳媒的公共性與產業發展國際學術研討會（2023）",
+      "date": "2023-11-01",
+      "unit": "傳播學系（所）",
+      "url": "https://media3.nhu.edu.tw/",
+      "source": "websearch",
+      "confidence": "medium"
     }
   ],
   "category_map": {

@@ -1,6 +1,6 @@
 # HEI Event Observatory
 
-Interactive dashboard tracking events from 27 Taiwan higher education institutions (15 public + 12 private).
+Interactive dashboard tracking academic events from 27 Taiwan higher education institutions (15 public + 12 private) across **3 academic years** (112–114).
 
 ## Live Demo
 
@@ -8,13 +8,22 @@ Interactive dashboard tracking events from 27 Taiwan higher education institutio
 
 ## Features
 
-- **211 events** crawled from 27 universities across the 2025-2026 academic year
+- **572 events** crawled from 27 universities across 3 academic years (2023–2026)
+- **Multi-year filtering**: Select 112 / 113 / 114 academic year or view all
 - **13 data-driven categories** derived from keyword analysis (AI/Digital, Medical, Sustainability, etc.)
 - **5 interactive tabs**: Overview, Event Browser, Analysis, School Profile, Admin
-- **Quality assured**: 99.5% verified with source URLs, fact-checked against original pages
+- **Quality assured**: 95%+ verified, 0 duplicates, all 12 valid categories
 - Light/Dark theme toggle
-- XLSX/JSON export
+- XLSX/JSON export (per academic year or full dataset)
 - Fully responsive
+
+## Academic Year Coverage
+
+| 學年度 | 期間 | Events |
+|--------|------|--------|
+| 114 | 2025-08 ~ 2026-07 | 208 |
+| 113 | 2024-08 ~ 2025-07 | 205 |
+| 112 | 2023-08 ~ 2024-07 | 159 |
 
 ## Tech Stack
 
@@ -28,20 +37,29 @@ Single-file HTML dashboard:
 ## Data
 
 - **Source**: University event pages, crawled via WebSearch + WebFetch
-- **Date range**: 2025-08-01 ~ 2026-07-31
+- **Date range**: 2023-08-01 ~ 2026-07-31 (3 academic years)
 - **Schools**: NTU, NTHU, NYCU, NCKU, NCCU, NCU, NSYSU, NCHU, NTNU, NTUT, NTUST, CCU, NUK, NCNU, NTOU, FJU, SCU, THU, TKU, FCU, CYCU, YZU, CGU, SHU, PCCU, MCU, USC
-- **Quality**: 210 verified / 1 unverified, 0 duplicates removed
+- **Quality**: ~99% verified / 0 duplicates
 
-## Lighthouse Scores
+## Data Schema
 
-| Category | Score |
-|----------|-------|
-| Performance | 55* |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
-
-*Performance limited by CDN-loaded external scripts (React, Babel, Chart.js, Tailwind, SheetJS) inherent to single-file architecture.
+Each event record:
+```json
+{
+  "id": "NTU-114001",
+  "school_id": "NTU",
+  "school_name": "國立臺灣大學",
+  "academic_year": "114",
+  "category": "TALK",
+  "category_name": "專題演講",
+  "title": "...",
+  "date": "2025-10-15",
+  "unit": "電機工程學系",
+  "url": "https://...",
+  "source": "webfetch",
+  "confidence": "high"
+}
+```
 
 ## License
 
