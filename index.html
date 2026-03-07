@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="HEI Event Observatory - Taiwan Higher Education Event Intelligence Dashboard covering 27 universities">
-<title>HEI Event Observatory</title>
+<meta name="description" content="高教活動觀測站 — 台灣 27 所高等教育機構活動情報儀表板，涵蓋 112–114 學年度">
+<title>高教活動觀測站</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234338CA'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-family='serif' font-weight='bold'>E</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,7 +113,7 @@ tr:hover td{background:var(--hover)}
 <div id="root" style="min-height:100vh;display:flex;align-items:center;justify-content:center">
 <div style="text-align:center">
 <div style="width:36px;height:36px;border:3px solid var(--accent);border-top-color:transparent;border-radius:50%;margin:0 auto 16px;animation:spin .8s linear infinite"></div>
-<div style="font-family:'Instrument Serif',serif;color:var(--accent);font-size:20px">Loading Observatory...</div>
+<div style="font-family:'Instrument Serif',serif;color:var(--accent);font-size:20px">載入中...</div>
 </div>
 </div>
 
@@ -265,23 +265,23 @@ function OverviewTab(){
   return(
     <div className="anim-fade">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6 sm:mb-8">
-        <StatCard label="Total Events" value={evts.length} sub={year==='all'?`${meta.date_range.start} ~ ${meta.date_range.end}`:`${year} 學年度`} delay={1}/>
-        <StatCard label="Schools" value={meta.schools_crawled} sub={`${schools.filter(s=>s.type==='public').length} public / ${schools.filter(s=>s.type==='private').length} private`} delay={2}/>
-        <StatCard label="Categories" value={catCount} sub="data-driven classification" delay={3}/>
-        <StatCard label="This Month" value={thisMonthCount} sub={thisMonth} delay={4}/>
+        <StatCard label="活動總數" value={evts.length} sub={year==='all'?`${meta.date_range.start} ~ ${meta.date_range.end}`:`${year} 學年度`} delay={1}/>
+        <StatCard label="學校數" value={meta.schools_crawled} sub={`${schools.filter(s=>s.type==='public').length} 國立 / ${schools.filter(s=>s.type==='private').length} 私立`} delay={2}/>
+        <StatCard label="活動類別" value={catCount} sub="資料驅動分類" delay={3}/>
+        <StatCard label="本月活動" value={thisMonthCount} sub={thisMonth} delay={4}/>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <div className="card p-6">
-          <SectionHead title="Category Distribution"/>
+          <SectionHead title="類別分布"/>
           <div style={{height:300}}><canvas ref={pieRef}></canvas></div>
         </div>
         <div className="card p-6">
-          <SectionHead title="School Ranking" sub="Top 15 by event count"/>
+          <SectionHead title="學校排名" sub="依活動數前 15 名"/>
           <div style={{height:300}}><canvas ref={barRef}></canvas></div>
         </div>
       </div>
       <div className="card p-6">
-        <SectionHead title="Monthly Timeline"/>
+        <SectionHead title="月度時間軸"/>
         <div style={{height:220}}><canvas ref={lineRef}></canvas></div>
       </div>
     </div>
@@ -326,21 +326,21 @@ function EventBrowserTab(){
     <div className="anim-fade">
       <div className="card-flat p-4 mb-5">
         <div className="flex flex-wrap gap-3 items-center">
-          <input className="w-full sm:flex-1 sm:min-w-[200px]" placeholder="Search events, schools, units..." value={search} onChange={e=>setSearch(e.target.value)}/>
+          <input className="w-full sm:flex-1 sm:min-w-[200px]" placeholder="搜尋活動、學校、系所..." value={search} onChange={e=>setSearch(e.target.value)}/>
           <select value={catFilter} onChange={e=>setCatFilter(e.target.value)}>
-            <option value="all">All Categories</option>
+            <option value="all">全部類別</option>
             {Object.entries(category_map).map(([k,v])=><option key={k} value={k}>{v.name}</option>)}
           </select>
           <select value={schoolFilter} onChange={e=>setSchoolFilter(e.target.value)}>
-            <option value="all">All Schools</option>
+            <option value="all">全部學校</option>
             {schools.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}
           </select>
           <select value={typeFilter} onChange={e=>setTypeFilter(e.target.value)}>
-            <option value="all">Public + Private</option>
-            <option value="public">Public Only</option>
-            <option value="private">Private Only</option>
+            <option value="all">國立 + 私立</option>
+            <option value="public">僅國立</option>
+            <option value="private">僅私立</option>
           </select>
-          <span className="text-sm font-mono font-medium" style={{color:'var(--accent)'}}>{filtered.length} results</span>
+          <span className="text-sm font-mono font-medium" style={{color:'var(--accent)'}}>{filtered.length} 筆</span>
         </div>
       </div>
       {/* Desktop table */}
@@ -348,13 +348,13 @@ function EventBrowserTab(){
         <table>
           <thead>
             <tr>
-              <th onClick={()=>doSort('date')}>Date{sortIcon('date')}</th>
-              <th onClick={()=>doSort('school_name')}>School{sortIcon('school_name')}</th>
-              <th onClick={()=>doSort('category')}>Category{sortIcon('category')}</th>
-              <th onClick={()=>doSort('title')}>Title{sortIcon('title')}</th>
-              <th>Unit</th>
-              <th>Link</th>
-              <th>Confidence</th>
+              <th onClick={()=>doSort('date')}>日期{sortIcon('date')}</th>
+              <th onClick={()=>doSort('school_name')}>學校{sortIcon('school_name')}</th>
+              <th onClick={()=>doSort('category')}>類別{sortIcon('category')}</th>
+              <th onClick={()=>doSort('title')}>標題{sortIcon('title')}</th>
+              <th>系所</th>
+              <th>連結</th>
+              <th>可信度</th>
             </tr>
           </thead>
           <tbody>
@@ -365,11 +365,11 @@ function EventBrowserTab(){
                 <td><span className="badge" style={{background:`${catColor(e.category)}15`,color:catColor(e.category)}}><span style={{width:6,height:6,borderRadius:'50%',background:catColor(e.category),display:'inline-block'}}></span>{catName(e.category)}</span></td>
                 <td className="min-w-[280px]">{e.title}</td>
                 <td className="text-sm" style={{color:'var(--text2)'}}>{e.unit}</td>
-                <td>{e.url?<a href={e.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium" style={{color:'var(--accent)',textDecoration:'underline',textUnderlineOffset:'3px'}}>Open</a>:<span className="text-xs" style={{color:'var(--muted)'}}>N/A</span>}</td>
+                <td>{e.url?<a href={e.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium" style={{color:'var(--accent)',textDecoration:'underline',textUnderlineOffset:'3px'}}>開啟</a>:<span className="text-xs" style={{color:'var(--muted)'}}>無</span>}</td>
                 <td><span className="badge text-xs" style={{background:e.confidence==='high'?'#DCFCE7':e.confidence==='medium'?'#FEF3C7':'#F5F5F4',color:e.confidence==='high'?'#166534':e.confidence==='medium'?'#854D0E':'#78716C'}}>{e.confidence}</span></td>
               </tr>
             ))}
-            {pageEvents.length===0&&<tr><td colSpan={7} className="text-center py-10" style={{color:'var(--muted)'}}>No events found</td></tr>}
+            {pageEvents.length===0&&<tr><td colSpan={7} className="text-center py-10" style={{color:'var(--muted)'}}>查無活動</td></tr>}
           </tbody>
         </table>
       </div>
@@ -390,15 +390,15 @@ function EventBrowserTab(){
             </div>
           </div>
         ))}
-        {pageEvents.length===0&&<div className="text-center py-10" style={{color:'var(--muted)'}}>No events found</div>}
+        {pageEvents.length===0&&<div className="text-center py-10" style={{color:'var(--muted)'}}>查無活動</div>}
       </div>
 
       {/* Pagination — shared */}
       {totalPages>1&&(
         <div className="card-flat mt-0 flex items-center justify-between p-3 sm:p-4" style={{borderTop:'1px solid var(--border)',borderTopLeftRadius:0,borderTopRightRadius:0}}>
-          <button className="btn btn-secondary text-sm" disabled={page<=1} onClick={()=>setPage(p=>p-1)} style={{opacity:page<=1?0.4:1}}>Prev</button>
+          <button className="btn btn-secondary text-sm" disabled={page<=1} onClick={()=>setPage(p=>p-1)} style={{opacity:page<=1?0.4:1}}>上一頁</button>
           <span className="text-sm font-mono" style={{color:'var(--text2)'}}>{page} / {totalPages}</span>
-          <button className="btn btn-secondary text-sm" disabled={page>=totalPages} onClick={()=>setPage(p=>p+1)} style={{opacity:page>=totalPages?0.4:1}}>Next</button>
+          <button className="btn btn-secondary text-sm" disabled={page>=totalPages} onClick={()=>setPage(p=>p+1)} style={{opacity:page>=totalPages?0.4:1}}>下一頁</button>
         </div>
       )}
     </div>
@@ -431,13 +431,38 @@ function AnalysisTab(){
   },[evts]);
 
   const keywords=useMemo(()=>{
-    const stops=new Set(['的','與','及','在','之','了','和','為','是','中','大','全','年','月','日','大學','國立','活動','學','系','院','處','室','所','會','講座','研討','工作坊','論壇','成果','發表','中心','學系','辦理','計畫','教育','國際','台灣','技術']);
+    const stops=new Set([
+      // 中文通用停用詞
+      '的','與','及','在','之','了','和','為','是','中','大','全','年','月','日','上','下','或','對','由','將',
+      // 中文學術/活動噪音
+      '大學','國立','私立','活動','學','系','院','處','室','所','會','講座','研討','工作坊','論壇',
+      '成果','發表','中心','學系','辦理','計畫','教育','國際','台灣','技術','演講','專題','學術',
+      '邀請','學年度','學年度第','學期','系列','研究所','學程','大講堂','座談','說明',
+      '第一屆','第二屆','第三屆','第四屆','第五屆','研討會','論文','發表會','年會',
+      '特別演講','公開演講','學術演講','專題演講',
+      // 英文停用詞
+      'and','or','of','in','for','the','on','at','to','a','an','is','are','be','was','were',
+      'with','from','by','The','In','Of','And','For','On','A','An','To','By','From','With',
+      // 英文學術噪音
+      'University','National','International','Conference','Seminar','Symposium','Workshop',
+      'Dr','Prof','Mr','Ms','PhD','Professor','Speaker','Lecture','Forum','Talk','Event',
+      'Taiwan','Annual','Research','Science','Studies',
+      'SEED',
+    ]);
+    const isAscii=w=>/^[A-Za-z]/.test(w);
     const m={};
     evts.forEach(e=>{
-      const words=e.title.replace(/[，。、：；「」（）\[\]\s\d\-\/]/g,' ').split(/\s+/).filter(w=>w.length>=2&&!stops.has(w));
+      const words=e.title
+        .replace(/[，。、：；「」（）《》【】\[\]\s\d\-\/\.\,\!\?\:\#\@\&\*]/g,' ')
+        .split(/\s+/)
+        .filter(w=>{
+          if(!w||stops.has(w))return false;
+          if(isAscii(w))return w.length>=4;
+          return w.length>=2;
+        });
       words.forEach(w=>{m[w]=(m[w]||0)+1;});
     });
-    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,24);
+    return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,50);
   },[evts]);
 
   const pvp=useMemo(()=>{
@@ -475,8 +500,8 @@ function AnalysisTab(){
     return{type:'bar',data:{
       labels:sortedCats.map(c=>catName(c)),
       datasets:[
-        {label:'Public',data:sortedCats.map(c=>pvp.pub[c]||0),backgroundColor:pubC,borderRadius:4,barPercentage:0.75},
-        {label:'Private',data:sortedCats.map(c=>pvp.pri[c]||0),backgroundColor:priC,borderRadius:4,barPercentage:0.75}
+        {label:'國立',data:sortedCats.map(c=>pvp.pub[c]||0),backgroundColor:pubC,borderRadius:4,barPercentage:0.75},
+        {label:'私立',data:sortedCats.map(c=>pvp.pri[c]||0),backgroundColor:priC,borderRadius:4,barPercentage:0.75}
       ]
     },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:o.legendColor,font:chartFont}}},scales:{x:{grid:{display:false},ticks:{color:o.tickColor,font:{...chartFont,size:10},maxRotation:45}},y:{grid:{color:o.gridColor},ticks:{color:o.tickColor,font:{family:'JetBrains Mono',size:11}},beginAtZero:true}}}}
   },[theme,pvp,sortedCats]);
@@ -484,7 +509,7 @@ function AnalysisTab(){
   return(
     <div className="anim-fade">
       <div className="card p-6 mb-6 overflow-x-auto">
-        <SectionHead title="Category x School Heatmap" sub="Top 15 schools by event count"/>
+        <SectionHead title="類別 × 學校熱力圖" sub="依活動數前 15 所學校"/>
         <div style={{minWidth:700}}>
           <div className="flex items-center" style={{marginBottom:4}}>
             <div style={{width:90}}></div>
@@ -504,27 +529,44 @@ function AnalysisTab(){
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <div className="card p-6">
-          <SectionHead title="Monthly Trend" sub="Top 5 categories"/>
+          <SectionHead title="月度趨勢" sub="前 5 大類別"/>
           <div style={{height:280}}><canvas ref={trendRef}></canvas></div>
         </div>
         <div className="card p-6">
-          <SectionHead title="Public vs Private"/>
+          <SectionHead title="國立 vs 私立"/>
           <div style={{height:280}}><canvas ref={compareRef}></canvas></div>
         </div>
       </div>
       <div className="card p-6">
-        <SectionHead title="Top Keywords"/>
-        <div className="flex flex-wrap gap-2">
-          {keywords.map(([w,c],i)=>{
-            const size=Math.max(13,Math.min(22,12+c*1.5));
-            const opacity=Math.max(0.5,1-(i/keywords.length)*0.5);
-            return(
-              <span key={w} className="px-3 py-1.5 rounded-lg font-medium" style={{fontSize:size,background:'var(--elevated)',border:'1px solid var(--border)',opacity,transition:'all .2s',cursor:'default'}}>
-                {w} <span className="font-mono text-xs" style={{color:'var(--accent)'}}>{c}</span>
-              </span>
-            );
-          })}
-        </div>
+        <SectionHead title="熱門關鍵字" sub="依出現頻率，字體越大代表越常見"/>
+        {(()=>{
+          const wColors=['#8B5CF6','#3B82F6','#EC4899','#F59E0B','#10B981','#6366F1','#F97316','#06B6D4','#22C55E','#EF4444','#A855F7','#14B8A6'];
+          const maxC=keywords[0]?.[1]||1;
+          const minC=keywords[keywords.length-1]?.[1]||1;
+          return(
+            <div style={{lineHeight:2.4,padding:'4px 0'}}>
+              {keywords.map(([w,c],i)=>{
+                const ratio=(c-minC)/Math.max(1,maxC-minC);
+                const size=Math.round(12+ratio*26);
+                const color=wColors[i%wColors.length];
+                const weight=ratio>0.6?700:ratio>0.3?600:400;
+                return(
+                  <span key={w} style={{
+                    fontSize:size,color,fontWeight:weight,
+                    margin:'0 6px',display:'inline-block',
+                    opacity:0.65+ratio*0.35,lineHeight:1.2,
+                    transition:'all .15s',cursor:'default',
+                    fontFamily:"'DM Sans','Noto Sans TC',sans-serif"
+                  }}
+                  onMouseEnter={e=>{e.currentTarget.style.opacity='1';e.currentTarget.style.transform='scale(1.12)';}}
+                  onMouseLeave={e=>{e.currentTarget.style.opacity=String(0.65+ratio*0.35);e.currentTarget.style.transform='scale(1)';}}>
+                    {w}
+                  </span>
+                );
+              })}
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
@@ -594,13 +636,13 @@ function SchoolProfileTab(){
     <div className="anim-fade">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="card p-6">
-          <SectionHead title="Select School"/>
+          <SectionHead title="選擇學校"/>
           <select className="w-full mb-5" value={selected} onChange={e=>setSelected(e.target.value)}>
-            <option value="">-- Choose a school --</option>
-            <optgroup label="Public">
+            <option value="">-- 請選擇學校 --</option>
+            <optgroup label="國立大學">
               {schools.filter(s=>s.type==='public').map(s=><option key={s.id} value={s.id}>{s.name} ({s.acronym})</option>)}
             </optgroup>
-            <optgroup label="Private">
+            <optgroup label="私立大學">
               {schools.filter(s=>s.type==='private').map(s=><option key={s.id} value={s.id}>{s.name} ({s.acronym})</option>)}
             </optgroup>
           </select>
@@ -610,12 +652,12 @@ function SchoolProfileTab(){
                 <div className="text-xl font-serif">{schoolName(selected)}</div>
                 <div className="text-sm" style={{color:'var(--text2)'}}>{schools.find(s=>s.id===selected)?.name_en}</div>
                 <div className="mt-2">
-                  <span className="badge" style={{background:schoolType(selected)==='public'?'rgba(67,56,202,0.1)':'rgba(225,29,72,0.1)',color:schoolType(selected)==='public'?'var(--accent)':'var(--accent2)'}}>{schoolType(selected)==='public'?'Public':'Private'}</span>
+                  <span className="badge" style={{background:schoolType(selected)==='public'?'rgba(67,56,202,0.1)':'rgba(225,29,72,0.1)',color:schoolType(selected)==='public'?'var(--accent)':'var(--accent2)'}}>{schoolType(selected)==='public'?'國立':'私立'}</span>
                 </div>
               </div>
-              <div className="stat-num text-3xl mb-4">{schoolEvents.length} <span className="text-base font-sans font-normal" style={{color:'var(--text2)'}}>events</span></div>
+              <div className="stat-num text-3xl mb-4">{schoolEvents.length} <span className="text-base font-sans font-normal" style={{color:'var(--text2)'}}>場活動</span></div>
               <div style={{height:200}}><canvas ref={polarRef}></canvas></div>
-              <h4 className="font-serif text-lg mt-5 mb-3">Recent Events</h4>
+              <h4 className="font-serif text-lg mt-5 mb-3">近期活動</h4>
               <div className="space-y-2">
                 {schoolEvents.slice(-5).reverse().map(e=>(
                   <div key={e.id} className="text-sm p-3 rounded-lg" style={{background:'var(--elevated)'}}>
@@ -628,12 +670,12 @@ function SchoolProfileTab(){
                 ))}
               </div>
             </div>
-          ):<div className="text-center py-12" style={{color:'var(--muted)'}}><div className="text-4xl mb-2" style={{fontFamily:'Instrument Serif'}}>Select a school</div><div className="text-sm">Choose from the dropdown above</div></div>}
+          ):<div className="text-center py-12" style={{color:'var(--muted)'}}><div className="text-4xl mb-2" style={{fontFamily:'Instrument Serif'}}>請選擇學校</div><div className="text-sm">請從上方下拉選單選擇</div></div>}
         </div>
 
         <div className="lg:col-span-2">
           <div className="card p-6">
-            <SectionHead title="Cross-School Comparison" sub="Select up to 6 schools to compare"/>
+            <SectionHead title="跨校比較" sub="最多選擇 6 所學校進行比較"/>
             <div className="flex flex-wrap gap-1.5 mb-5">
               {schools.map(s=>(
                 <button key={s.id} onClick={()=>toggleCompare(s.id)}
@@ -680,13 +722,13 @@ function AdminTab(){
   return(
     <div className="anim-fade">
       <div className="card p-6 mb-6">
-        <SectionHead title="Quality Metrics"/>
+        <SectionHead title="資料品質指標"/>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {[
-            {label:'Verified',value:q.verified_count||0,color:'#16A34A'},
-            {label:'Unverified',value:q.unverified_count||0,color:'#78716C'},
-            {label:'Deduplicated',value:q.deduplicated_count||0,color:'#CA8A04'},
-            {label:'Fact-Check Pass',value:`${((q.fact_check_pass_rate||0)*100).toFixed(1)}%`,color:q.fact_check_pass_rate>=0.8?'#16A34A':'#DC2626'},
+            {label:'已驗證',value:q.verified_count||0,color:'#16A34A'},
+            {label:'未驗證',value:q.unverified_count||0,color:'#78716C'},
+            {label:'去重複',value:q.deduplicated_count||0,color:'#CA8A04'},
+            {label:'事實查核通過',value:`${((q.fact_check_pass_rate||0)*100).toFixed(1)}%`,color:q.fact_check_pass_rate>=0.8?'#16A34A':'#DC2626'},
           ].map(({label,value,color})=>(
             <div key={label} className="p-4 rounded-xl" style={{background:'var(--elevated)'}}>
               <div className="text-xs font-medium mb-2" style={{color:'var(--text2)'}}>{label}</div>
@@ -697,7 +739,7 @@ function AdminTab(){
       </div>
 
       <div className="card p-6 mb-6">
-        <SectionHead title="Crawl Status"/>
+        <SectionHead title="爬取狀態"/>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-2">
           {schools.map(s=>{
             const cnt=evts.filter(e=>e.school_id===s.id).length;
@@ -716,18 +758,18 @@ function AdminTab(){
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="card p-6">
-          <SectionHead title="Data Summary"/>
+          <SectionHead title="資料摘要"/>
           <div className="space-y-3 text-sm">
             {[
-              ['Version',meta.version],
-              ['Crawl Date',meta.crawl_date],
-              ['Date Range',`${meta.date_range.start} ~ ${meta.date_range.end}`],
-              ['Academic Years',(meta.academic_years||['114']).join(' / ')],
-              ['Total Events (All)',events.length],
-              ['Shown Events (Filter)',evts.length],
-              ['Public Events',pubCount],
-              ['Private Events',priCount],
-              ['Schools',meta.schools_crawled],
+              ['版本',meta.version],
+              ['爬取日期',meta.crawl_date],
+              ['日期範圍',`${meta.date_range.start} ~ ${meta.date_range.end}`],
+              ['學年度',(meta.academic_years||['114']).join(' / ')],
+              ['活動總數（全部）',events.length],
+              ['目前顯示（篩選後）',evts.length],
+              ['國立學校活動',pubCount],
+              ['私立學校活動',priCount],
+              ['學校數',meta.schools_crawled],
             ].map(([k,v])=>(
               <div key={k} className="flex justify-between items-center py-1" style={{borderBottom:'1px solid var(--border)'}}>
                 <span style={{color:'var(--text2)'}}>{k}</span>
@@ -737,10 +779,10 @@ function AdminTab(){
           </div>
         </div>
         <div className="card p-6">
-          <SectionHead title="Export"/>
+          <SectionHead title="匯出"/>
           <div className="space-y-3 mb-6">
-            <button className="btn btn-primary w-full" onClick={exportXLSX}>Export XLSX {year!=='all'?`(${year} 學年)`:'(All)'}</button>
-            <button className="btn btn-secondary w-full" onClick={exportJSON}>Export JSON (Full)</button>
+            <button className="btn btn-primary w-full" onClick={exportXLSX}>匯出 XLSX {year!=='all'?`（${year} 學年）`:'（全部）'}</button>
+            <button className="btn btn-secondary w-full" onClick={exportJSON}>匯出 JSON（完整）</button>
           </div>
           <div className="p-4 rounded-xl mb-4" style={{background:'var(--elevated)'}}>
             <div className="font-serif text-lg mb-2">學年度分布</div>
@@ -757,9 +799,9 @@ function AdminTab(){
             </div>
           </div>
           <div className="p-4 rounded-xl" style={{background:'var(--elevated)'}}>
-            <div className="font-serif text-lg mb-2">Data Freshness</div>
-            <div className="text-sm" style={{color:'var(--text2)'}}>Last crawl: <span className="font-mono">{meta.crawl_date}</span></div>
-            <div className="text-sm" style={{color:'var(--text2)'}}>Coverage: <span className="font-mono">{schools.length}/{schools.length}</span> schools</div>
+            <div className="font-serif text-lg mb-2">資料新鮮度</div>
+            <div className="text-sm" style={{color:'var(--text2)'}}>最後爬取：<span className="font-mono">{meta.crawl_date}</span></div>
+            <div className="text-sm" style={{color:'var(--text2)'}}>覆蓋率：<span className="font-mono">{schools.length}/{schools.length}</span> 所學校</div>
           </div>
         </div>
       </div>
@@ -772,7 +814,7 @@ function App(){
   const[theme,toggleTheme]=useTheme();
   const[tab,setTab]=useState(0);
   const[yearFilter,setYearFilter]=useState('all');
-  const tabs=['Overview','Events','Analysis','Schools','Admin'];
+  const tabs=['總覽','活動瀏覽','分析','學校資料','管理'];
   const availableYears=(meta.academic_years||['114']);
 
   return(
@@ -784,8 +826,8 @@ function App(){
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{background:'var(--accent)',color:'#fff',fontFamily:'Instrument Serif',fontSize:22}}>E</div>
             <div>
-              <h1 className="font-serif text-xl" style={{lineHeight:1.2,letterSpacing:'-0.02em'}}>HEI Event Observatory</h1>
-              <p className="text-xs" style={{color:'var(--text2)'}}>Taiwan Higher Education Event Intelligence · {meta.date_range.start.slice(0,4)}–{meta.date_range.end.slice(0,4)}</p>
+              <h1 className="font-serif text-xl" style={{lineHeight:1.2,letterSpacing:'-0.02em'}}>高教活動觀測站</h1>
+              <p className="text-xs" style={{color:'var(--text2)'}}>台灣高等教育活動情報儀表板 · {meta.date_range.start.slice(0,4)}–{meta.date_range.end.slice(0,4)}</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
