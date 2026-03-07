@@ -432,14 +432,20 @@ function AnalysisTab(){
 
   const keywords=useMemo(()=>{
     const stops=new Set([
-      // 中文通用停用詞
+      // 中文通用停用詞（單字/雙字）
       '的','與','及','在','之','了','和','為','是','中','大','全','年','月','日','上','下','或','對','由','將',
-      // 中文學術/活動噪音
-      '大學','國立','私立','活動','學','系','院','處','室','所','會','講座','研討','工作坊','論壇',
-      '成果','發表','中心','學系','辦理','計畫','教育','國際','台灣','技術','演講','專題','學術',
-      '邀請','學年度','學年度第','學期','系列','研究所','學程','大講堂','座談','說明',
-      '第一屆','第二屆','第三屆','第四屆','第五屆','研討會','論文','發表會','年會',
-      '特別演講','公開演講','學術演講','專題演講',
+      '國立','私立','大學','學院','學系','系所','學程','研究所','研究',
+      // 中文活動格式噪音
+      '活動','講座','研討','論壇','成果','發表','中心','辦理','邀請','說明',
+      '演講','專題','學術','系列','年會','工作','工作坊','座談','成果展',
+      '特別','公開','邀請','舉辦','主辦','舉行','報告','介紹',
+      '第一','第二','第三','第四','第五','第六','第七','第八','第九','第十',
+      '一學','二學','上學','下學','學年','年度','學期','本週','每週','本學',
+      '本次','本院','本系','本校','今年',
+      // 常見搭配但無意義
+      '合作','交流','推動','建立','促進','提升','強化','發展','實施',
+      '計畫','方案','政策','制度','機制','模式','架構','系統','平台',
+      '台灣','臺灣','國際','全球','亞洲','亞太',
       // 英文停用詞
       'and','or','of','in','for','the','on','at','to','a','an','is','are','be','was','were',
       'with','from','by','The','In','Of','And','For','On','A','An','To','By','From','With',
@@ -449,19 +455,21 @@ function AnalysisTab(){
       'Taiwan','Annual','Research','Science','Studies',
       'SEED',
     ]);
-    const isAscii=w=>/^[A-Za-z]/.test(w);
-    const isAcronym=w=>/^[A-Z0-9]{2,5}$/.test(w); // AI, ML, ESG, GPT, LLM...
+    const isAcronym=w=>/^[A-Z0-9]{2,5}$/.test(w);
     const m={};
     evts.forEach(e=>{
-      const words=e.title
-        .replace(/[，。、：；「」（）《》【】\[\]\s\d\-\/\.\,\!\?\:\#\@\&\*]/g,' ')
-        .split(/\s+/)
-        .filter(w=>{
-          if(!w||stops.has(w))return false;
-          if(isAscii(w))return isAcronym(w)||w.length>=4;
-          return w.length>=2;
-        });
-      words.forEach(w=>{m[w]=(m[w]||0)+1;});
+      const title=e.title;
+      // 英文 token（空白切割，縮寫 ≥2，其他 ≥4）
+      title.replace(/[\u4e00-\u9fff]+/g,' ').split(/\s+/).forEach(w=>{
+        w=w.replace(/[^A-Za-z0-9]/g,'');
+        if(!w||stops.has(w))return;
+        if(isAcronym(w)||w.length>=4)m[w]=(m[w]||0)+1;
+      });
+      // 中文 2-gram + 3-gram（對每段連續中文字切割）
+      (title.match(/[\u4e00-\u9fff]{2,}/g)||[]).forEach(seg=>{
+        for(let i=0;i<=seg.length-2;i++){const g2=seg.slice(i,i+2);if(!stops.has(g2))m[g2]=(m[g2]||0)+1;}
+        for(let i=0;i<=seg.length-3;i++){const g3=seg.slice(i,i+3);if(!stops.has(g3))m[g3]=(m[g3]||0)+1;}
+      });
     });
     return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,50);
   },[evts]);
